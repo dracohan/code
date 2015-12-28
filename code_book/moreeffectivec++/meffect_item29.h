@@ -1,0 +1,15 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  FileName    :   meffect_item29.h
+//  Version     :   0.10
+//  Author      :   Ryan Han
+//  Date        :   2013/11/28
+//  Comment     :	
+//
+///////////////////////////////////////////////////////////////////////////////
+#ifndef MEFFECT_ITEM29_H
+#define	MEFFECT_ITEM29_H
+#include <iostream>
+using namespace std;
+
+#endif

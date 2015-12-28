@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/bwhan" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch02" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch03" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch07" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch08" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch09" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch10" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch11" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch12" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch13" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch14" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch15" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch16" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch17" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch18" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch19" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch20" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch21" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch22" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch23" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/ch24" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/com/examples/eclipse-project" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jdk1.8" level="project" />
+  </component>
+</module>
