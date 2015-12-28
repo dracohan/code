@@ -1,0 +1,18 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  FileName    :   type_info.h
+//  Version     :   0.10	created	2013/07/26 16:50:14	
+//  Author      :   Jimmy Han
+//  Comment     :  
+//
+///////////////////////////////////////////////////////////////////////////////
+#ifndef PAGE_CONTENT_H
+#define	PAGE_CONTENT_H
+class employee {
+	public:
+};
+
+
+
+
+#endif

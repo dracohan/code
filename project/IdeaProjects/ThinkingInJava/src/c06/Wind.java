@@ -1,0 +1,23 @@
+package c06;
+
+/**
+ * Created by root on 4/13/15.
+ */
+//: Wind.java
+// Inheritance & upcasting
+import java.util.*;
+class Instrument {
+    public void play() {}
+    static void tune(Instrument i) {
+// ...
+        i.play();
+    }
+}
+// Wind objects are instruments
+// because they have the same interface:
+class Wind extends Instrument {
+    public static void main(String[] args) {
+        Wind flute = new Wind();
+        Instrument.tune(flute); // Upcasting
+    }
+} ///:~
