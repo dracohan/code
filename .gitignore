@@ -1,0 +1,8 @@
+# Ignore following files
+*.exe
+*.out
+*.rar
+*.tar
+*.doc
+*.*dump*
+*.txt
