@@ -20,3 +20,6 @@
 *.ipch
 *.*_*
 *.class
+company/*
+script/*
+transfer/*
