@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bwhan.android.yamba"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!-- -->
+        <activity
+            android:name="com.bwhan.android.yamba.StatusActivity"
+            android:label="@string/status_update" >
+            <intent-filter>
+                <action android:name="com.bwhan.android.yamba.action.tweet" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- -->
+        <activity android:name="com.bwhan.android.yamba.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bwhan.android.yamba.SettingsActivity"
+        android:label="@string/action_settings" >
+    </activity>
+    <service android:name="com.bwhan.android.yamba.RefreshService" >
+    </service>
+    <provider
+        android:name="com.bwhan.android.yamba.StatusProvider"
+        android:authorities="com.bwhan.android.yamba.StatusProvider"
+        android:exported="false" />
+        <receiver android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+        <activity android:name="com.bwhan.android.yamba.DetailsActivity" >
+        </activity>
+</application>
+    </manifest>
