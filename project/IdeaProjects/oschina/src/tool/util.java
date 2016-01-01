@@ -9,8 +9,6 @@ package tool;
  * @result:
  */
 
-import org.omg.CORBA.Any;
-
 import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -43,4 +41,5 @@ public class util {
             System.out.print(item + " ");
         }
     }
+
 }
