@@ -52,11 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IT25.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IT25.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT25.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6862745">
-              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cc0107.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/oschina/cc150/cc0107.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.75980395">
+              <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,16 +110,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IT4.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="21" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -568,27 +568,7 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.IT25">
-    <configuration default="false" name="IT16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="oschina.IT100.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="oschina.IT100.IT16" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="oschina" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.cc0107">
     <configuration default="false" name="IT17" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -657,6 +637,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="oschina.IT100.IT25" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="oschina" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="cc0107" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="oschina.cc150.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="oschina.cc150.cc0107" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -915,19 +915,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.IT16" />
-      <item index="1" class="java.lang.String" itemvalue="Application.IT17" />
-      <item index="2" class="java.lang.String" itemvalue="Application.IT18" />
-      <item index="3" class="java.lang.String" itemvalue="Application.cc0101" />
-      <item index="4" class="java.lang.String" itemvalue="Application.IT25" />
+      <item index="0" class="java.lang.String" itemvalue="Application.IT17" />
+      <item index="1" class="java.lang.String" itemvalue="Application.IT18" />
+      <item index="2" class="java.lang.String" itemvalue="Application.cc0101" />
+      <item index="3" class="java.lang.String" itemvalue="Application.IT25" />
+      <item index="4" class="java.lang.String" itemvalue="Application.cc0107" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.IT25" />
-        <item index="1" class="java.lang.String" itemvalue="Application.cc0101" />
-        <item index="2" class="java.lang.String" itemvalue="Application.IT18" />
-        <item index="3" class="java.lang.String" itemvalue="Application.IT17" />
-        <item index="4" class="java.lang.String" itemvalue="Application.IT16" />
+        <item index="0" class="java.lang.String" itemvalue="Application.cc0107" />
+        <item index="1" class="java.lang.String" itemvalue="Application.IT25" />
+        <item index="2" class="java.lang.String" itemvalue="Application.cc0101" />
+        <item index="3" class="java.lang.String" itemvalue="Application.IT18" />
+        <item index="4" class="java.lang.String" itemvalue="Application.IT17" />
       </list>
     </recent_temporary>
   </component>
@@ -1230,13 +1230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/oschina/cc150/cc0107.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/oschina/cc150/cc0106.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1456,8 +1449,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT25.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6862745">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oschina/cc150/cc0107.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75980395">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
           <folding />
         </state>
       </provider>

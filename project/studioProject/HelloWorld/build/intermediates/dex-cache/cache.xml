@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/bwhan/project/studioProject/HelloWorld/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/bwhan/project/studioProject/HelloWorld/app/build/intermediates/pre-dexed/debug/classes-f540be52fdf8289d548e0eac68b25866a128a9a8.jar" />
+    </item>
+    <item
+        jar="/home/bwhan/project/studioProject/HelloWorld/app/libs/google-play-services.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9b63d9aba531aa7ff5dd30e0c872e8ca550b363a">
+        <dex dex="/home/bwhan/project/studioProject/HelloWorld/app/build/intermediates/pre-dexed/debug/google-play-services-707b544b5d28a3a73d897beb62e3702fd29eb36b.jar" />
+    </item>
+    <item
+        jar="/home/bwhan/project/studioProject/HelloWorld/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/bwhan/project/studioProject/HelloWorld/app/build/intermediates/pre-dexed/debug/classes-92f328d95a1a6a9a620e59306db66652aa07c933.jar" />
+    </item>
+    <item
+        jar="/home/bwhan/project/studioProject/HelloWorld/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/bwhan/project/studioProject/HelloWorld/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-2b0af37e8e3397a0ae8404af1bac97a7eaff6847.jar" />
+    </item>
+    <item
+        jar="/home/bwhan/tool/android-sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/bwhan/project/studioProject/HelloWorld/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-438f60046aecb40c5a714d2b3b759e52aed3d3fc.jar" />
+    </item>
+
+</items>
