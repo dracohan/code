@@ -17,7 +17,7 @@ public class IT26 {
 		return srb.reverse().toString();
 	}
 	public static void main(String[] args) {
-		String src = "12345678"; int n = 3;
+		String src = "12345678"; int n = 8;
 		System.out.println("After rotate " + n + "character of " + src + " is: " + rotateString(src, n));
 	}
 }
