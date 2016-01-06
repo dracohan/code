@@ -2,6 +2,7 @@ package data.tree;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 import static tool.util.printGenericColection;
@@ -37,6 +38,10 @@ public class BSTree{
 		//IT4 specific
 		currentSum = 0;
 		path = new Stack<Integer>();
+	}
+	//Checker
+	private boolean isLeaf(BSTreeNode bsTreeNode){
+		return bsTreeNode.left == null && bsTreeNode.right == null;
 	}
 	//Operations
 	public void insert(int value){
@@ -188,4 +193,40 @@ public class BSTree{
 		}
 	}
 	//IT16 end
+
+	//IT27 start
+	private LinkedList<BSTreeNode> lst = new LinkedList<BSTreeNode>();
+	public void findDepthPath(int depth){
+		findDepthPath(root, depth);
+	}
+	private void findDepthPath(BSTreeNode bsTreeNode, int expected){
+		//inorder traversal tree
+		//checkNode for each node
+		checkNode(bsTreeNode, expected);
+		if(bsTreeNode.left != null)
+			findDepthPath(bsTreeNode.left, expected);
+		if(bsTreeNode.right != null)
+			findDepthPath(bsTreeNode.right, expected);
+	}
+	//Find all the expected depth leaf and print path
+	private void checkNode(BSTreeNode bsTreeNode, int expected){
+		lst.addLast(bsTreeNode);
+		if(isLeaf(bsTreeNode) && expected == 0) {
+			System.out.println("Get: ");
+			for (int i = 0; i < lst.size(); i++) {
+				System.out.print(lst.get(i).value + " ");
+			}
+			System.out.println();
+		}
+		if(bsTreeNode.left != null && expected > 0) {
+			checkNode(bsTreeNode.left, --expected);
+			++expected;
+		}
+		if(bsTreeNode.right != null && expected > 0) {
+			checkNode(bsTreeNode.right, --expected);
+			++expected;
+		}
+		lst.removeLast();
+	}
+	//IT27 end
 }
