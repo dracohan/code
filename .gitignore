@@ -1,10 +1,7 @@
-*.[oa]
-*~
 *.exe
 *.txt
 *.log
 *.a
-*.out
 script/*
 transfer/*
 company/*
