@@ -2,6 +2,7 @@
 *.txt
 *.log
 *.a
+*.out
 script/*
 transfer/*
 company/*
