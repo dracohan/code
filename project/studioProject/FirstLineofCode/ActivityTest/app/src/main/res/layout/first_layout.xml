@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<Button
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toast"/>
+<Button
+        android:id="@+id/button_11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finish()"/>
+<Button
+        android:id="@+id/button_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="explicit Intent"/>
+<Button
+        android:id="@+id/button_13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Implicit Intent"/>
+<Button
+        android:id="@+id/button_14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add category"/>
+<Button
+        android:id="@+id/button_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Other Intent"/>
+</LinearLayout>
