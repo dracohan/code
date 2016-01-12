@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a498067-bc0d-4bdb-b89c-9c239398957a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT35.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../code/basic/out_file" afterPath="$PROJECT_DIR$/../../../code/basic/out_file" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../code/fromweb/logkeys-0.1.0.tar" afterPath="$PROJECT_DIR$/../../../code/fromweb/logkeys-0.1.0.tar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../code/tools/column_transfer/columntransfer.zip" afterPath="$PROJECT_DIR$/../../../code/tools/column_transfer/columntransfer.zip" />
@@ -4050,6 +4051,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../effectiveJava/src/master/Chapter8/Item46/NestedIteration.java" afterPath="$PROJECT_DIR$/../effectiveJava/src/master/Chapter8/Item46/NestedIteration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../effectiveJava/src/master/Chapter8/Item47/RandomBug.java" afterPath="$PROJECT_DIR$/../effectiveJava/src/master/Chapter8/Item47/RandomBug.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../effectiveJava/src/master/Chapter8/Item48/Arithmetic.java" afterPath="$PROJECT_DIR$/../effectiveJava/src/master/Chapter8/Item48/Arithmetic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../studioProject/.idea/.name" afterPath="$PROJECT_DIR$/../../studioProject/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../studioProject/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../../studioProject/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../studioProject/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../../studioProject/.idea/copyright/profiles_settings.xml" />
@@ -4192,124 +4194,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../vsproject/string_operations/string_operations/string_operations.vcxproj" afterPath="$PROJECT_DIR$/../../../vsproject/string_operations/string_operations/string_operations.vcxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../vsproject/string_operations/string_operations/string_operations.vcxproj.filters" afterPath="$PROJECT_DIR$/../../../vsproject/string_operations/string_operations/string_operations.vcxproj.filters" />
     </list>
-    <list id="ebbc3b80-cfbd-4679-9d89-361a71508395" name="Rejected commit: Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT28.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/cnblogs/A.class" afterPath="$PROJECT_DIR$/out/production/oschina/cnblogs/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/cnblogs/B.class" afterPath="$PROJECT_DIR$/out/production/oschina/cnblogs/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/cnblogs/initSequence.class" afterPath="$PROJECT_DIR$/out/production/oschina/cnblogs/initSequence.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/data/list/doublylinkedlist.class" afterPath="$PROJECT_DIR$/out/production/oschina/data/list/doublylinkedlist.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/data/list/linkedlist$Node.class" afterPath="$PROJECT_DIR$/out/production/oschina/data/list/linkedlist$Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/data/list/linkedlist.class" afterPath="$PROJECT_DIR$/out/production/oschina/data/list/linkedlist.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/data/tree/BSTree$BSTreeNode.class" afterPath="$PROJECT_DIR$/out/production/oschina/data/tree/BSTree$BSTreeNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/data/tree/BSTree.class" afterPath="$PROJECT_DIR$/out/production/oschina/data/tree/BSTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/nowcode/HasStatic.class" afterPath="$PROJECT_DIR$/out/production/oschina/nowcode/HasStatic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT1.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT10.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT12.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT13.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT14.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT15.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT16.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT17.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT18$Node.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT18$Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT18.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT2.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT25.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT26.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT26.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT27.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT27.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT3.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT4.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT5.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT6.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT7.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT8.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT9.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/IT9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/LinkedList7$Node.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/LinkedList7$Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/LinkedList7.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/LinkedList7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/LinkedListIT8$Node.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/LinkedListIT8$Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/LinkedListIT8.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/LinkedListIT8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/MinStack.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/IT100/MinStack.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/IT28.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/IT28.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0101.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0101.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0103.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0103.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0104.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0104.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0105.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0105.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0106.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0106.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0107.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0107.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0108.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0108.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0201.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0201.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0202.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0202.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0203.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0203.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0204.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0204.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0205.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0205.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0206.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0206.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0207.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/cc150/cc0207.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/java/EnumTest$Fruit.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/java/EnumTest$Fruit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/java/EnumTest.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/java/EnumTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/onsite/find3larger.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/onsite/find3larger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/oschina/onsite/permutaion.class" afterPath="$PROJECT_DIR$/out/production/oschina/oschina/onsite/permutaion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/oschina/tool/util.class" afterPath="$PROJECT_DIR$/out/production/oschina/tool/util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oschina.iml" afterPath="$PROJECT_DIR$/oschina.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cnblogs/initSequence.java" afterPath="$PROJECT_DIR$/src/cnblogs/initSequence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/list/doublylinkedlist.java" afterPath="$PROJECT_DIR$/src/data/list/doublylinkedlist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/list/linkedlist.java" afterPath="$PROJECT_DIR$/src/data/list/linkedlist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/tree/BSTree.java" afterPath="$PROJECT_DIR$/src/data/tree/BSTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nowcode/HasStatic.java" afterPath="$PROJECT_DIR$/src/nowcode/HasStatic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT1.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT10.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT10.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT12.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT12.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT13.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT13.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT14.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT14.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT15.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT15.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT16.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT16.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT17.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT17.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT18.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT18.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT2.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT25.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT25.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT26.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT26.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT27.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT27.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT3.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT4.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT5.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT5.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT6.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT6.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT7.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT7.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT8.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT8.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/IT100/IT9.java" afterPath="$PROJECT_DIR$/src/oschina/IT100/IT9.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/IT28.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/IT28.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0101.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0101.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0103.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0103.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0104.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0104.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0105.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0105.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0106.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0106.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0107.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0107.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0108.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0108.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0201.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0201.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0202.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0202.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0203.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0203.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0204.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0204.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0205.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0205.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0206.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0206.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/cc150/cc0207.java" afterPath="$PROJECT_DIR$/src/oschina/cc150/cc0207.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/java/EnumTest.java" afterPath="$PROJECT_DIR$/src/oschina/java/EnumTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/onsite/find3larger.java" afterPath="$PROJECT_DIR$/src/oschina/onsite/find3larger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oschina/onsite/permutation.java" afterPath="$PROJECT_DIR$/src/oschina/onsite/permutation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tool/util.java" afterPath="$PROJECT_DIR$/src/tool/util.java" />
-    </list>
     <ignored path="oschina.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/src/oschina/IT100/IT28.java" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -4356,21 +4244,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IT28.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IT28.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT28.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50932837">
+            <state vertical-scroll-proportion="0.0">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find3larger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/oschina/onsite/find3larger.java">
+      <file leaf-file-name="IT35.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT35.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.48576513">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -4391,10 +4279,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
-              <folding>
-                <element signature="e#1602#1603#0" expanded="true" />
-                <element signature="e#1622#1623#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -4424,9 +4309,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -4566,8 +4449,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -4856,6 +4737,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -5251,6 +5134,13 @@
       <option name="number" value="Default" />
       <updated>1432794258369</updated>
     </task>
+    <task id="LOCAL-00001" summary="Rejected commit: Default">
+      <created>1452592603557</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1452592603557</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -5259,14 +5149,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32539684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33951333" sideWeight="0.31754574" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2185501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2185501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24840085" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -5278,6 +5167,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35641316" sideWeight="0.6824542" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32576618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27014756" sideWeight="0.45263726" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -5296,7 +5186,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Rejected commit: Default" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rejected commit: Default" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5374,13 +5265,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tool/util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5676,7 +5560,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5692,17 +5578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
-          <folding>
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT9.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -5711,9 +5586,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5749,9 +5622,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT9.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT28.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50932837">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oschina/IT100/IT35.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48576513">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
