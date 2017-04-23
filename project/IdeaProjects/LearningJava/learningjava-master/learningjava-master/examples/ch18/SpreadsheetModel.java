@@ -1,7 +1,6 @@
 //file: SpreadsheetModel.java
-import java.util.StringTokenizer;
-import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
+import java.util.StringTokenizer;
 
 public class SpreadsheetModel extends AbstractTableModel {
   Expression [][] data;

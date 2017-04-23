@@ -1,7 +1,4 @@
 //file:	MoveButton.java
-import java.awt.event.*;
-import javax.swing.*;
-
 public class MoveButton	extends	JPanel {
   JButton button = new JButton("I Move");
 

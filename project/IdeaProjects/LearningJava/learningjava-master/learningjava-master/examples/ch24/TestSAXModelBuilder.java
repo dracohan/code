@@ -1,5 +1,3 @@
-import org.xml.sax.*;
-import javax.xml.parsers.*;
 import java.beans.XMLEncoder;
 
 public class TestSAXModelBuilder

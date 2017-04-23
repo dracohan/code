@@ -1,8 +1,4 @@
 //file: TextEntryBox.java
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class TextEntryBox {
 
   public static void main(String[] args) {

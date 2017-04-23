@@ -7,11 +7,6 @@
 // 02/2002, Niemeyer
 package magicbeans.sunw.demo.molecule;
 
-import java.io.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 /* A Bean to display a Chemical model */
 
 public class Molecule extends JComponent 

@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 public class ExerciseOptions {
   public static void main(String[] args) {
     JFrame frame = new JFrame("ExerciseOptions v1.0");

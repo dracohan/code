@@ -1,9 +1,4 @@
 //file: Iguana.java
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import javax.swing.*;
-
 public class Iguana extends JComponent {
   private Image image;
   private int theta;

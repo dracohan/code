@@ -1,6 +1,4 @@
 //file: DullShipTable.java
-import javax.swing.*;
-
 public class DullShipTable {
   public static void main(String[] args) {
     // create some tabular data

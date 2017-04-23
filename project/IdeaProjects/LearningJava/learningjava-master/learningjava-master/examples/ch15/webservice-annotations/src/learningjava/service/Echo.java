@@ -1,6 +1,5 @@
 package learningjava.service;
 
-import javax.jws.*;
 import javax.xml.ws.Endpoint;
 
 @WebService

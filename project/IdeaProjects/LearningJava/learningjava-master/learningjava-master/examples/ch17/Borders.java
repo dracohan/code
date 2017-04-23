@@ -1,8 +1,4 @@
 //file: Borders.java
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.border.*;
-
 public class Borders {
   public static void main(String[] args) {
     // create a JFrame to hold everything

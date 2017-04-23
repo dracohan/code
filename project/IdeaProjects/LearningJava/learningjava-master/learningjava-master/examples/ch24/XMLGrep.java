@@ -1,7 +1,5 @@
-import org.w3c.dom.*;
 import org.xml.sax.InputSource;
-import javax.xml.xpath.*;
-import javax.xml.transform.*;
+
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 

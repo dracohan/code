@@ -1,10 +1,4 @@
 //file: Post.java
-import java.net.*;
-import java.io.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class Post extends JPanel implements ActionListener {
   JTextField nameField, passwordField;
   String postURL;

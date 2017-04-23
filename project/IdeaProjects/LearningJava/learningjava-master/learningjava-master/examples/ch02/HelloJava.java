@@ -29,8 +29,7 @@ public class HelloJava
 }
 */
 
-import javax.swing.*;
-public class HelloJava 
+public class HelloJava
 {
   public static void main( String[] args ) {
     JFrame frame = new JFrame( "HelloJava" );

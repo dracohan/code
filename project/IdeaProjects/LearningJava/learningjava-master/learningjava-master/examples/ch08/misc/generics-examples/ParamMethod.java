@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class ParamMethod
 {
 	<T,U extends T> void add2(List<T> to, List<U> from) {

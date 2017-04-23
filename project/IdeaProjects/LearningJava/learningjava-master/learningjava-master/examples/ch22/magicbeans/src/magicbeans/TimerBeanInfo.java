@@ -1,7 +1,5 @@
 package magicbeans;
 
-import java.beans.*;
-
 public class TimerBeanInfo extends SimpleBeanInfo {
 
     public PropertyDescriptor[] getPropertyDescriptors() {

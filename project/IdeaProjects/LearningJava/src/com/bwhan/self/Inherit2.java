@@ -59,3 +59,12 @@ public class Inherit2 {
 
     }
 }
+
+interface A{
+	void prt();
+}
+
+interface B{
+	void prt();
+}
+

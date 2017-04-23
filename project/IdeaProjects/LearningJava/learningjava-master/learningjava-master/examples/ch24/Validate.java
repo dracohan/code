@@ -1,6 +1,4 @@
 import javax.xml.XMLConstants;
-import javax.xml.validation.*;
-import org.xml.sax.*;
 import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamSource;
 

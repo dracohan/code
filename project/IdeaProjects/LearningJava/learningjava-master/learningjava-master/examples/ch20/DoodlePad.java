@@ -1,9 +1,5 @@
 //file: DoodlePad.java
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-public class DoodlePad 
+public class DoodlePad
 {
   public static void main(String[] args) 
   {

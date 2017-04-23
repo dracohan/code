@@ -1,7 +1,5 @@
 //file: Consumer.java
-import java.util.Vector;
-
-public class Consumer implements Runnable 
+public class Consumer implements Runnable
 {
     Producer producer;
 

@@ -1,7 +1,5 @@
 package magicbeans;
 
-import java.beans.*;
-
 public class Multiplier implements java.io.Serializable {
 	private double a, b, c;
 	

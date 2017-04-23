@@ -1,6 +1,3 @@
-import javax.xml.parsers.*;
-import org.w3c.dom.*;
-
 public class TestDOM
 {
 	public static void main( String [] args ) throws Exception

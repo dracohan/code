@@ -6,10 +6,6 @@
 
 package magicbeans.sunw.demo.molecule;
 
-import java.io.*;
-import java.util.*;
-
-
 /** The representation of a Chemical .xyz model */
 class XYZChemModel {
     float vert[];

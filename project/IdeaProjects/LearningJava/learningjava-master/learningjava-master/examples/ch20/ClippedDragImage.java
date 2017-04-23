@@ -1,8 +1,4 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-public class ClippedDragImage extends DragImage 
+public class ClippedDragImage extends DragImage
 {
   int oldX, oldY;
 

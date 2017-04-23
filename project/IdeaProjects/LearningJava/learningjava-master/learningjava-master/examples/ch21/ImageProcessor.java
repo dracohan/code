@@ -1,10 +1,4 @@
 //file: ImageProcessor.java
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import java.awt.image.*;
-import javax.swing.*;
-
 public class ImageProcessor extends JComponent {
   private BufferedImage source, destination;
   private JComboBox options;

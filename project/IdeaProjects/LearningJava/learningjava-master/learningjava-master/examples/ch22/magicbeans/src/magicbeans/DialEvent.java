@@ -1,7 +1,5 @@
 package magicbeans;
 
-import java.awt.*;
-
 public class DialEvent extends java.util.EventObject {
 	int value;
 

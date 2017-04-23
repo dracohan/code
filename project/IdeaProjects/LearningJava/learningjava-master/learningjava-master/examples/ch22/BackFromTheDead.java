@@ -1,8 +1,4 @@
 //file: BackFromTheDead.java
-import java.awt.Component;
-import javax.swing.*; 
-import java.beans.*; 
- 
 public class BackFromTheDead extends JFrame
 { 
 	public BackFromTheDead( String name ) 

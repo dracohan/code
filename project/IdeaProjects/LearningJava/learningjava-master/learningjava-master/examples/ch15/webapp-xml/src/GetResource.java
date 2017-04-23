@@ -1,7 +1,5 @@
-import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-import java.net.*;
 
 public class GetResource extends HttpServlet 
 {

@@ -1,6 +1,5 @@
 //file: DateAtHost.java
 import java.net.Socket;
-import java.io.*;
 
 public class DateAtHost extends java.util.Date {
     static int timePort = 37;

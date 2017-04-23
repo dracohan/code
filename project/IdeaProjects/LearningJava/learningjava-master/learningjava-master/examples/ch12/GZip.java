@@ -1,7 +1,4 @@
 //file: GZip.java
-import java.io.*;
-import java.util.zip.*;
-
 public class GZip {
   public static int sChunk = 8192;
 

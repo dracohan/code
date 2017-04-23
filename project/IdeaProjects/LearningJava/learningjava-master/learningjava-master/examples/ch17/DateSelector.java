@@ -1,7 +1,3 @@
-import javax.swing.*;
-import javax.swing.event.*;
-import java.util.*;
-
 public class DateSelector {
 
   public static void main(String[] args) 

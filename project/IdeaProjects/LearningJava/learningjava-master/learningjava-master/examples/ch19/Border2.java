@@ -1,7 +1,4 @@
 //file:	Border2.java
-import java.awt.*;
-import javax.swing.*;
-
 public class Border2 extends JPanel {
 
   public Border2() {

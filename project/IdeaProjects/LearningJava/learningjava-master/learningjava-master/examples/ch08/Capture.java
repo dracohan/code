@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class Capture 
+public class Capture
 {
 
 	static <T> Set<T> listToSet( List<T> list ) { 

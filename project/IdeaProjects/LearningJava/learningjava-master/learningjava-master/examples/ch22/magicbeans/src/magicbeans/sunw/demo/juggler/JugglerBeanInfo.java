@@ -5,8 +5,6 @@
 
 package magicbeans.sunw.demo.juggler;
 
-import java.beans.*;
-
 public class JugglerBeanInfo extends SimpleBeanInfo {
 
     public java.awt.Image getIcon(int iconKind) {

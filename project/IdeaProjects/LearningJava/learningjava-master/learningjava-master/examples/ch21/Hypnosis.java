@@ -1,7 +1,5 @@
 //file: Hypnosis.java
-import java.awt.*;
 import java.awt.geom.GeneralPath;
-import javax.swing.*;
 
 public class Hypnosis extends JComponent implements Runnable {
   private int[] coordinates;

@@ -1,6 +1,4 @@
 //file: EvilEmpire.java
-import java.net.*;
-
 public class EvilEmpire {
   public static void main(String[] args) throws Exception{
     try {

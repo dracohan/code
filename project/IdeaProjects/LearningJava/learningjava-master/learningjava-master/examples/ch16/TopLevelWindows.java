@@ -1,6 +1,4 @@
 //file: TopLevelWindows.java
-import javax.swing.*;
-
 public class TopLevelWindows {
   public static void main(String[] args) {
     JFrame f = new JFrame("The Frame");

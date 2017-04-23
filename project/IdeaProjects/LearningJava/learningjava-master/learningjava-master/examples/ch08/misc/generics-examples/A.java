@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class A<E extends Date>
 {
 	E get() { return null; }

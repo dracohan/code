@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class T1 < 
+public class T1 <
 {
 	private static void print( Object o ) { System.out.println(o); }
 	private static void print( long o ) { System.out.println(o); }

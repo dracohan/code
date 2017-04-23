@@ -1,7 +1,4 @@
-import java.util.*;
-import java.util.concurrent.locks.*;
-
-public class RWLock 
+public class RWLock
 {
 
 	public static void main( String [] args )

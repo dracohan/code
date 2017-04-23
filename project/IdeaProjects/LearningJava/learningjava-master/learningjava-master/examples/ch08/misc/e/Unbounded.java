@@ -1,5 +1,4 @@
 
-import java.util.*;
 /** @author Pat Niemeyer (pat@pat.net) */
 
 public class Unbounded 

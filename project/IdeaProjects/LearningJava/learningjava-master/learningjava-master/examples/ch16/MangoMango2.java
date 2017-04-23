@@ -1,7 +1,4 @@
 //file: MangoMango2.java
-import java.awt.*;
-import javax.swing.*;
-
 public class MangoMango2 {
   public static void main(String[] args) {
     JFrame frame = new JFrame("The Frame");

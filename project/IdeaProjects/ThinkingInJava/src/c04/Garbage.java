@@ -41,7 +41,8 @@ public class Garbage {
         if(args.length == 0) {
             System.err.println("Usage: \n" +
                     "java Garbage before\n or:\n" +
-                    "java Garbage after");
+                    "java Garbage after");;
+
             return;
         }
         while(!Chair.f) {

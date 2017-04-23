@@ -153,5 +153,6 @@ public class List1 {
         iterManipulation(fill(new ArrayList()));
         testVisual(fill(new LinkedList()));
         testLinkedList();
+
     }
 } ///:~

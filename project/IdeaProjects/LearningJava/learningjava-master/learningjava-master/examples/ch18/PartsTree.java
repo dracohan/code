@@ -1,10 +1,4 @@
 //file: PartsTree.java
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.tree.*;
-
 public class PartsTree {
   public static void main(String[] args) {
     // create a hierarchy of nodes

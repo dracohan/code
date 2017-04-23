@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class GM 
+public class GM
 {
 	static void foo( List<String> ls ) { }
 	static <T> void bar( T t ) { }

@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class SC 
+public class SC
 {
 
 	public static void main( String [] args ) throws Exception

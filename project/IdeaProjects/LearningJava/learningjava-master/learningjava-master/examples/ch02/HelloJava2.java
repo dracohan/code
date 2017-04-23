@@ -1,7 +1,3 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class HelloJava2
 {
   public static void main( String[] args ) {

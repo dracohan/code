@@ -1,6 +1,4 @@
 //file: TabbedPaneFrame.java
-import javax.swing.*;
-
 public class TabbedPaneFrame {
   public static void main(String[] args) 
   {

@@ -1,5 +1,3 @@
-import java.util.*;
-
 /*
 public class C<E extends C<E>> 
 {

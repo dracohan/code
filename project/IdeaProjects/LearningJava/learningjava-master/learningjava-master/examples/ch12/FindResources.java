@@ -1,7 +1,7 @@
 //file: FindResources.java
 package mypackage;
-import java.net.URL;
 import java.io.IOException;
+import java.net.URL;
 
 public class FindResources {
   public static void main( String [] args ) throws IOException {

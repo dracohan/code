@@ -1,8 +1,4 @@
 //file: ColorPan.java
-import java.awt.*;
-import java.awt.image.*;
-import javax.swing.*;
-
 public class ColorPan extends JComponent {
   BufferedImage image;
 

@@ -14,6 +14,6 @@ public class sizeof {
         System.out.println("Float: " + Float.SIZE/8);               // 4
         System.out.println("Double: " + Double.SIZE/8);             // 8
         //System.out.println("Boolean: " + Boolean.SIZE/8);         //true/false
-	    //System.out.println("Class: " );
+	    //System.out.println("Class: ");                            //no size attribute
     }
 }

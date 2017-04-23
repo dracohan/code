@@ -1,6 +1,4 @@
 //file:	Flow.java
-import javax.swing.*;
-
 public class Flow extends JPanel {
 
   public Flow() {

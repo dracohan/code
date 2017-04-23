@@ -1,6 +1,3 @@
-import javax.swing.*;
-import java.awt.event.*;
-
 public class ShowApplet extends JApplet {
 	JTextArea text = new JTextArea();
 	int startCount;

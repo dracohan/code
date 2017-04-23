@@ -1,6 +1,3 @@
-import java.text.*;
-import javax.swing.*;
-import javax.swing.text.*;
 import java.util.Date;
 
 public class FormattedFields 

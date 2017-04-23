@@ -1,7 +1,4 @@
 //file: Load.java
-import java.io.*;
-import java.util.*;
-
 public class Load {
   public static void main(String[] args) {
     try {

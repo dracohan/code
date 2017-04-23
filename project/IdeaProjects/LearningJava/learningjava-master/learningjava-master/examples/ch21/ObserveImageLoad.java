@@ -1,7 +1,4 @@
 //file: ObserveImageLoad.java
-import java.awt.*;
-import java.awt.image.*;
-
 public class ObserveImageLoad {
 
   public static void main( String [] args) 

@@ -1,7 +1,4 @@
-import java.util.*;
-import java.util.regex.*;
-
-public class Template 
+public class Template
 {
 	Properties values = new Properties();
 	Pattern templateComment = 

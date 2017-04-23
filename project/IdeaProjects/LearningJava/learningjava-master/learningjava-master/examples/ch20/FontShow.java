@@ -1,10 +1,5 @@
 //file: FontShow.java
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.font.*;
-import javax.swing.*;
-
-public class FontShow extends JComponent 
+public class FontShow extends JComponent
 {
   private static final int PAD = 25;   // frilly line padding
   private boolean bigFont = true;

@@ -1,7 +1,4 @@
-import java.util.*;
-import java.lang.reflect.*;
-
-public class Reflect 
+public class Reflect
 {
 
 	public static void main( String [] args )throws Exception

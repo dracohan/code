@@ -1,6 +1,4 @@
 //file: MyStringIterator.java
-import java.rmi.*;
-
 public class MyStringIterator
   extends java.rmi.server.UnicastRemoteObject
   implements StringIterator {

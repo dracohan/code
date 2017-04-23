@@ -1,7 +1,5 @@
 //file: rot13InputStream.java
 package learningjava.io;
-import java.io.*;
-
 public class rot13InputStream extends FilterInputStream {
 
     public rot13InputStream ( InputStream i ) {

@@ -1,7 +1,4 @@
 //file: SplitPaneFrame.java
-import java.awt.*;
-import javax.swing.*;
-
 public class SplitPaneFrame {
   public static void main(String[] args) {
     String fileOne = "Piazza di Spagna.jpg";

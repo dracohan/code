@@ -7,3 +7,4 @@ script/*
 transfer/*
 company/*
 project/*
+*.o

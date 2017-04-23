@@ -1,6 +1,4 @@
 //file: DynamicHookup.java
-import javax.swing.*;
-import java.awt.event.*;
 import java.beans.EventHandler;
 
 public class DynamicHookup extends JFrame {

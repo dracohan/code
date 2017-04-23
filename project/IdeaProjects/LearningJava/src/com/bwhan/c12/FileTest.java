@@ -45,7 +45,5 @@ public class FileTest {
 		System.out.println("==========part 3=========");
 
 
-
-
 	}
 }

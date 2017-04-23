@@ -1,9 +1,5 @@
 package magicbeans;
 
-import javax.swing.*;
-import java.beans.beancontext.*;
-import java.util.*;
-
 public class ShowContext extends JTabbedPane implements BeanContextProxy {
 	BeanContext context;
 	BeanContextServices services;

@@ -1,7 +1,4 @@
 //file: HeartBeat.java
-import java.net.*;
-import java.io.*;
-
 public class HeartBeat extends java.applet.Applet {
     String myHost;
     int myPort;

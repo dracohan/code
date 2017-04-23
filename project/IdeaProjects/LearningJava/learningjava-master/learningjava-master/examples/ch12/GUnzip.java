@@ -1,7 +1,4 @@
 //file: GUnzip.java
-import java.io.*;
-import java.util.zip.*;
-
 public class GUnzip {
   public static int sChunk = 8192;
   public static void main(String[] args) {

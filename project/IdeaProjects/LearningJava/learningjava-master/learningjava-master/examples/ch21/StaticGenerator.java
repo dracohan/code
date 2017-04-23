@@ -1,8 +1,5 @@
 //file: StaticGenerator.java
-import java.awt.*;
-import java.awt.image.*;
 import java.util.Random;
-import javax.swing.*;
 
 public class StaticGenerator extends JComponent implements Runnable {
   byte[] data;

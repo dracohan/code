@@ -1,8 +1,3 @@
-import java.net.*;
-import java.io.*;
-import java.util.regex.*;
-import java.util.concurrent.*;
-
 public class ExecutorHttpd2
 {
   ExecutorService executor = Executors.newFixedThreadPool(3);

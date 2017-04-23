@@ -1,8 +1,4 @@
 //file: QuickChange.java
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class QuickChange extends JFrame {
 
   public QuickChange() {

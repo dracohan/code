@@ -1,6 +1,3 @@
-import java.util.*;
-
-
 public class Bounds1 < T extends java.io.Serializable & Runnable >
 {
 	Runnable r;

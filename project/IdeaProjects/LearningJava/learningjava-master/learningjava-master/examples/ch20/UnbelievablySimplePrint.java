@@ -1,8 +1,5 @@
 //file: UnbelievablySimplePrint.java
-import java.awt.*;
-import java.awt.print.*;
-
-public class UnbelievablySimplePrint implements Printable 
+public class UnbelievablySimplePrint implements Printable
 {
   private static Font sFont = new Font("Serif", Font.PLAIN , 64);
 

@@ -1,7 +1,4 @@
-import javax.xml.transform.*;
-import javax.xml.transform.stream.*;
-
-public class XSLTransform 
+public class XSLTransform
 {
 	public static void main( String [] args ) throws Exception
 	{

@@ -14,6 +14,7 @@ public class HelloWorldActivity extends Activity {
 	    Log.d("data", "onCreate execute");
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

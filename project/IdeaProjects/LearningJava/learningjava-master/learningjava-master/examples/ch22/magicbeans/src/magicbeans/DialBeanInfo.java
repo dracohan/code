@@ -1,7 +1,5 @@
 package magicbeans;
 
-import java.beans.*;
-
 public class DialBeanInfo extends SimpleBeanInfo {
 
     public PropertyDescriptor[] getPropertyDescriptors() {

@@ -46,7 +46,7 @@ class Derived extends Base{
         this(ff, bb);
         System.out.println("Derived constructor(Bar bb, Foo ff) without arg.");
     }
-    static {
+    {
         System.out.println("Just a block in class Derived");
     }
     private Foo m_foo;

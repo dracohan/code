@@ -1,6 +1,4 @@
 //file: Desktop.java
-import javax.swing.*;
-
 public class Desktop {
   public static void main(String[] args) {
     JFrame frame = new JFrame("Desktop");

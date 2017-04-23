@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Swap
 {
 	List<?> swap( List<?> list ) {

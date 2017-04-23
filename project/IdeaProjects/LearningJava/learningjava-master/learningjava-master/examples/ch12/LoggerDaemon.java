@@ -1,6 +1,4 @@
 //file: LoggerDaemon.java
-import java.io.*;
-
 class LoggerDaemon extends Thread {
     PipedReader in = new PipedReader(  );
 

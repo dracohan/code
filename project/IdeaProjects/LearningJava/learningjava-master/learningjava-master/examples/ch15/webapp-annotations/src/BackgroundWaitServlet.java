@@ -1,8 +1,6 @@
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
-import java.io.*;
-import java.util.concurrent.*;
 
 @WebServlet(
     urlPatterns={"/bgwait"},

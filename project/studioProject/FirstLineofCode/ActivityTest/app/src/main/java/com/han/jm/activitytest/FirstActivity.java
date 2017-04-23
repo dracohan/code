@@ -16,11 +16,16 @@ import android.widget.Toast;
  * Created by JM on 2016/1/8.
  */
 public class FirstActivity extends Activity {
+	public static String TAG = "FirstActivity";
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.first_layout);
+
+		//check the instance of FirstActivity
+		Log.d(TAG, this.toString());
+		Log.d(TAG, "Task id is " + getTaskId());
 
 		//Toast
 		Button button1 = (Button) findViewById(R.id.button_1);
@@ -47,6 +52,7 @@ public class FirstActivity extends Activity {
 				String data = "Hello SecondActivity";
 				intent.putExtra("extra_data", data);
 				startActivity(intent);
+
 			}
 		});
 
@@ -54,10 +60,14 @@ public class FirstActivity extends Activity {
 		button13.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Log.e("FirstActivity", "Send implicit Intent");
+				Log.d("FirstActivity", "Send implicit Intent");
 				Intent intent = new Intent("com.han.jm.activitytest.ACTION_START");
-				String data = "Hello SecondActivity";
-				intent.putExtra("extra_data", data);
+				//String data = "Hello SecondActivity";
+				Bundle b = new Bundle();
+				b.putString("str_key", "sth!!!!!!!");
+				b.putInt("int_key", 123321);
+//				intent.putExtras(b);
+				intent.putExtra("data", b);
 				startActivityForResult(intent, 1);
 			}
 		});
@@ -77,8 +87,12 @@ public class FirstActivity extends Activity {
 		button15.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent("Intent.ACTION_DIAL");
-				intent.setData(Uri.parse("tel:10086"));
+				//Intent intent = new Intent("Intent.ACTION_DIAL");
+				//intent.setPackage("com.han.jm.activitytest");
+				//intent.setData(Uri.parse("tel:10086"));
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse("http://www.baidu.com"));
+
 				startActivity(intent);
 			}
 		});
@@ -104,12 +118,12 @@ public class FirstActivity extends Activity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data){
-		Log.e("FirstActivity", "Entering onActivityResult");
+		Log.d("FirstActivity", "Entering onActivityResult");
 		switch (requestCode){
 			case 1:
 				if(resultCode == RESULT_OK){
 					String returnedData = data.getStringExtra("data_return");
-					Log.e("FirstActivity", returnedData);
+					Log.d("FirstActivity", returnedData);
 				}
 				break;
 			default:

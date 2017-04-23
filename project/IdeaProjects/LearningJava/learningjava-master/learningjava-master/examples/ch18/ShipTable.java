@@ -1,7 +1,4 @@
 //file: ShipTable.java
-import javax.swing.*;
-import javax.swing.table.*;
-
 public class ShipTable {
   public static class ShipTableModel extends AbstractTableModel {
     private String[] headings = new String[] {

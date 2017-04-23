@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class Raw 
+public class Raw
 {
 
 	@SuppressWarnings(value={"unchecked"})

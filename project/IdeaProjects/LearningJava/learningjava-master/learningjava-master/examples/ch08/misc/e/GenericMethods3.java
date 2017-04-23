@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class GenericMethods3 
+public class GenericMethods3
 {
 	/*
 	no...

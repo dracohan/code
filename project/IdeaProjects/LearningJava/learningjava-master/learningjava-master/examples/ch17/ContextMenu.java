@@ -1,7 +1,3 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class ContextMenu implements ActionListener
 {
   JTextArea textArea = new JTextArea();

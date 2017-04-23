@@ -16,14 +16,8 @@ package magicbeans.sunw.demo.juggler;
 // 12/2004 Changed package to avoid conflict with original Sun JavaBeans
 //   examples which don't play well in NetBeans 4.x.
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.*;
-import java.net.URL;
-import java.beans.*;
 import java.beans.DesignMode.*;
-import javax.swing.*;
-import java.io.*;
+import java.net.URL;
 
 public class Juggler extends JComponent
 implements Runnable, PropertyChangeListener, DesignMode {

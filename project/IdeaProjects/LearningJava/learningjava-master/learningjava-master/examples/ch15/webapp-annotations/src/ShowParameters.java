@@ -1,7 +1,5 @@
-import java.io.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import java.util.*;
 
 /*
     <servlet>

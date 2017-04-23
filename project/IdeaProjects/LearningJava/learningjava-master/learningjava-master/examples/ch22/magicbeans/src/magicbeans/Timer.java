@@ -1,7 +1,5 @@
 package magicbeans;
 
-import java.util.*;
-
 public class Timer implements Runnable
 {
 	long delay = 200;

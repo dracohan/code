@@ -1,9 +1,4 @@
 //file: NoisyButton.java
-import java.applet.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class NoisyButton {
 
   public static void main(String[] args) throws Exception {

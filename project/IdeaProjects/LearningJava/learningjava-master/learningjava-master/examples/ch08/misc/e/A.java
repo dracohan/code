@@ -1,5 +1,3 @@
-import java.util.*;
-
 class DateList extends ArrayList<Date> { }
 
 class A {

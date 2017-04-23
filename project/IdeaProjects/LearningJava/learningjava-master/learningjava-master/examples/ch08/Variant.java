@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class Variant 
+public class Variant
 {
 	Object get() { return null; }
 }

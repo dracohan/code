@@ -1,7 +1,4 @@
 //file:	GridBag3.java
-import java.awt.*;
-import javax.swing.*;
-
 public class GridBag3 extends JPanel {
   GridBagConstraints constraints = new GridBagConstraints();
 

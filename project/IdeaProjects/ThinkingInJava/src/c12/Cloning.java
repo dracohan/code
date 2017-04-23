@@ -48,6 +48,8 @@ public class Cloning {
         System.out.println("v: " + v);
 
         Integer x = new Integer(1);
+	    //Normally, a class can't be cloned, since it didn't implement clone() from object
+	    //it's protected there, need to set to public and redeclare
         //x.clone();
     }
 } ///:

@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Type1<T>
 {
 	static T t;

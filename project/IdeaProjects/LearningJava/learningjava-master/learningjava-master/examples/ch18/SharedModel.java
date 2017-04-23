@@ -1,7 +1,4 @@
 //file: SharedModel.java
-import java.awt.*;
-import javax.swing.*;
-
 public class SharedModel {
 
   public static void main(String[] args) {

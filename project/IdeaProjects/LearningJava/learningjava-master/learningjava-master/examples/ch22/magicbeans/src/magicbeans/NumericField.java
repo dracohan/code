@@ -1,8 +1,5 @@
 package magicbeans;
 
-import javax.swing.*;
-import java.awt.event.*;
-
 public class NumericField extends JTextField {
 	static int defaultFieldSize = 6;
 	private double value;

@@ -20,7 +20,7 @@ public class ArraySize {
         };
 // Compile error: variable a not initialized:
 //!System.out.println("a.length=" + a.length);
-        System.out.println("b.length = " + b.length);
+	    System.out.println("b.length = " + b.length);
 // The handles inside the array are
 // automatically initialized to null:
         for(int i = 0; i < b.length; i++)

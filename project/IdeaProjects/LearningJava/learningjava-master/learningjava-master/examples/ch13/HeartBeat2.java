@@ -1,7 +1,4 @@
 //file: HeartBeat.java
-import java.net.*;
-import java.io.*;
-
 public class HeartBeat2 {
     private String myHost;
     private int myPort;

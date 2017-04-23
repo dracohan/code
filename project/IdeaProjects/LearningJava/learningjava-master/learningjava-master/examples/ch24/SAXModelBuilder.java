@@ -1,8 +1,3 @@
-import org.xml.sax.*;
-import org.xml.sax.helpers.*;
-import java.util.*;
-import java.lang.reflect.*;
-
 public class SAXModelBuilder extends DefaultHandler
 {
     Stack<Object> stack = new Stack<>();

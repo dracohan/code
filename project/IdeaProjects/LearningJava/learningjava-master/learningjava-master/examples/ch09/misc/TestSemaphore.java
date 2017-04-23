@@ -1,7 +1,4 @@
-import java.util.*;
-import java.util.concurrent.*;
-
-public class TestSemaphore 
+public class TestSemaphore
 {
 	int concurrentUsers = 5;
 	boolean fair = true;

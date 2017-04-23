@@ -1,7 +1,5 @@
 //file: ScrollPaneFrame.java
-import javax.swing.*;
-
-public class ScrollPaneFrame 
+public class ScrollPaneFrame
 {
   public static void main(String[] args) {
     String filename = "Piazza di Spagna.jpg";

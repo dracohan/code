@@ -5,8 +5,11 @@ package c08;
  */
 //: Collection1.java
 // Things you can do with all Collections
-import java.util.*;
-import static tool.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+
 public class Collection1 {
 // Fill with 'size' elements, start
     // counting at 'start':

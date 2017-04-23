@@ -1,5 +1,3 @@
-import java.util.*;
-
 interface Foo {
 	public int X=42;
 	void foo();

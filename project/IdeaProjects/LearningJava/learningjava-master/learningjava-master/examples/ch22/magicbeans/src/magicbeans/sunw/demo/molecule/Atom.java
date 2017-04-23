@@ -5,9 +5,6 @@
 
 package magicbeans.sunw.demo.molecule;
 
-import java.awt.*;
-import java.awt.image.*;
-
 class Atom {
     private static java.awt.Component panel;
     private static byte[] data;

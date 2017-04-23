@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class AR 
+public class AR
 {
 	public static void main( String [] args )
 	{

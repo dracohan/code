@@ -1,4 +1,3 @@
-import java.util.*;
 public class T1<T extends Date>
 {
 	

@@ -1,8 +1,4 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-public class DragImage extends JComponent 
+public class DragImage extends JComponent
 	implements MouseMotionListener 
 {
   static int imageWidth=60, imageHeight=60;

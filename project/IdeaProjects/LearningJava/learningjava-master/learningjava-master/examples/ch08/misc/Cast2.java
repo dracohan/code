@@ -1,5 +1,3 @@
-import java.util.*;
-
 interface A { static int FOO=1; String getFoo(); }
 interface B { static int FOO=2; Date getDoo(); }
 

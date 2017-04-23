@@ -21,9 +21,11 @@ public class Unsupported {
 			b.add(Integer.toString(i));
 		boolean b1 = b instanceof List;
 		System.out.println(b1);
-		ListIterator it = b.listIterator(0);
+		ListIterator it = b.listIterator();
 		it.add("xyz");
 		it.add(new Integer(10));
+		System.out.println("test");
+		printGenericIterator(it);
 
 		String[] s = {
 				"one", "two", "three", "four", "five",

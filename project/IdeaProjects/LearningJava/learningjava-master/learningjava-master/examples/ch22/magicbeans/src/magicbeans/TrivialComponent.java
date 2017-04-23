@@ -1,8 +1,5 @@
 package magicbeans;
 
-import javax.swing.*;
-import java.awt.Graphics;
-
 public class TrivialComponent extends JComponent {
 
 	public void paintComponent( Graphics g ) { 

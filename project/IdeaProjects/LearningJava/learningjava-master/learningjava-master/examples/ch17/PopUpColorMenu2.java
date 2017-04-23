@@ -1,8 +1,4 @@
 //file: PopUpColorMenu.java
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class PopUpColorMenu2 implements ActionListener
 {
   public PopUpColorMenu2() {

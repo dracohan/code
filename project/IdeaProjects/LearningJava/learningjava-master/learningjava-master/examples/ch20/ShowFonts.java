@@ -1,6 +1,4 @@
 //file: ShowFonts.java
-import java.awt.*;
-
 public class ShowFonts {
   public static void main(String[] args) {
     Font[] fonts;

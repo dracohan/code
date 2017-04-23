@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class FoodRecipe
 {
 	public String name;

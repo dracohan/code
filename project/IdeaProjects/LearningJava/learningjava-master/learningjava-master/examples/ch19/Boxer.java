@@ -1,7 +1,4 @@
 //file:	Boxer.java
-import java.awt.*;
-import javax.swing.*;
-
 public class Boxer extends JPanel {
   public static	void main(String[] args) {
     JFrame frame = new JFrame("Boxer");

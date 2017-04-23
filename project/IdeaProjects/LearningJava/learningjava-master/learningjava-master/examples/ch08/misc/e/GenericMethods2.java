@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class GenericMethods2 
+public class GenericMethods2
 {
 	/*
 	static <T> List<T> arrayToList( Object [] oa ) {

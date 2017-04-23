@@ -1,5 +1,4 @@
 import magicbeans.sunw.demo.juggler.Juggler;
-import java.io.*;
 
 /*
 	Not implemented by bean deserialization.

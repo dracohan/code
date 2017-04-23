@@ -1,10 +1,4 @@
 //file: CanisMinor.java
-import java.awt.*;
-import java.awt.event.*;
-import java.net.*;
-import javax.swing.*;
-import javax.swing.event.*;
-
 public class CanisMinor extends JFrame {
   protected JEditorPane mEditorPane;
   protected JTextField mURLField;

@@ -1,5 +1,5 @@
-import java.util.*;
 import Q;
+
 import static Q.*;
 
 public class StaticImport 

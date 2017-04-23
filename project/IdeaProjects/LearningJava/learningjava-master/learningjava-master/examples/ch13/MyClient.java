@@ -1,7 +1,4 @@
 //file: MyClient.java
-import java.rmi.*;
-import java.util.*;
-
 public class MyClient {
 
     public static void main(String [] args)

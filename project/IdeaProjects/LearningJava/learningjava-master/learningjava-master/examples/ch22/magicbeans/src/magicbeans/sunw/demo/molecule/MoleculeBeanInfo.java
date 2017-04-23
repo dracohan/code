@@ -6,8 +6,6 @@ package magicbeans.sunw.demo.molecule;
  * the molecule name, with a custome proeprty editor.
  */
 
-import java.beans.*;
-
 public class MoleculeBeanInfo extends SimpleBeanInfo {
 
     public PropertyDescriptor[] getPropertyDescriptors() {

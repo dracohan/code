@@ -1,7 +1,5 @@
-import java.io.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
-import java.util.Enumeration;
 
 public class ShoppingCart extends HttpServlet {
     String [] items = new String [] {

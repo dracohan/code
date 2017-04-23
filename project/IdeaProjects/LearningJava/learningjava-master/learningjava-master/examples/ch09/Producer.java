@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Producer implements Runnable
 {
     static final int MAXQUEUE = 5;

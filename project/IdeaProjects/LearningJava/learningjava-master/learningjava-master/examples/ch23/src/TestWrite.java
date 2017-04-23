@@ -1,8 +1,4 @@
-import java.awt.event.*;
-import javax.swing.*;
-import java.io.*;
-
-public class TestWrite extends JApplet 
+public class TestWrite extends JApplet
 	implements ActionListener
 {
 	JTextArea ta = new JTextArea();

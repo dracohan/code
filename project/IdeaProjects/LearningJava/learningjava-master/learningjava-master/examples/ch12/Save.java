@@ -1,7 +1,4 @@
 //file: Save.java
-import java.io.*;
-import java.util.*;
-
 public class Save {
   public static void main(String[] args) {
     Hashtable h = new Hashtable(  );

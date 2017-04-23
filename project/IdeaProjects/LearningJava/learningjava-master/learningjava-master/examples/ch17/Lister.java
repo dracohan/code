@@ -1,8 +1,4 @@
 //file: Lister.java
-import java.awt.*; 
-import java.awt.event.*;
-import javax.swing.*;
-
 public class Lister {
   public static void main(String[] args) {
     JFrame frame = new JFrame("Lister v1.0");

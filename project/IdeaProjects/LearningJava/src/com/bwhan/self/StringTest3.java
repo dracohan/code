@@ -9,8 +9,6 @@ package self;
  * @result:
  */
 
-import static tool.util.*;
-
 public class StringTest3 {
 	public static void main(String[] args) {
 		String s = "ab";
@@ -24,6 +22,11 @@ public class StringTest3 {
 		char c = 'a';
 		StringBuilder sb = new StringBuilder(c);
 		System.out.println(sb.capacity());
+
+		//test the multiline string
+		String ms = "ab" +
+				"cd" +
+				"ef";
 
 	}
 }

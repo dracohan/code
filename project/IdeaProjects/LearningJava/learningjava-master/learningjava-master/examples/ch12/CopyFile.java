@@ -1,5 +1,3 @@
-import java.nio.channels.*;
-import java.nio.file.*;
 import static java.nio.file.StandardOpenOption.*;
 
 public class CopyFile

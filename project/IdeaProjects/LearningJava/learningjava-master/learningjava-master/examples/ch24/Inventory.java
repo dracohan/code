@@ -1,6 +1,3 @@
-import javax.xml.bind.annotation.*;
-import java.util.*;
-
 @XmlRootElement
 public class Inventory {
 

@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class DF 
+public class DF
 {
 	private int x=5;
 	public int y =6;

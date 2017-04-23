@@ -1,7 +1,4 @@
 //file:	Grid.java
-import java.awt.*;
-import javax.swing.*;
-
 public class Grid extends JPanel {
 
   public Grid() {

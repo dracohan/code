@@ -1,8 +1,6 @@
 //package bsh.util.util;
 /** @author Pat Niemeyer (pat@pat.net) */
-import java.util.*;
-
-public class Arrays 
+public class Arrays
 {
 	public static void main( String [] args )
 	{

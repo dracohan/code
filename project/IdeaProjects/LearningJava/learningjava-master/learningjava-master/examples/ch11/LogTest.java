@@ -1,6 +1,4 @@
 
-import java.util.logging.*;
-
 public class LogTest {
     public static void main(String argv[]) {
         Logger logger = Logger.getLogger("com.oreilly.LogTest");

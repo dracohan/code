@@ -1,4 +1,3 @@
-import java.io.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.HttpMethodConstraint;
 import javax.servlet.annotation.ServletSecurity;

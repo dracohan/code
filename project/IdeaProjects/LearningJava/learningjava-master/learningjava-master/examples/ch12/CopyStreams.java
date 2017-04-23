@@ -1,5 +1,3 @@
-import java.io.*;
-
 public class CopyStreams {
 	public static void main( String [] args ) throws Exception
 	{

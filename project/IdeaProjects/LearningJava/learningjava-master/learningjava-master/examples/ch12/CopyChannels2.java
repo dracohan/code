@@ -1,7 +1,3 @@
-import java.io.*;
-import java.nio.*;
-import java.nio.channels.*;
-
 public class CopyChannels2 {
 	public static void main( String [] args ) throws Exception
 	{

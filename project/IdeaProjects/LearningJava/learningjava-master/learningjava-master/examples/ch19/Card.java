@@ -1,8 +1,4 @@
 //file:	Card.java
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class Card extends JPanel {
   CardLayout cards = new CardLayout();
 

@@ -1,5 +1,4 @@
 //file: ShowParameters.java
-import java.io.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.util.Enumeration;

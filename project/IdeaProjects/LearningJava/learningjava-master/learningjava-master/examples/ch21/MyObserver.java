@@ -1,7 +1,4 @@
 //file: MyObserver.java
-import java.awt.*;
-import java.awt.image.*;
-
 class MyObserver implements ImageObserver {
 
 	public boolean imageUpdate( 

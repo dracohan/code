@@ -1,8 +1,4 @@
 //file:	Calculator.java
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class Calculator	extends	JPanel implements ActionListener {
   GridBagConstraints gbc = new GridBagConstraints();
   JTextField theDisplay	= new JTextField();

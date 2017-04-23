@@ -1,5 +1,4 @@
 import magicbeans.sunw.demo.juggler.Juggler;
-import java.io.*;
 
 public class SerializeJuggler {
 	public static void main( String [] args ) throws Exception

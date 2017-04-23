@@ -13,20 +13,28 @@ class Tag {
     }
 }
 class Card {
-    Tag t1 = new Tag(1); // Before constructor
-    {
-        System.out.println("initilize statement");
-    }
-    Card() {
-// Indicate we're in the constructor:
-        System.out.println("Card()");
-        t3 = new Tag(33); // Re-initialize t3
-    }
+
+
+
+	static {
+		System.out.println("static initilize statement");
+	}
+	Tag t3 = new Tag(3); // At end
+	Card() {
+		// Indicate we're in the constructor:
+		System.out.println("Card()");
+		t3 = new Tag(33); // Re-initialize t3
+	}
+	{
+		System.out.println("initilize statement");
+	}
+	Tag t1 = new Tag(1); // Before constructor
+
     static Tag t2 = new Tag(2); // After constructor
     void f() {
         System.out.println("f()");
     }
-    Tag t3 = new Tag(3); // At end
+
 
 }
 public class OrderOfInitialization {

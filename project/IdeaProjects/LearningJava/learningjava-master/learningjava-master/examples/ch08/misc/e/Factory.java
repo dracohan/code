@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class Factory 
+public class Factory
 {
 	public static <T> T make()
 	{

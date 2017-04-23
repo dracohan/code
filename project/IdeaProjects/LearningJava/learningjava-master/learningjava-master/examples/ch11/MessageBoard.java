@@ -1,6 +1,4 @@
 //file: MessageBoard.java
-import java.util.*;
-
 public class MessageBoard extends Observable {
     private String message;
 

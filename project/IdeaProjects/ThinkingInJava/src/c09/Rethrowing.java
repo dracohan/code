@@ -18,8 +18,8 @@ public class Rethrowing {
             System.out.println(
                     "Inside g(), e.printStackTrace()");
             e.printStackTrace();
-            throw e; // 17
-// throw e.fillInStackTrace(); // 18
+            //throw e; // 17
+ throw e.fillInStackTrace(); // 18
         }
     }
     public static void

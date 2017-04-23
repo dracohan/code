@@ -3,8 +3,7 @@ package c07;
 import org.omg.CORBA.Any;
 
 /**
- * HeapSort,因为堆排序需要交换元素，从小到大排序，请用最大堆，从大到小排序，请用最小堆
- * @param an array of Comparable items.
+ * HeapSort,锟斤拷为锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷锟斤拷元锟截ｏ拷锟斤拷小锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟窖ｏ拷锟接达拷小锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷小锟斤拷
  * O(NLogN)
  **/
 public class HeapSort {

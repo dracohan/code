@@ -1,6 +1,5 @@
 import javax.servlet.*;
 import javax.servlet.annotation.*;
-import java.util.concurrent.*;
 
 @WebListener
 public class BackgroundWaitService implements ServletContextListener

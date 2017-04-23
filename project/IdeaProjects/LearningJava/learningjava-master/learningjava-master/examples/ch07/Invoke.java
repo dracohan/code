@@ -1,6 +1,4 @@
 //file: Invoke.java
-import java.lang.reflect.*;
-
 class Invoke {
   public static void main( String [] args ) {
     try {

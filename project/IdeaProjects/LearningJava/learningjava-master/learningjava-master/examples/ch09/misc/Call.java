@@ -1,7 +1,4 @@
-import java.util.*;
-import java.util.concurrent.*;
-
-public class Call 
+public class Call
 {
 
 	public static void main( String [] args )

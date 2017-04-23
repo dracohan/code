@@ -1,7 +1,4 @@
 //file: Pulse.java
-import java.net.*;
-import java.io.*;
-
 public class Pulse {
     public static void main( String [] argv ) throws IOException {
         DatagramSocket s =

@@ -1,6 +1,3 @@
-import javax.swing.*;
-import javax.swing.text.*;
-
 public class DocFilter
 {
 	public static void main( String[] args ) throws Exception 

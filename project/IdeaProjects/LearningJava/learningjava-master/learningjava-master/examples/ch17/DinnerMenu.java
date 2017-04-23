@@ -1,9 +1,5 @@
 //file: DinnerMenu.java
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-public class DinnerMenu 
+public class DinnerMenu
 {
   public static void main(String[] args) {
     JFrame frame = new JFrame("Dinner Menu");

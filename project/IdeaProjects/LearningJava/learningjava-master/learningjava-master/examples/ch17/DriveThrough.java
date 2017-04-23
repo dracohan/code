@@ -1,10 +1,5 @@
 //file: DriveThrough.java
-import java.awt.*;
-import java.awt.event.*;
-
-import javax.swing.*;
-
-public class DriveThrough 
+public class DriveThrough
 {
   public static void main(String[] args) {
     JFrame frame = new JFrame("DriveThrough v1.0");

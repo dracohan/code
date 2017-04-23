@@ -1,5 +1,3 @@
-import java.util.*;
-
 /*
 	When subclassing in Java the best we 
 */

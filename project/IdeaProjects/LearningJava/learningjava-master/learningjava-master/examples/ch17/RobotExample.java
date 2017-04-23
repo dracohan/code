@@ -1,6 +1,3 @@
-import java.awt.*;
-import java.awt.event.*;
-
 public class RobotExample
 {
     public static void main( String [] args ) throws Exception 

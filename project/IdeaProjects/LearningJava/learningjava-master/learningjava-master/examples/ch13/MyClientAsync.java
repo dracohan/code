@@ -1,7 +1,4 @@
-import java.rmi.*;
-import java.util.*;
-
-public class MyClientAsync 
+public class MyClientAsync
 	extends java.rmi.server.UnicastRemoteObject implements WorkListener 
 {
 

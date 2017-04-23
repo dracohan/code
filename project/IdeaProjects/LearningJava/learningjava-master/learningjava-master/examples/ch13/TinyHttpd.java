@@ -1,8 +1,3 @@
-import java.net.*;
-import java.io.*;
-import java.util.regex.*;
-import java.util.concurrent.*;
-
 public class TinyHttpd {
   public static void main( String argv[] ) throws IOException {
     Executor executor = Executors.newFixedThreadPool(3);

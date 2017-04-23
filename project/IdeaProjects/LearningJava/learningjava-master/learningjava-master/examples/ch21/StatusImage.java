@@ -1,7 +1,4 @@
 //file: StatusImage.java
-import java.awt.*;
-import javax.swing.*;
-
 public class StatusImage extends JComponent
 {
   boolean loaded = false;

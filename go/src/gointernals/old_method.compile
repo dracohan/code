@@ -1,0 +1,221 @@
+"".test t=1 size=169 args=0x10 locals=0x58
+	0x0000 00000 (old_method.go:5)	TEXT	"".test(SB), $88-16
+	0x0000 00000 (old_method.go:5)	MOVQ	(TLS), CX
+	0x0009 00009 (old_method.go:5)	CMPQ	SP, 16(CX)
+	0x000d 00013 (old_method.go:5)	JLS	159
+	0x0013 00019 (old_method.go:5)	SUBQ	$88, SP
+	0x0017 00023 (old_method.go:5)	MOVQ	BP, 80(SP)
+	0x001c 00028 (old_method.go:5)	LEAQ	80(SP), BP
+	0x0021 00033 (old_method.go:5)	FUNCDATA	$0, gclocals·524d71b8d4b4126db12e7a6de3370d94(SB)
+	0x0021 00033 (old_method.go:5)	FUNCDATA	$1, gclocals·adc9a4e9eec70025782f0016681b6ae2(SB)
+	0x0021 00033 (old_method.go:6)	MOVQ	"".s+96(FP), AX
+	0x0026 00038 (old_method.go:6)	MOVQ	AX, ""..autotmp_1+48(SP)
+	0x002b 00043 (old_method.go:6)	MOVQ	"".s+104(FP), AX
+	0x0030 00048 (old_method.go:6)	MOVQ	AX, ""..autotmp_1+56(SP)
+	0x0035 00053 (old_method.go:6)	MOVQ	$0, ""..autotmp_0+64(SP)
+	0x003e 00062 (old_method.go:6)	MOVQ	$0, ""..autotmp_0+72(SP)
+	0x0047 00071 (old_method.go:6)	LEAQ	type.string(SB), AX
+	0x004e 00078 (old_method.go:6)	MOVQ	AX, (SP)
+	0x0052 00082 (old_method.go:6)	LEAQ	""..autotmp_1+48(SP), AX
+	0x0057 00087 (old_method.go:6)	MOVQ	AX, 8(SP)
+	0x005c 00092 (old_method.go:6)	PCDATA	$0, $1
+	0x005c 00092 (old_method.go:6)	CALL	runtime.convT2E(SB)
+	0x0061 00097 (old_method.go:6)	MOVQ	24(SP), AX
+	0x0066 00102 (old_method.go:6)	MOVQ	16(SP), CX
+	0x006b 00107 (old_method.go:6)	MOVQ	CX, ""..autotmp_0+64(SP)
+	0x0070 00112 (old_method.go:6)	MOVQ	AX, ""..autotmp_0+72(SP)
+	0x0075 00117 (old_method.go:6)	LEAQ	""..autotmp_0+64(SP), AX
+	0x007a 00122 (old_method.go:6)	MOVQ	AX, (SP)
+	0x007e 00126 (old_method.go:6)	MOVQ	$1, 8(SP)
+	0x0087 00135 (old_method.go:6)	MOVQ	$1, 16(SP)
+	0x0090 00144 (old_method.go:6)	PCDATA	$0, $1
+	0x0090 00144 (old_method.go:6)	CALL	fmt.Println(SB)
+	0x0095 00149 (old_method.go:7)	MOVQ	80(SP), BP
+	0x009a 00154 (old_method.go:7)	ADDQ	$88, SP
+	0x009e 00158 (old_method.go:7)	RET
+	0x009f 00159 (old_method.go:7)	NOP
+	0x009f 00159 (old_method.go:5)	PCDATA	$0, $-1
+	0x009f 00159 (old_method.go:5)	CALL	runtime.morestack_noctxt(SB)
+	0x00a4 00164 (old_method.go:5)	JMP	0
+	0x0000 64 48 8b 0c 25 00 00 00 00 48 3b 61 10 0f 86 8c  dH..%....H;a....
+	0x0010 00 00 00 48 83 ec 58 48 89 6c 24 50 48 8d 6c 24  ...H..XH.l$PH.l$
+	0x0020 50 48 8b 44 24 60 48 89 44 24 30 48 8b 44 24 68  PH.D$`H.D$0H.D$h
+	0x0030 48 89 44 24 38 48 c7 44 24 40 00 00 00 00 48 c7  H.D$8H.D$@....H.
+	0x0040 44 24 48 00 00 00 00 48 8d 05 00 00 00 00 48 89  D$H....H......H.
+	0x0050 04 24 48 8d 44 24 30 48 89 44 24 08 e8 00 00 00  .$H.D$0H.D$.....
+	0x0060 00 48 8b 44 24 18 48 8b 4c 24 10 48 89 4c 24 40  .H.D$.H.L$.H.L$@
+	0x0070 48 89 44 24 48 48 8d 44 24 40 48 89 04 24 48 c7  H.D$HH.D$@H..$H.
+	0x0080 44 24 08 01 00 00 00 48 c7 44 24 10 01 00 00 00  D$.....H.D$.....
+	0x0090 e8 00 00 00 00 48 8b 6c 24 50 48 83 c4 58 c3 e8  .....H.l$PH..X..
+	0x00a0 00 00 00 00 e9 57 ff ff ff                       .....W...
+	rel 5+4 t=16 TLS+0
+	rel 74+4 t=15 type.string+0
+	rel 93+4 t=8 runtime.convT2E+0
+	rel 145+4 t=8 fmt.Println+0
+	rel 160+4 t=8 runtime.morestack_noctxt+0
+"".main t=1 size=71 args=0x0 locals=0x18
+	0x0000 00000 (old_method.go:8)	TEXT	"".main(SB), $24-0
+	0x0000 00000 (old_method.go:8)	MOVQ	(TLS), CX
+	0x0009 00009 (old_method.go:8)	CMPQ	SP, 16(CX)
+	0x000d 00013 (old_method.go:8)	JLS	64
+	0x000f 00015 (old_method.go:8)	SUBQ	$24, SP
+	0x0013 00019 (old_method.go:8)	MOVQ	BP, 16(SP)
+	0x0018 00024 (old_method.go:8)	LEAQ	16(SP), BP
+	0x001d 00029 (old_method.go:8)	FUNCDATA	$0, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x001d 00029 (old_method.go:8)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x001d 00029 (old_method.go:9)	LEAQ	go.string."a"(SB), AX
+	0x0024 00036 (old_method.go:9)	MOVQ	AX, (SP)
+	0x0028 00040 (old_method.go:9)	MOVQ	$1, 8(SP)
+	0x0031 00049 (old_method.go:9)	PCDATA	$0, $0
+	0x0031 00049 (old_method.go:9)	CALL	"".test(SB)
+	0x0036 00054 (old_method.go:10)	MOVQ	16(SP), BP
+	0x003b 00059 (old_method.go:10)	ADDQ	$24, SP
+	0x003f 00063 (old_method.go:10)	RET
+	0x0040 00064 (old_method.go:10)	NOP
+	0x0040 00064 (old_method.go:8)	PCDATA	$0, $-1
+	0x0040 00064 (old_method.go:8)	CALL	runtime.morestack_noctxt(SB)
+	0x0045 00069 (old_method.go:8)	JMP	0
+	0x0000 64 48 8b 0c 25 00 00 00 00 48 3b 61 10 76 31 48  dH..%....H;a.v1H
+	0x0010 83 ec 18 48 89 6c 24 10 48 8d 6c 24 10 48 8d 05  ...H.l$.H.l$.H..
+	0x0020 00 00 00 00 48 89 04 24 48 c7 44 24 08 01 00 00  ....H..$H.D$....
+	0x0030 00 e8 00 00 00 00 48 8b 6c 24 10 48 83 c4 18 c3  ......H.l$.H....
+	0x0040 e8 00 00 00 00 eb b9                             .......
+	rel 5+4 t=16 TLS+0
+	rel 32+4 t=15 go.string."a"+0
+	rel 50+4 t=8 "".test+0
+	rel 65+4 t=8 runtime.morestack_noctxt+0
+"".init t=1 size=63 args=0x0 locals=0x0
+	0x0000 00000 (old_method.go:11)	TEXT	"".init(SB), $0-0
+	0x0000 00000 (old_method.go:11)	MOVQ	(TLS), CX
+	0x0009 00009 (old_method.go:11)	CMPQ	SP, 16(CX)
+	0x000d 00013 (old_method.go:11)	JLS	56
+	0x000f 00015 (old_method.go:11)	FUNCDATA	$0, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x000f 00015 (old_method.go:11)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x000f 00015 (old_method.go:11)	MOVBLZX	"".initdone·(SB), AX
+	0x0016 00022 (old_method.go:11)	CMPB	AL, $1
+	0x0018 00024 (old_method.go:11)	JLS	$0, 27
+	0x001a 00026 (old_method.go:11)	RET
+	0x001b 00027 (old_method.go:11)	JNE	$0, 36
+	0x001d 00029 (old_method.go:11)	PCDATA	$0, $0
+	0x001d 00029 (old_method.go:11)	CALL	runtime.throwinit(SB)
+	0x0022 00034 (old_method.go:11)	UNDEF
+	0x0024 00036 (old_method.go:11)	MOVB	$1, "".initdone·(SB)
+	0x002b 00043 (old_method.go:11)	PCDATA	$0, $0
+	0x002b 00043 (old_method.go:11)	CALL	fmt.init(SB)
+	0x0030 00048 (old_method.go:11)	MOVB	$2, "".initdone·(SB)
+	0x0037 00055 (old_method.go:11)	RET
+	0x0038 00056 (old_method.go:11)	NOP
+	0x0038 00056 (old_method.go:11)	PCDATA	$0, $-1
+	0x0038 00056 (old_method.go:11)	CALL	runtime.morestack_noctxt(SB)
+	0x003d 00061 (old_method.go:11)	JMP	0
+	0x0000 64 48 8b 0c 25 00 00 00 00 48 3b 61 10 76 29 0f  dH..%....H;a.v).
+	0x0010 b6 05 00 00 00 00 3c 01 76 01 c3 75 07 e8 00 00  ......<.v..u....
+	0x0020 00 00 0f 0b c6 05 00 00 00 00 01 e8 00 00 00 00  ................
+	0x0030 c6 05 00 00 00 00 02 c3 e8 00 00 00 00 eb c1     ...............
+	rel 5+4 t=16 TLS+0
+	rel 18+4 t=15 "".initdone·+0
+	rel 30+4 t=8 runtime.throwinit+0
+	rel 38+4 t=15 "".initdone·+-1
+	rel 44+4 t=8 fmt.init+0
+	rel 50+4 t=15 "".initdone·+-1
+	rel 57+4 t=8 runtime.morestack_noctxt+0
+gclocals·adc9a4e9eec70025782f0016681b6ae2 t=8 dupok size=10
+	0x0000 02 00 00 00 04 00 00 00 00 0d                    ..........
+gclocals·524d71b8d4b4126db12e7a6de3370d94 t=8 dupok size=10
+	0x0000 02 00 00 00 02 00 00 00 01 00                    ..........
+go.info."".test t=45 size=40
+	0x0000 02 22 22 2e 74 65 73 74 00 00 00 00 00 00 00 00  ."".test........
+	0x0010 00 00 00 00 00 00 00 00 00 01 05 73 00 01 9c 00  ...........s....
+	0x0020 00 00 00 00 00 00 00 00                          ........
+	rel 9+8 t=1 "".test+0
+	rel 17+8 t=1 "".test+169
+	rel 31+8 t=28 go.info.string+0
+go.string."a" t=8 dupok size=1
+	0x0000 61                                               a
+gclocals·33cdeccccebe80329f1fdbee7f5874cb t=8 dupok size=8
+	0x0000 01 00 00 00 00 00 00 00                          ........
+go.info."".main t=45 size=27
+	0x0000 02 22 22 2e 6d 61 69 6e 00 00 00 00 00 00 00 00  ."".main........
+	0x0010 00 00 00 00 00 00 00 00 00 01 00                 ...........
+	rel 9+8 t=1 "".main+0
+	rel 17+8 t=1 "".main+71
+go.info."".init t=45 size=27
+	0x0000 02 22 22 2e 69 6e 69 74 00 00 00 00 00 00 00 00  ."".init........
+	0x0010 00 00 00 00 00 00 00 00 00 01 00                 ...........
+	rel 9+8 t=1 "".init+0
+	rel 17+8 t=1 "".init+63
+"".initdone· t=32 size=1
+runtime.gcbits.01 t=8 dupok size=1
+	0x0000 01                                               .
+type..namedata.*interface {}. t=8 dupok size=16
+	0x0000 00 00 0d 2a 69 6e 74 65 72 66 61 63 65 20 7b 7d  ...*interface {}
+type.*interface {} t=8 dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 4f 0f 96 9d 00 08 08 36 00 00 00 00 00 00 00 00  O......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.algarray+80
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*interface {}.+0
+	rel 48+8 t=1 type.interface {}+0
+runtime.gcbits.03 t=8 dupok size=1
+	0x0000 03                                               .
+type.interface {} t=8 dupok size=80
+	0x0000 10 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0010 e7 57 a0 18 02 08 08 14 00 00 00 00 00 00 00 00  .W..............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 runtime.algarray+144
+	rel 32+8 t=1 runtime.gcbits.03+0
+	rel 40+4 t=5 type..namedata.*interface {}.+0
+	rel 44+4 t=6 type.*interface {}+0
+	rel 56+8 t=1 type.interface {}+80
+type..namedata.*[]interface {}. t=8 dupok size=18
+	0x0000 00 00 0f 2a 5b 5d 69 6e 74 65 72 66 61 63 65 20  ...*[]interface 
+	0x0010 7b 7d                                            {}
+type.*[]interface {} t=8 dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 f3 04 9a e7 00 08 08 36 00 00 00 00 00 00 00 00  .......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.algarray+80
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]interface {}.+0
+	rel 48+8 t=1 type.[]interface {}+0
+type.[]interface {} t=8 dupok size=56
+	0x0000 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 70 93 ea 2f 02 08 08 17 00 00 00 00 00 00 00 00  p../............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.algarray+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]interface {}.+0
+	rel 44+4 t=6 type.*[]interface {}+0
+	rel 48+8 t=1 type.interface {}+0
+type..namedata.*[1]interface {}. t=8 dupok size=19
+	0x0000 00 00 10 2a 5b 31 5d 69 6e 74 65 72 66 61 63 65  ...*[1]interface
+	0x0010 20 7b 7d                                          {}
+type.*[1]interface {} t=8 dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 bf 03 a8 35 00 08 08 36 00 00 00 00 00 00 00 00  ...5...6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.algarray+80
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[1]interface {}.+0
+	rel 48+8 t=1 type.[1]interface {}+0
+type.[1]interface {} t=8 dupok size=72
+	0x0000 10 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0010 50 91 5b fa 02 08 08 11 00 00 00 00 00 00 00 00  P.[.............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 01 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.algarray+144
+	rel 32+8 t=1 runtime.gcbits.03+0
+	rel 40+4 t=5 type..namedata.*[1]interface {}.+0
+	rel 44+4 t=6 type.*[1]interface {}+0
+	rel 48+8 t=1 type.interface {}+0
+	rel 56+8 t=1 type.[]interface {}+0
+type..importpath.fmt. t=8 dupok size=6
+	0x0000 00 00 03 66 6d 74                                ...fmt

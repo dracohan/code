@@ -59,7 +59,5 @@ public class referenceTest {
 		else
 			System.out.println("c is NOT type of interface i");
 
-
-
 	}
 }

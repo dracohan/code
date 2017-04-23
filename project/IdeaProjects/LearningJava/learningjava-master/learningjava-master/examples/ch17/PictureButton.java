@@ -1,7 +1,4 @@
 
-import java.awt.event.*;
-import javax.swing.*;
-
 public class PictureButton
 {
   public static void main(String[] args) 

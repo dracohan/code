@@ -1,8 +1,3 @@
-import java.awt.*;
-import javax.swing.*;
-import java.awt.image.*;
-import java.util.concurrent.*;
-
 public class Mandelbrot extends JFrame
 {
     @Override public void paint( Graphics g ) {
