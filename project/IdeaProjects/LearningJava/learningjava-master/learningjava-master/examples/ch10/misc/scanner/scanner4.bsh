@@ -1,5 +1,0 @@
-
-fin=new FileInputStream("/etc/passwd");
-s=new Scanner(fin);
-line = s.nextLine();
-print(line);

@@ -1,7 +1,0 @@
-
-# Default logging level
-.level = INFO
-
-# Output to console
-handlers = java.tool.tool.logging.ConsoleHandler
-
