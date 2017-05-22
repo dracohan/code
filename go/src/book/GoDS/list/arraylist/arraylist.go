@@ -1,13 +1,14 @@
 package arraylist
 
 import (
+	"book/GoDS/list"
+	"book/GoDS/utils"
 	"fmt"
 	"strings"
-	"study/datastruct/utils"
 )
 
 func assertListImplementation() {
-	var _ lists.List = (*List)(nil)
+	var _ list.List = (*List)(nil)
 }
 
 const (

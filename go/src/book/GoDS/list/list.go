@@ -1,8 +1,8 @@
 package list
 
 import (
-	"study/datastruct/containers"
-	"study/datastruct/utils"
+	"book/GoDS/containers"
+	"book/GoDS/utils"
 )
 
 type List interface {

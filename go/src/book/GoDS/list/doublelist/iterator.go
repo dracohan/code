@@ -4,7 +4,7 @@
 
 package doublelist
 
-import "study/datastruct/containers"
+import "book/GoDS/containers"
 
 func assertIteratorImplementation() {
 	var _ containers.ReverseIteratorWithIndex = (*Iterator)(nil)

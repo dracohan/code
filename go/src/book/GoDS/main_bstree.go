@@ -1,7 +1,7 @@
 package main
 
 import (
-	"study/datastruct/tree/bstree"
+	"book/GoDS/tree/bstree"
 )
 
 func main_bstree() {

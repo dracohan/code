@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"study/datastruct-master/stacks"
-	"study/datastruct/list/singlelist"
+	"book/GoDS-master/stacks"
+	"book/GoDS/list/singlelist"
 )
 
 func assertStackImplementation() {

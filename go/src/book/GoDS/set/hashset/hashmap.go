@@ -3,7 +3,7 @@ package hashset
 import (
 	"fmt"
 	"strings"
-	"study/datastruct/set"
+	"book/GoDS/set"
 	"sync"
 )
 

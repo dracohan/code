@@ -1,6 +1,6 @@
 package set
 
-import "study/datastruct/containers"
+import "book/GoDS/containers"
 
 type Set interface {
 	Add(elements ...interface{})

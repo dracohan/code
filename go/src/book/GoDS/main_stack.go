@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	"study/datastruct/stack/linkedliststack"
+	"book/GoDS/stack/linkedliststack"
 	"unicode"
 )
 

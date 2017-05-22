@@ -1,8 +1,8 @@
 package bstree
 
 import (
-	"study/datastruct/tree"
-	"study/datastruct/utils"
+	"book/GoDS/tree"
+	"book/GoDS/utils"
 )
 
 func assertTreeImplementation() {

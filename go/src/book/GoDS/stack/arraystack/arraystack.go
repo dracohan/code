@@ -1,14 +1,14 @@
 package arraystack
 
 import (
+	"book/GoDS/list/arraylist"
+	"book/GoDS/stack"
 	"fmt"
 	"strings"
-	"study/datastruct-master/stacks"
-	"study/datastruct/list/arraylist"
 )
 
 func assertStackImplementation() {
-	var _ stacks.Stack = (*Stack)(nil)
+	var _ stack.Stack = (*Stack)(nil)
 }
 
 type Stack struct {

@@ -2,7 +2,7 @@ package hashmap
 
 import (
 	"fmt"
-	"study/datastruct/maps"
+	"book/GoDS/maps"
 )
 
 func assertMapImplementation() {

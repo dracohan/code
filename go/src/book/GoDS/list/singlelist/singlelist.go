@@ -1,11 +1,11 @@
 package singlelist
 
 import (
+	"book/GoDS/list"
+	"book/GoDS/utils"
 	"errors"
 	"fmt"
 	"strings"
-	"study/datastruct/list"
-	"study/datastruct/utils"
 )
 
 var (
@@ -77,6 +77,7 @@ func (ll *List) Remove(idx int) {
 	if err != nil {
 		return
 	}
+
 	ll.remove(p)
 }
 
@@ -216,10 +217,8 @@ func (ll *List) getNode(idx, lower, upper int) (node *Node, err error) {
 		return nil, ErrorOutofBound
 	}
 
-	var p *Node
-	p = ll.begin.next
-	for i := 0; i < idx; i++ {
-		p = p.next
+	p := ll.begin.next
+	for i := 0; i < idx; i, p = i+1, p.next {
 	}
 
 	return p, nil

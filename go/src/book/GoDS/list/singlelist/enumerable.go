@@ -1,6 +1,6 @@
 package singlelist
 
-import "study/datastruct/containers"
+import "book/GoDS/containers"
 
 func assertEnumerableImplementation() {
 	var _ containers.EnumerableWithIndex = (*List)(nil)

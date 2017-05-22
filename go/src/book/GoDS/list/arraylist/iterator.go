@@ -1,6 +1,6 @@
 package arraylist
 
-//import "study/datastruct/containers"
+//import "book/GoDS/containers"
 
 type Iterator struct {
 	list  *List

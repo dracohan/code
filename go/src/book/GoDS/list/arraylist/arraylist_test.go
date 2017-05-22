@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"study/datastruct/utils"
+	"book/GoDS/utils"
 )
 
 func TestListAdd(t *testing.T) {

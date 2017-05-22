@@ -1,6 +1,6 @@
 package maps
 
-import "study/datastruct/containers"
+import "book/GoDS/containers"
 
 type Map interface {
 	Put(key interface{}, value interface{})

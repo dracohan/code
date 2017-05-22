@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"strings"
-	"study/datastruct/list"
-	"study/datastruct/utils"
+	"book/GoDS/list"
+	"book/GoDS/utils"
 )
 
 var (
