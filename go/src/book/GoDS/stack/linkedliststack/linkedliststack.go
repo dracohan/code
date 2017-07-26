@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"strings"
 
-	"book/GoDS-master/stacks"
 	"book/GoDS/list/singlelist"
+	"book/GoDS/stack"
 )
 
 func assertStackImplementation() {
-	var _ stacks.Stack = (*Stack)(nil)
+	var _ stack.Stack = (*Stack)(nil)
 }
 
 type Stack struct {

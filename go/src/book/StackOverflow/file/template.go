@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 )
 
@@ -31,5 +32,12 @@ func main() {
 	f.Write(str)
 	//	err := ioutil.WriteFile("test.txt", str, 0644)
 	f.Close()
+
+	as := "another string.."
+	ioutil.WriteFile("test1.txt", []byte(as), 644)
+	files, _ := ioutil.ReadDir(".")
+	for _, f := range files {
+		fmt.Println(f.Name())
+	}
 	fmt.Println("---------end----------")
 }

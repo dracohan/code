@@ -1,11 +1,11 @@
 package doublelist
 
 import (
+	"book/GoDS/list"
+	"book/GoDS/utils"
 	"errors"
 	"fmt"
 	"strings"
-	"book/GoDS/list"
-	"book/GoDS/utils"
 )
 
 var (
@@ -14,7 +14,7 @@ var (
 )
 
 func assertListImplementation() {
-	var _ lists.List = (*List)(nil)
+	var _ list.List = (*List)(nil)
 }
 
 type Node struct {
