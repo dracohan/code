@@ -26,8 +26,16 @@ type Node struct {
 	height int
 }
 
+func NewWith(comparator utils.Comparator) *AvlTree {
+	return &AvlTree{Root: nil, Comparator: comparator, size: 0}
+}
+
 func NewWithIntComparator() *AvlTree {
 	return &AvlTree{Root: nil, Comparator: utils.IntComparator, size: 0}
+}
+
+func NewWithStringComparator() *AvlTree {
+	return &AvlTree{Root: nil, Comparator: utils.StringComparator(), size: 0}
 }
 
 func (n *Node) Height() int {
