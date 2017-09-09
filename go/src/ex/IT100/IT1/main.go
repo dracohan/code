@@ -4,80 +4,66 @@ import (
 	"fmt"
 )
 
-type BSTreeNode struct {
-	value int
-	left  *BSTreeNode
-	right *BSTreeNode
+var head, last *tree
+
+type tree struct {
+	value       int
+	right, left *tree
+	prev, next  *tree
 }
 
-type BSTree struct {
-	root *BSTreeNode
-	head *BSTreeNode
-	last *BSTreeNode
-}
-
-func NewTree() *BSTree {
-	return &BSTree{}
-}
-
-func (bs *BSTree) Insert(value int) {
-	bs.root = bs.insert(bs.root, value)
-}
-
-func (bs *BSTree) insert(t *BSTreeNode, value int) *BSTreeNode {
+func insert(t *tree, value int) *tree {
 	if t == nil {
-		return &BSTreeNode{value: value}
+		return &tree{value: value}
 	}
 
 	if t.value > value {
-		t.left = bs.insert(t.left, value)
+		t.left = insert(t.left, value)
 	} else if t.value < value {
-		t.right = bs.insert(t.right, value)
+		t.right = insert(t.right, value)
 	} else {
-		print("already exist")
+		//ignore dup
 	}
 	return t
 }
 
-func (bs *BSTree) TreeToList() {
-	bs.treeToList(bs.root)
-}
-
-func (bs *BSTree) treeToList(root *BSTreeNode) {
-	if nil == root {
+func (t *tree) treeToList() {
+	if nil == t {
 		return
 	}
-	bs.treeToList(root.left)
+	t.left.treeToList()
 
-	root.left = bs.last
-	if nil == bs.last {
-		bs.head = root
+	if last == nil {
+		head = t
 	} else {
-		bs.last.right = root
+		t.prev = last
+		last.next = t
 	}
-	bs.last = root
-	bs.treeToList(root.right)
+	last = t
+
+	t.right.treeToList()
+
 }
 
-func (bs *BSTree) printList() {
-	if nil == bs.head {
+func printList(t *tree) {
+	if nil == t {
 		return
 	}
-	for bs.head != nil {
-		fmt.Println(bs.head.value)
-		bs.head = bs.head.right
+
+	for t.next != nil {
+		fmt.Println(t.value)
+		t = t.next
 	}
+	fmt.Println(t.value)
 }
 
 func main() {
-	bstree := NewTree()
-	bstree.Insert(10)
-	bstree.Insert(6)
-	bstree.Insert(14)
-	bstree.Insert(4)
-	bstree.Insert(8)
-	bstree.Insert(12)
-	bstree.Insert(16)
-	bstree.TreeToList()
-	bstree.printList()
+	ta := []int{10, 6, 14, 4, 4, 8, 12, 16}
+
+	var t *tree
+	for _, n := range ta {
+		t = insert(t, n)
+	}
+	t.treeToList()
+	printList(head)
 }
