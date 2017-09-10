@@ -1,0 +1,8 @@
+CPP = mwcc
+CPPFLAGS = -prefix MSLCarbonPrefix.h $HOME/console.lib
+OFLAGS = -c
+EXEFLAG = -o  
+OBJEXT = o
+LIBLINK = -l
+.cpp.exe :
+	$(CPP) $(CPPFLAGS) $< $(EXEFLAG)$@
