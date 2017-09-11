@@ -16,13 +16,12 @@ func insert(t *tree, value int) *tree {
 	if t == nil {
 		return &tree{value: value}
 	}
-
 	if t.value > value {
 		t.left = insert(t.left, value)
 	} else if t.value < value {
 		t.right = insert(t.right, value)
 	} else {
-		//ignore dup
+		//ignore duplicate
 	}
 	return t
 }
@@ -49,7 +48,6 @@ func printList(t *tree) {
 	if nil == t {
 		return
 	}
-
 	for t.next != nil {
 		fmt.Println(t.value)
 		t = t.next

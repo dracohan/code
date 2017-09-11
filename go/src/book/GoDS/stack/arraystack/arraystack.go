@@ -55,13 +55,11 @@ func (stack *Stack) Values() []interface{} {
 }
 
 func (stack *Stack) String() string {
-	str := "ArrayStack\n"
 	values := []string{}
 	for _, value := range stack.list.Values() {
 		values = append(values, fmt.Sprintf("%v", value))
 	}
-	str += strings.Join(values, ", ")
-	return str
+	return strings.Join(values, ", ")
 }
 
 func (stack *Stack) withinRange(index int) bool {

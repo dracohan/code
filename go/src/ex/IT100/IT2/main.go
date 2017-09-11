@@ -1,17 +1,13 @@
 package main
 
 import (
-	"book/GoDS/stack/arraystack"
+	stack "book/GoDS/stack/arraystack"
 	"fmt"
 )
 
 type MinStack struct {
-	stacks *arraystack.Stack
-	mins   *arraystack.Stack
-}
-
-func New() *MinStack {
-	return &MinStack{stacks: arraystack.New(), mins: arraystack.New()}
+	stacks *stack.Stack
+	mins   *stack.Stack
 }
 
 func (ms *MinStack) Push(value int) {
@@ -19,22 +15,22 @@ func (ms *MinStack) Push(value int) {
 
 	if ms.mins.Empty() {
 		ms.mins.Push(value)
+	} else {
+		x, ok := ms.mins.Peek()
+		if !ok {
+			return
+		}
+
+		if value <= x.(int) {
+			ms.mins.Push(value)
+		}
 	}
 
-	x, ok := ms.mins.Peek()
-	if !ok {
-		return
-	}
-
-	if value <= x.(int) {
-		ms.mins.Push(value)
-	}
 }
 
 func (ms *MinStack) Pop() {
-	ms.stacks.Pop()
-
 	x := ms.Top()
+	ms.stacks.Pop()
 
 	v, ok := ms.mins.Peek()
 	if !ok {
@@ -63,15 +59,14 @@ func (ms *MinStack) GetMin() int {
 }
 
 func main() {
-	s := New()
-	s.Push(6)
-	s.Push(7)
-	s.Push(5)
-	s.Push(9)
-	s.Push(3)
+	a := []int{6, 7, 5, 9, 3, 3, 4}
+	s := &MinStack{stacks: stack.New(), mins: stack.New()}
+	for _, i := range a {
+		s.Push(i)
+	}
 	fmt.Println(s.GetMin())
-	s.Pop()
-	s.Pop()
-	s.Pop()
+	for i := 0; i < 4; i++ {
+		s.Pop()
+	}
 	fmt.Println(s.GetMin())
 }
