@@ -4,7 +4,7 @@
 
 package arraystack
 
-import "book/GoDS/containers"
+import "book/GoDS/0_containers"
 
 func assertIteratorImplementation() {
 	var _ containers.ReverseIteratorWithIndex = (*Iterator)(nil)

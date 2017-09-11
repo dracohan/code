@@ -2,8 +2,8 @@ package treeset
 
 import (
 	"book/GoDS/set"
-	"book/GoDS/tree/avltree"
-	"book/GoDS/utils"
+	"book/GoDS/4_tree/avltree"
+	"book/GoDS/1_utils"
 	"fmt"
 	"strings"
 )

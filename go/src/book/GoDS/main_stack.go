@@ -1,16 +1,16 @@
 package main
 
 import (
+	"book/GoDS/3_stack/linkedliststack"
 	"bufio"
 	"fmt"
 	"os"
 	"strconv"
 	"strings"
-	"book/GoDS/stack/linkedliststack"
 	"unicode"
 )
 
-func main_stack() {
+func main() {
 	text := bufio.NewScanner(os.Stdin)
 
 	for text.Scan() {

@@ -1,6 +1,6 @@
 package set
 
-import "book/GoDS/containers"
+import "book/GoDS/0_containers"
 
 type Set interface {
 	Add(elements ...interface{})

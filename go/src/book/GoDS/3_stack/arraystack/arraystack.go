@@ -1,8 +1,8 @@
 package arraystack
 
 import (
-	"book/GoDS/list/arraylist"
-	"book/GoDS/stack"
+	"book/GoDS/2_list/arraylist"
+	"book/GoDS/3_stack"
 	"fmt"
 	"strings"
 )

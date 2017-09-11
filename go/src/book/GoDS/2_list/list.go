@@ -1,8 +1,8 @@
 package list
 
 import (
-	"book/GoDS/containers"
-	"book/GoDS/utils"
+	"book/GoDS/0_containers"
+	"book/GoDS/1_utils"
 )
 
 type List interface {

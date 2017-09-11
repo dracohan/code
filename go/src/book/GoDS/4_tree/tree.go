@@ -1,6 +1,6 @@
 package tree
 
-import "book/GoDS/containers"
+import "book/GoDS/0_containers"
 
 type Tree interface {
 	containers.Container

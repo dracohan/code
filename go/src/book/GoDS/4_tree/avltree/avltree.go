@@ -1,8 +1,8 @@
 package avltree
 
 import (
-	"book/GoDS/tree"
-	"book/GoDS/utils"
+	"book/GoDS/4_tree"
+	"book/GoDS/1_utils"
 	"errors"
 	"fmt"
 )

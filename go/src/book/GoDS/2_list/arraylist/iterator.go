@@ -1,6 +1,6 @@
 package arraylist
 
-//import "book/GoDS/containers"
+//import "book/GoDS/0_containers"
 
 type Iterator struct {
 	list  *List

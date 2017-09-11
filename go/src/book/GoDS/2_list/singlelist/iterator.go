@@ -1,6 +1,6 @@
 package singlelist
 
-import "book/GoDS/containers"
+import "book/GoDS/0_containers"
 
 func assertIteratorImplementation() {
 	var _ containers.IteratorWithIndex = (*Iterator)(nil)

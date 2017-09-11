@@ -1,8 +1,8 @@
 package arraylist
 
 import (
-	"book/GoDS/list"
-	"book/GoDS/utils"
+	"book/GoDS/2_list"
+	"book/GoDS/1_utils"
 	"fmt"
 	"strings"
 )

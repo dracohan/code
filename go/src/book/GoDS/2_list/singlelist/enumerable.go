@@ -1,6 +1,6 @@
 package singlelist
 
-import "book/GoDS/containers"
+import "book/GoDS/0_containers"
 
 func assertEnumerableImplementation() {
 	var _ containers.EnumerableWithIndex = (*List)(nil)

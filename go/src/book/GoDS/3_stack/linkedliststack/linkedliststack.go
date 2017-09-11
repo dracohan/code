@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"book/GoDS/list/singlelist"
-	"book/GoDS/stack"
+	"book/GoDS/2_list/singlelist"
+	"book/GoDS/3_stack"
 )
 
 func assertStackImplementation() {

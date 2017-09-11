@@ -1,6 +1,6 @@
 package arraylist
 
-//import "book/GoDS/containers"
+//import "book/GoDS/0_containers"
 
 // Each calls the given function once for each element, passing that element's index and value.
 func (list *List) Each(f func(index int, value interface{})) {

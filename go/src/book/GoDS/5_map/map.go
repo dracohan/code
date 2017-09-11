@@ -1,6 +1,6 @@
 package maps
 
-import "book/GoDS/containers"
+import "book/GoDS/0_containers"
 
 type Map interface {
 	Put(key interface{}, value interface{})

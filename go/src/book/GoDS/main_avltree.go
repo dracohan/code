@@ -1,11 +1,11 @@
 package main
 
 import (
-	"book/GoDS/tree/avltree"
+	"book/GoDS/4_tree/avltree"
 	"fmt"
 )
 
-func main() {
+func main_avltree() {
 	avlt := avltree.NewWithIntComparator()
 	avlt.Insert(4)
 	avlt.Insert(3)

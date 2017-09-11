@@ -1,7 +1,7 @@
 package main
 
 import (
-	"book/GoDS/stack/arraystack"
+	"book/GoDS/3_stack/arraystack"
 	"fmt"
 )
 

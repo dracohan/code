@@ -1,7 +1,7 @@
 package stack
 
 import (
-	"book/GoDS/containers"
+	"book/GoDS/0_containers"
 )
 
 type Stack interface {
