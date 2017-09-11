@@ -35,7 +35,7 @@ func NewWithIntComparator() *AvlTree {
 }
 
 func NewWithStringComparator() *AvlTree {
-	return &AvlTree{Root: nil, Comparator: utils.StringComparator(), size: 0}
+	return &AvlTree{Root: nil, Comparator: utils.StringComparator, size: 0}
 }
 
 func (n *Node) Height() int {
