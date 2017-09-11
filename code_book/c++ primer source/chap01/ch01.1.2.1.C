@@ -1,5 +1,6 @@
-#include <iostream.h>
-// #include <iostream>
+//#include <iostream.h>
+#include <iostream>
+using namespace std;
 
 /**
  **
