@@ -54,7 +54,7 @@ func shellsort(a []int) {
 
 //把数组拆分成小的块，然后再合并
 func mergesort(a []int) {
-	var res []int
+	res := make([]int, len(a))
 	mergesorta(a, res, 0, len(a)-1)
 }
 
@@ -70,32 +70,30 @@ func mergesorta(a []int, res []int, l int, r int) {
 func merge(a []int, res []int, leftPos int, rightPos int, rightEnd int) {
 	leftEnd := rightPos - 1
 	tmpPos := leftPos
-	numElements := rightEnd - leftPos + 1
+	num := rightEnd - leftPos + 1
 
-	for leftPos <= leftEnd && rightPos <= rightEnd {
+	for ; leftPos <= leftEnd && rightPos <= rightEnd; tmpPos++ {
 		if a[leftPos] < a[rightPos] {
 			res[tmpPos] = a[leftPos]
+			leftPos++
 		} else {
 			res[tmpPos] = a[rightPos]
+			rightPos++
 		}
-		tmpPos++
-		leftPos++
-	}
-	for leftPos <= leftEnd {
-		res[tmpPos] = a[leftPos]
-		tmpPos++
-		leftPos++
-	}
-	for rightPos <= rightEnd {
-		res[tmpPos] = a[rightPos]
-		tmpPos++
-		rightPos++
-	}
-	for i := 0; i < numElements; i++ {
-		a[rightEnd] = res[rightEnd]
-		rightEnd--
 	}
 
+	for ; leftPos <= leftEnd; tmpPos, leftPos = tmpPos+1, leftPos+1 {
+		res[tmpPos] = a[leftPos]
+	}
+
+	for ; rightPos <= rightEnd; tmpPos, rightPos = tmpPos+1, rightPos+1 {
+		res[tmpPos] = a[rightPos]
+	}
+
+	//只拷贝rightEnd结尾的num个元素
+	for i := 0; i < num; i, rightEnd = i+1, rightEnd-1 {
+		a[rightEnd] = res[rightEnd]
+	}
 }
 
 func main() {
