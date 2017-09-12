@@ -1,8 +1,8 @@
 package singlelist
 
 import (
-	"book/GoDS/2_list"
 	"book/GoDS/1_utils"
+	"book/GoDS/2_list"
 	"errors"
 	"fmt"
 	"strings"
