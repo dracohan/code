@@ -23,7 +23,7 @@ func (l *list) Size() int {
 	return l.size
 }
 
-func (l *list) Reverse() {
+func (l *list) reverse() {
 	var pre, cur, np *node
 
 }
