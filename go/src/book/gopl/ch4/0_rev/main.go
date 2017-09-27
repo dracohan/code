@@ -13,10 +13,5 @@ func rev(a []int) {
 func main() {
 	s := [...]int{1, 2, 3, 4, 5, 6, 7}
 	rev(s[:])
-	for _, r := range s {
-		fmt.Printf("%d ", r)
-	}
-	i := 1
-	i++
-	fmt.Println(i)
+	fmt.Println(s)
 }

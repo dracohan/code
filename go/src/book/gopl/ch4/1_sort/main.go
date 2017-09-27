@@ -21,5 +21,6 @@ func main() {
 		ages = append(ages, age)
 	}
 	sort.Ints(ages)
+	fmt.Println(person)
 	fmt.Println(ages)
 }
