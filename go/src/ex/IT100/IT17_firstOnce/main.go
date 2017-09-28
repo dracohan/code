@@ -1,9 +1,9 @@
 package main
 
 import (
-	"bufio"
+	//	"bufio"
 	"fmt"
-	"os"
+	//	"os"
 )
 
 var set map[rune]int
@@ -23,14 +23,15 @@ func findChar(s string) rune {
 }
 
 func main() {
-	text := bufio.NewScanner(os.Stdin)
-	for text.Scan() {
-		line := text.Text()
-		r := findChar(line)
-		if r != ' ' {
-			fmt.Println("The first char is: ", string(r))
-		} else {
-			fmt.Println("Not exist")
-		}
+	//	text := bufio.NewScanner(os.Stdin)
+	//	for text.Scan() {
+	//		line := text.Text()
+	line := "asdertrtdsaf"
+	r := findChar(line)
+	if r != ' ' {
+		fmt.Println("The first char is: ", string(r))
+	} else {
+		fmt.Println("Not exist")
 	}
+	//	}
 }
