@@ -19,9 +19,9 @@ var root *node
 func add(pidx, idx int) {
 	if pidx == 0 {
 		if root == nil {
-			root = &node{nil, 0, 0}
+			root = &node{nil, 0, 1}
 		}
-		nodes[idx] = &node{root, idx, 1}
+		nodes[idx] = &node{root, idx, 2}
 		return
 	}
 
@@ -35,7 +35,6 @@ func add(pidx, idx int) {
 
 var num int
 var nodes map[int]*node
-var pidx, idx int
 
 func main() {
 	text := bufio.NewScanner(os.Stdin)
@@ -51,12 +50,8 @@ func main() {
 			}
 		} else {
 			rec := strings.Split(line, " ")
-			if pidx, ok = strconv.Atoi(rec[0]); ok != nil {
-				fmt.Println("wrong input")
-			}
-			if idx, ok = strconv.Atoi(rec[1]); ok != nil {
-				fmt.Println("wrong input")
-			}
+			pidx, _ := strconv.Atoi(rec[0])
+			idx, _ := strconv.Atoi(rec[1])
 			add(pidx, idx)
 		}
 	}
