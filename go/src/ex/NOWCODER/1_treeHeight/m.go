@@ -40,12 +40,12 @@ func main() {
 	for text.Scan() {
 		line := text.Text()
 		if first {
-			num = strconv.Atoi(line)
+			num, _ = strconv.Atoi(line)
 			first = false
 		} else {
 			r := strings.Split(line, " ")
-			pi := strconv.Atoi(r[0])
-			in := strconv.Atoi(r[1])
+			pi, _ := strconv.Atoi(r[0])
+			in, _ := strconv.Atoi(r[1])
 			add(pi, in)
 		}
 	}
