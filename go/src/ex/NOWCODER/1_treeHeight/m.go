@@ -16,27 +16,26 @@ type node struct {
 
 var root *node
 
-func add(pi, in int) {
-	if pi == 0 {
+func add(pidx, idx int) {
+	if pidx == 0 {
 		if root == nil {
 			root = &node{nil, 0, 0}
 		}
-		node := &node{root, in, 1}
-		nodes[in] = node
+		nodes[idx] = &node{root, idx, 1}
 		return
 	}
 
-	if pn, ok := nodes[pi]; ok {
-		node := &node{pn, in, pn.height + 1}
-		nodes[in] = node
+	if pn, ok := nodes[pidx]; ok {
+		node := &node{pn, idx, pn.height + 1}
+		nodes[idx] = node
 	} else {
 		fmt.Println("parent not found")
 	}
 }
 
-var ar []string
 var num int
 var nodes map[int]*node
+var pidx, idx int
 
 func main() {
 	text := bufio.NewScanner(os.Stdin)
@@ -44,22 +43,28 @@ func main() {
 	for text.Scan() {
 		line := text.Text()
 		if first {
-			num, _ = strconv.Atoi(line)
-			nodes = make(map[int]*node, num)
-			first = false
+			if num, ok := strconv.Atoi(line); ok == nil {
+				nodes = make(map[int]*node, num)
+				first = false
+			} else {
+				fmt.Println("wrong input")
+			}
 		} else {
-			r := strings.Split(line, " ")
-			pi, _ := strconv.Atoi(r[0])
-			in, _ := strconv.Atoi(r[1])
-			add(pi, in)
+			rec := strings.Split(line, " ")
+			if pidx, ok = strconv.Atoi(rec[0]); ok != nil {
+				fmt.Println("wrong input")
+			}
+			if idx, ok = strconv.Atoi(rec[1]); ok != nil {
+				fmt.Println("wrong input")
+			}
+			add(pidx, idx)
 		}
 	}
 
 	var max int
 	for _, n := range nodes {
-		height := n.height
-		if height > max {
-			max = height
+		if n.height > max {
+			max = n.height
 		}
 	}
 	fmt.Println(max)
