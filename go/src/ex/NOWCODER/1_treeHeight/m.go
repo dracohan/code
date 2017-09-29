@@ -14,10 +14,14 @@ type node struct {
 	height int
 }
 
+var root *node
+
 func add(pi, in int) {
-	if in == 0 {
-		root := &node{nil, 0, 0}
-		node := &node{root, 0, 1}
+	if pi == 0 {
+		if root == nil {
+			root = &node{nil, 0, 0}
+		}
+		node := &node{root, in, 1}
 		nodes[in] = node
 		return
 	}
@@ -41,6 +45,7 @@ func main() {
 		line := text.Text()
 		if first {
 			num, _ = strconv.Atoi(line)
+			nodes = make(map[int]*node, num)
 			first = false
 		} else {
 			r := strings.Split(line, " ")
@@ -50,4 +55,12 @@ func main() {
 		}
 	}
 
+	var max int
+	for _, n := range nodes {
+		height := n.height
+		if height > max {
+			max = height
+		}
+	}
+	fmt.Println(max)
 }
