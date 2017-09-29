@@ -15,9 +15,13 @@ func (s *stack) push(i int) {
 }
 
 func (s *stack) pop() int {
-	tmp := s.array[s.count-1]
-	s.count--
-	return tmp
+	if s.count > 0 {
+		tmp := s.array[s.count-1]
+		s.count--
+		return tmp
+	} else {
+		return nil
+	}
 }
 
 func (s *stack) display() {
