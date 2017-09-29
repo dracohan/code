@@ -118,29 +118,43 @@ func (ll *List) withinRange(index int) bool {
 	return index >= 0 && index < ll.Size()
 }
 
-func (ll *List) Reverse(m int) *Node {
-	preNode := ll.begin     //previous node
-	curNode := preNode.Next //current node
-	var np *Node            //next node
+func (ll *List) Reverse(gap int) {
+	l := ll.Size()
+	m := 0
+	n := gap
+	for n+gap < l {
+		ll.ReverseMN(m, n)
+		m = m + gap
+		n = n + gap
+	}
+}
 
-	//store the head
-	pHead := curNode
+func (ll *List) ReverseMN(m int, n int) {
+	start := ll.begin
+	end := ll.begin
 
-	//Reverse before position m
-	for i := 0; i < m; i++ {
-		np = curNode.Next
-		curNode.Next = preNode
-		preNode = curNode
-		curNode = np
-		if i == m-1 {
-			pHead.Next = np
-		}
+	for i := 0; i < m-1; i++ {
+		start = start.Next
 	}
 
-	//preNode is the new head node
-	newHead := preNode
+	for j := 0; j < n; j++ {
+		end = end.Next
+	}
 
-	return newHead
+	preNode := start        //previous node
+	curNode := preNode.Next //current node
+	nexNode := curNode.Next //next node
+
+	//Reverse before position m
+	for i := 0; i < m-n-1; i++ {
+		curNode.Next = preNode
+		nexNode.Next = curNode
+		preNode = curNode
+		curNode = nexNode
+		nexNode = nexNode.Next
+	}
+
+	start.Next = nexNode
 }
 
 func main() {
@@ -152,6 +166,10 @@ func main() {
 	fmt.Println("Please input the reverse position: ")
 	text.Scan()
 	n, _ := strconv.Atoi(text.Text())
+	if m < n {
+		fmt.Println("Fatal error: select position not exist")
+		return
+	}
 
 	//Build the list
 	l := New()
@@ -164,14 +182,9 @@ func main() {
 	fmt.Println(l.String())
 
 	//Perform the reverse
-	nHead := l.Reverse(n)
+	l.Reverse(n)
 
 	//Show the list after reverse
 	fmt.Println("Afterward list is: ")
-	var node *Node
-	for node = nHead; node.Next != l.end; node = node.Next {
-		fmt.Printf("%d->", node.Data)
-	}
-	fmt.Printf("%d\n", node.Data)
 
 }
