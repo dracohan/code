@@ -119,42 +119,74 @@ func (ll *List) withinRange(index int) bool {
 }
 
 func (ll *List) Reverse(gap int) {
-	l := ll.Size()
-	m := 0
-	n := gap
-	for n+gap < l {
-		ll.ReverseMN(m, n)
-		m = m + gap
-		n = n + gap
-	}
-}
-
-func (ll *List) ReverseMN(m int, n int) {
-	start := ll.begin
-	end := ll.begin
-
-	for i := 0; i < m-1; i++ {
-		start = start.Next
+	var start, end *Node
+	if last == nil {
+		//首次循环起始节点为首节点
+		start = ll.begin.Next
+	} else {
+		//后续循环起始节点为上次结束的nNode
+		start = next
 	}
 
-	for j := 0; j < n; j++ {
+	//找到本次循环的末尾节点
+	end = start
+	for i := 0; i < gap-1 && end != ll.end; i++ {
 		end = end.Next
 	}
 
-	preNode := start        //previous node
-	curNode := preNode.Next //current node
-	nexNode := curNode.Next //next node
-
-	//Reverse before position m
-	for i := 0; i < m-n-1; i++ {
-		curNode.Next = preNode
-		nexNode.Next = curNode
-		preNode = curNode
-		curNode = nexNode
-		nexNode = nexNode.Next
+	if end != ll.end {
+		//如果还有大于gap个元素，继续翻转start到end部分
+		ll.ReverseGap(start, end)
+	} else {
+		//否则链接剩余节点后结束
+		last.Next = start
+		return
 	}
 
-	start.Next = nexNode
+	//继续后续gap翻转
+	ll.Reverse(gap)
+}
+
+//上次遍历的首节点
+var last *Node
+
+//本次遍历的首节点
+var next *Node
+
+func (ll *List) ReverseGap(start, end *Node) {
+	if last == nil {
+		//首次遍历，end即为新的头节点
+		ll.begin.Next = end
+	} else {
+		//后续遍历，end为上次遍历最后节点的Next节点
+		last.Next = end
+	}
+
+	if start.Next == end {
+		//gap为2
+		pNode := start
+		cNode := start.Next
+		next = cNode.Next
+		cNode.Next = pNode
+		last = start
+	} else {
+		//gap大于2
+		pNode := start
+		cNode := start.Next
+		nNode := start.Next.Next
+
+		for cNode != end {
+			rNode := nNode.Next
+			cNode.Next = pNode
+			nNode.Next = cNode
+			pNode = cNode
+			cNode = nNode
+			nNode = rNode
+		}
+		last = start
+		next = nNode
+	}
+
 }
 
 func main() {
@@ -162,18 +194,18 @@ func main() {
 	text := bufio.NewScanner(os.Stdin)
 	fmt.Println("Please input the list length: ")
 	text.Scan()
-	m, _ := strconv.Atoi(text.Text())
+	n, _ := strconv.Atoi(text.Text())
 	fmt.Println("Please input the reverse position: ")
 	text.Scan()
-	n, _ := strconv.Atoi(text.Text())
-	if m < n {
-		fmt.Println("Fatal error: select position not exist")
+	gap, _ := strconv.Atoi(text.Text())
+	if gap <= 1 {
+		fmt.Println("Please input gap larger than 1")
 		return
 	}
 
 	//Build the list
 	l := New()
-	for i := 1; i < m+1; i++ {
+	for i := 1; i < n+1; i++ {
 		l.Add(i)
 	}
 
@@ -182,9 +214,10 @@ func main() {
 	fmt.Println(l.String())
 
 	//Perform the reverse
-	l.Reverse(n)
+	l.Reverse(gap)
 
 	//Show the list after reverse
 	fmt.Println("Afterward list is: ")
+	fmt.Println(l.String())
 
 }
