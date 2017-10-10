@@ -42,11 +42,11 @@ func reverseN(head *node, num int) *node {
 			curr = next
 			count++
 		} else {
-			curr = prev.next
+			curr = prev.next //前一个元素
 			prev.next = nil
 			for count > 0 {
 				next = curr.next
-				curr.next = prev
+				curr.next = prev //矫正
 				prev = curr
 				curr = next
 				count--
@@ -55,11 +55,11 @@ func reverseN(head *node, num int) *node {
 		}
 	}
 	if next != nil {
-		head.next = reverseN(next, num)
+		head.next = reverseN(next, num) //当前head的下一个指向下一次递归的新head
 	} else {
 		head.next = nil
 	}
-	return prev
+	return prev //返回每一段的新head
 }
 
 func main() {
