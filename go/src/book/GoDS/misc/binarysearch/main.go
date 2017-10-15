@@ -13,12 +13,9 @@ func binarySearch(n int, v []int) int {
 
 		if v[mid] < n {
 			low = mid + 1
-			fmt.Println("<")
 		} else if v[mid] > n {
 			high = mid - 1
-			fmt.Println(">")
 		} else {
-			fmt.Println("=")
 			return mid
 		}
 	}
@@ -27,6 +24,6 @@ func binarySearch(n int, v []int) int {
 }
 
 func main() {
-	v := []int{22, 33, 44, 55, 66, 77, 88, 99}
+	v := []int{22, 33, 44, 55, 66, 77, 89, 99}
 	fmt.Println("index is:", binarySearch(88, v))
 }
