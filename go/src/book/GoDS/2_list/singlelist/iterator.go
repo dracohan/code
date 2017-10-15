@@ -24,12 +24,12 @@ func (iterator *Iterator) Next() bool {
 		iterator.node = nil
 		return false
 	}
-	iterator.node = iterator.node.Next
+	iterator.node = iterator.node.next
 	return true
 }
 
 func (iterator *Iterator) Value() interface{} {
-	return iterator.node.Data
+	return iterator.node.data
 }
 
 func (iterator *Iterator) Index() int {

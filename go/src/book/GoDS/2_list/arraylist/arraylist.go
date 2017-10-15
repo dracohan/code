@@ -1,8 +1,8 @@
 package arraylist
 
 import (
-	"book/GoDS/2_list"
 	"book/GoDS/1_utils"
+	"book/GoDS/2_list"
 	"fmt"
 	"strings"
 )
@@ -51,18 +51,32 @@ func (l *List) Values() []interface{} {
 
 // List
 //	Get(index int) (interface{}, bool)
-//	Remove(index int)
 //	Add(values ...interface{}) bool
+//	Remove(index int)
 //	Contains(values ...interface{}) bool
+//	Insert(index int, values ...interface{})
 //	Sort(comparator utils.Comparator)
 //	Swap(index1, index2 int)
-//	Insert(index int, values ...interface{})
 
 func (l *List) Get(index int) (interface{}, bool) {
 	if !l.withinRange(index) {
 		return nil, false
 	}
 	return l.elements[index], true
+}
+
+func (l *List) Set(index int, value interface{}) {
+	if l.withinRange(index) {
+		l.elements[index] = value
+	}
+}
+
+func (l *List) Add(values ...interface{}) {
+	l.growBy(len(values))
+	for _, value := range values {
+		l.elements[l.size] = value
+		l.size++
+	}
 }
 
 func (l *List) Remove(index int) {
@@ -75,14 +89,6 @@ func (l *List) Remove(index int) {
 	l.size--
 
 	l.shrink()
-}
-
-func (l *List) Add(values ...interface{}) {
-	l.growBy(len(values))
-	for _, value := range values {
-		l.elements[l.size] = value
-		l.size++
-	}
 }
 
 func (l *List) Contains(values ...interface{}) bool {
@@ -99,19 +105,6 @@ func (l *List) Contains(values ...interface{}) bool {
 		}
 	}
 	return true
-}
-
-func (l *List) Sort(comparator utils.Comparator) {
-	if len(l.elements) < 2 {
-		return
-	}
-	utils.Sort(l.elements[:l.size], comparator)
-}
-
-func (l *List) Swap(i, j int) {
-	if l.withinRange(i) && l.withinRange(j) {
-		l.elements[i], l.elements[j] = l.elements[j], l.elements[i]
-	}
 }
 
 func (l *List) Insert(index int, values ...interface{}) {
@@ -137,7 +130,25 @@ func (l *List) Insert(index int, values ...interface{}) {
 	}
 }
 
-// widget functions
+func (l *List) Sort(comparator utils.Comparator) {
+	if len(l.elements) < 2 {
+		return
+	}
+	utils.Sort(l.elements[:l.size], comparator)
+}
+
+func (l *List) Swap(i, j int) {
+	if l.withinRange(i) && l.withinRange(j) {
+		l.elements[i], l.elements[j] = l.elements[j], l.elements[i]
+	}
+}
+
+// Other Fucntions
+// resize(c int)
+// growBy(n int)
+// withinRange(index int) bool
+// shrink()
+// String() string
 func (l *List) resize(c int) {
 	newElements := make([]interface{}, c, c)
 	copy(newElements, l.elements)
@@ -167,7 +178,6 @@ func (l *List) shrink() {
 	}
 }
 
-// support func
 func (l *List) String() string {
 	str := "ArrayList\n"
 	values := []string{}

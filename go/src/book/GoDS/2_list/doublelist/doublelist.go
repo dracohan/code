@@ -1,8 +1,8 @@
 package doublelist
 
 import (
-	"book/GoDS/2_list"
 	"book/GoDS/1_utils"
+	"book/GoDS/2_list"
 	"errors"
 	"fmt"
 	"strings"
@@ -17,20 +17,20 @@ func assertListImplementation() {
 	var _ list.List = (*List)(nil)
 }
 
+type List struct {
+	begin *Node
+	end   *Node
+	size  int
+}
+
 type Node struct {
 	data interface{}
 	prev *Node
 	next *Node
 }
 
-type List struct {
-	size  int
-	begin *Node
-	end   *Node
-}
-
 func New() *List {
-	ll := &List{0, nil, nil}
+	ll := &List{}
 	return ll.init()
 }
 
@@ -43,6 +43,10 @@ func (ll *List) init() *List {
 }
 
 //Container
+// Empty() bool
+// Size() int
+// Clear()
+// Values() []interface{}
 func (ll *List) Empty() bool {
 	return ll.size == 0
 }
@@ -64,7 +68,14 @@ func (ll *List) Values() []interface{} {
 	return values
 }
 
-//List
+// List
+//	Get(index int) (interface{}, bool)
+//	Add(values ...interface{}) bool
+//	Remove(index int)
+//	Contains(values ...interface{}) bool
+//	Insert(index int, values ...interface{})
+//	Sort(comparator utils.Comparator)
+//	Swap(index1, index2 int)
 func (ll *List) Get(idx int) (interface{}, bool) {
 	p, err := ll.GetNode(idx)
 	if err != nil {
@@ -73,31 +84,18 @@ func (ll *List) Get(idx int) (interface{}, bool) {
 	return p.data, true
 }
 
-func (ll *List) Remove(idx int) {
-	p, err := ll.GetNode(idx - 1)
-	if err != nil {
-		return
-	}
-	ll.remove(p)
-}
-
-func (ll *List) Append(values ...interface{}) {
-	ll.Add(values)
-}
-
 func (ll *List) Add(values ...interface{}) {
 	for _, value := range values {
 		ll.addAfter(ll.Size()-1, value)
 	}
 }
 
-func (ll *List) Prepend(values ...interface{}) {
-	for v := len(values) - 1; v >= 0; v-- {
-		newNode := &Node{data: values[v], prev: ll.begin, next: ll.begin.next}
-		ll.begin.next.prev = newNode
-		ll.begin.next = newNode
-		ll.size++
+func (ll *List) Remove(idx int) {
+	p, err := ll.GetNode(idx - 1)
+	if err != nil {
+		return
 	}
+	ll.remove(p)
 }
 
 func (ll *List) Contains(values ...interface{}) bool {
@@ -114,6 +112,16 @@ func (ll *List) Contains(values ...interface{}) bool {
 		}
 	}
 	return true
+}
+
+func (ll *List) Insert(index int, values ...interface{}) {
+	if index > ll.Size() {
+		return
+	}
+	for _, value := range values {
+		ll.addBefore(index, value)
+		index++
+	}
 }
 
 func (ll *List) Sort(comparator utils.Comparator) {
@@ -143,41 +151,6 @@ func (ll *List) Swap(i, j int) {
 	}
 }
 
-func (ll *List) Insert(index int, values ...interface{}) {
-	if index > ll.Size() {
-		return
-	}
-	for _, value := range values {
-		ll.addBefore(index, value)
-		index++
-	}
-}
-
-func (ll *List) addBefore(idx int, value interface{}) {
-	if ll.Size() == 0 {
-		newNode := &Node{data: value, prev: ll.begin, next: ll.end}
-		ll.begin.next = newNode
-		ll.end.prev = newNode
-		ll.size++
-		return
-	}
-
-	var p *Node
-	var err error
-
-	p, err = ll.GetNode(idx)
-	if err != nil && idx == ll.Size() {
-		//在最后一个位置插入
-		ll.Add(value)
-		return
-	}
-
-	newNode := &Node{data: value, prev: p.prev, next: p}
-	p.prev.next = newNode
-	p.prev = newNode
-	ll.size++
-}
-
 func (ll *List) String() string {
 	str := "DoubleList\n"
 	values := []string{}
@@ -188,23 +161,15 @@ func (ll *List) String() string {
 	return str
 }
 
-func (ll *List) addAfter(idx int, value interface{}) {
-	p, err := ll.GetNode(idx)
-	if err != nil {
-		fmt.Println("error get node ", idx)
-		return
-	}
-	newNode := &Node{data: value, prev: p, next: p.next}
-	p.next.prev = newNode
-	p.next = newNode
-	ll.size++
-}
-
+// Other functions
+// GetNode(idx int) (node *Node, err error)
+// addAfter(idx int, value interface{})
+// addBefore(idx int, value interface{})
+// remove(p *Node)
+// Append(values ...interface{})
+// Prepend(values ...interface{})
+// withinRange(index int) bool
 func (ll *List) GetNode(idx int) (node *Node, err error) {
-	return ll.getNode(idx, 0, ll.Size()-1)
-}
-
-func (ll *List) getNode(idx, lower, upper int) (node *Node, err error) {
 	if idx == -1 {
 		return ll.begin, nil
 	}
@@ -222,8 +187,40 @@ func (ll *List) getNode(idx, lower, upper int) (node *Node, err error) {
 	return p, nil
 }
 
-func (ll *List) withinRange(index int) bool {
-	return index >= 0 && index < ll.Size()
+func (ll *List) addAfter(idx int, value interface{}) {
+	p, err := ll.GetNode(idx)
+	if err != nil {
+		fmt.Println("error get node ", idx)
+		return
+	}
+	newNode := &Node{data: value, prev: p, next: p.next}
+	p.next.prev = newNode
+	p.next = newNode
+	ll.size++
+}
+
+func (ll *List) addBefore(idx int, value interface{}) {
+	if ll.Size() == 0 {
+		newNode := &Node{data: value, prev: ll.begin, next: ll.end}
+		ll.begin.next = newNode
+		ll.end.prev = newNode
+		ll.size++
+		return
+	}
+
+	var p *Node
+	var err error
+
+	p, err = ll.GetNode(idx - 1)
+	if err != nil {
+		fmt.Println("error get node ", idx)
+		return
+	}
+
+	newNode := &Node{data: value, prev: p, next: p.next}
+	p.next.prev = newNode
+	p.next = newNode
+	ll.size++
 }
 
 func (ll *List) remove(p *Node) {
@@ -232,4 +229,21 @@ func (ll *List) remove(p *Node) {
 		p.next = p.next.next
 		ll.size--
 	}
+}
+
+func (ll *List) Append(values ...interface{}) {
+	ll.Add(values)
+}
+
+func (ll *List) Prepend(values ...interface{}) {
+	for v := len(values) - 1; v >= 0; v-- {
+		newNode := &Node{data: values[v], prev: ll.begin, next: ll.begin.next}
+		ll.begin.next.prev = newNode
+		ll.begin.next = newNode
+		ll.size++
+	}
+}
+
+func (ll *List) withinRange(index int) bool {
+	return index >= 0 && index < ll.Size()
 }

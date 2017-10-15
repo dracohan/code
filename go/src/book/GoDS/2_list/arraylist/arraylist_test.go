@@ -5,10 +5,9 @@
 package arraylist
 
 import (
+	"book/GoDS/1_utils"
 	"fmt"
 	"testing"
-
-	"book/GoDS/1_utils"
 )
 
 func TestListAdd(t *testing.T) {
