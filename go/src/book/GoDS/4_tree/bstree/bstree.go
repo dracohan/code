@@ -1,8 +1,8 @@
 package bstree
 
 import (
-	"book/GoDS/4_tree"
 	"book/GoDS/1_utils"
+	"book/GoDS/4_tree"
 )
 
 func assertTreeImplementation() {
@@ -24,11 +24,15 @@ func New() *BSTree {
 	return &BSTree{root: nil, size: 0}
 }
 
-//Container
 func (t *BSTree) MakeEmpty() {
 	t.root = nil
 }
 
+//Container
+// Empty() bool
+// Size() int
+// Clear()
+// Values() []interface{}
 func (t *BSTree) Empty() bool {
 	return nil == t.root
 }
@@ -93,13 +97,12 @@ func (t *BSTree) FindMax() int {
 }
 
 func (t *BSTree) findMin(n *Node) *Node {
-	if n == nil {
-		return nil
-	} else if n.left == nil {
-		return n
+	if n != nil {
+		for n.left != nil {
+			n = n.left
+		}
 	}
-	return t.findMin(n.left)
-
+	return n
 }
 
 func (t *BSTree) findMax(n *Node) *Node {

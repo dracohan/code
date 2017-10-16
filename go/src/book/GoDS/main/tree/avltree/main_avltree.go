@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main_avltree() {
+func main() {
 	avlt := avltree.NewWithIntComparator()
 	avlt.Insert(4)
 	avlt.Insert(3)

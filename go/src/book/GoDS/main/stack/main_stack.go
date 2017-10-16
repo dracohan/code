@@ -10,7 +10,7 @@ import (
 	"unicode"
 )
 
-func main() {
+func main_stack() {
 	text := bufio.NewScanner(os.Stdin)
 
 	for text.Scan() {
