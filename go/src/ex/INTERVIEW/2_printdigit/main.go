@@ -5,10 +5,14 @@ import (
 )
 
 func printDigit(i int) {
-	fmt.Printf("%d", i)
+	print(i)
 }
 
 func printOut(n int) {
+	if n < 0 {
+		print("-")
+		n = -n
+	}
 	if n >= 10 {
 		printOut(n / 10)
 	}
@@ -17,5 +21,5 @@ func printOut(n int) {
 
 func main() {
 	fmt.Println("start...")
-	printOut(123)
+	printOut(-123)
 }
