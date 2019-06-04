@@ -33,7 +33,7 @@ func main() {
 	test := "asSASA ddd dsjkdsjs dk"
 	var res map[rune]int
 	res = make(map[rune]int)
-	for _, r := range []rune(test) {
+	for _, r := range test {
 		res[r]++
 	}
 	for j, k := range res {
