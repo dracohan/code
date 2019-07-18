@@ -27,19 +27,12 @@ func prt(head *node) {
 }
 
 func rev(head *node) *node {
-	//不存下来无法识别原来的表头
-	if phead == nil {
-		phead = head
-	}
 	if head.next == nil {
 		nhead = head
 		return head
 	}
 	rev(head.next).next = head
-	//不设置原表头的next会循环指向
-	if phead.next != nil {
-		phead.next = nil
-	}
+	head.next = nil
 	return head
 }
 
