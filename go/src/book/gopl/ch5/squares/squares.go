@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 // squares返回一个匿名函数。
@@ -19,6 +20,6 @@ func main() {
 	fmt.Println(f()) // "4"
 	fmt.Println(f()) // "9"
 	fmt.Println(f()) // "16"
-    for {
-    }
+	s := strings.Map(func(r rune) rune { return r + 1 }, "HAL-9000")
+	fmt.Println(s)
 }
