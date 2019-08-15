@@ -13,6 +13,28 @@
 // 来源：CSDN
 // 原文：https://blog.csdn.net/v_july_v/article/details/6057286
 // 版权声明：本文为博主原创文章，转载请附上博文链接！
+/*
+This seems interesting. However, a quite straightforward and promising way is to actually build the stack and check whether the pop action can be achieved.
+
+int isPopSeries(int push[], int pop[], int n) {
+    stack<int> helper;
+    int i1=0, i2=0;
+    while (i2 < n) {
+	    while (stack.empty() || stack.peek() != pop[i2]) {
+		    if (i1<n)
+		        stack.push(push[i1++]);
+		    else
+		        return 0;
+			while (!stack.empty() && stack.peek() == pop[i2]) {
+				stack.pop(); i2++;
+			}
+		}
+	}
+	return 1;
+}
+---------------------
+版权声明：本文为CSDN博主「v_JULY_v」的原创文章，遵循CC 4.0 by-sa版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/v_july_v/article/details/6870251*/
 package main
 
 import (
