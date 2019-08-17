@@ -16,7 +16,7 @@ func quickSort(values []int, left, right int) {
 			p = j
 		}
 		//找到第一个比temp大的数
-		if values[i] <= temp && i <= p {
+		for values[i] <= temp && i <= p {
 			i++
 		}
 		//将该数值赋值给p

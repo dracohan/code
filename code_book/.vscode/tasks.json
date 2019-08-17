@@ -10,8 +10,12 @@
             "args": [
                 "-g",
                 "${file}",
+                "-g",
+                " /home/withon/github/code/code_book/TEMPLATE/c/utils/utils.c",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I",
+                "/home/withon/github/code/code_book/TEMPLATE/c/common_header/"
             ],
             "options": {
                 "cwd": "/usr/bin"
