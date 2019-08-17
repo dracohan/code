@@ -11,7 +11,7 @@ double pop(void);
 main(){
     int type;
     double op2;
-    char [MAXOP];
+    char s[MAXOP];
 
     while((type = getop(s)) != EOF) {
         switch (type) {
