@@ -26,6 +26,7 @@ void swap(int v[], int i, int j) {
 int main() {
     int a[] = {5,2,3,8,10,21,32,55,14};
     int l = sizeof(a)/sizeof(a[0]);
+    printf("array length a: %d\n", l);
     quicksort(a, 0, l);
-    print_array(a);
+    print_array(a, l);
 }
