@@ -1,5 +1,5 @@
 # INCLUDE := -I /home/withon/github/code/code_book/TEMPLATE/c/header/utils.h
-CC=gcc -Wall -c
+CC=gcc -Wall -c -g
 LD=gcc
 
 quicksort: quicksort.o utils.o
@@ -11,4 +11,4 @@ utils.o: ../utils/utils.c ../common_header/utils.h
 
 .PHONY : clean
 clean:
-	rm -rf quicksort quicksort.o utils.o
+	del quicksort.exe quicksort.o utils.o
