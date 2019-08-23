@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "../common_header/utils.h"
+#include "/home/withon/github/code/code_book/TEMPLATE/c/common_header/utils.h"
 
 void print_array(int v[], int length){
     int i;
