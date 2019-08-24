@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-#include "/home/withon/github/code/code_book/TEMPLATE/c/common_header/utils.h"
 
 void print_array(int v[], int length){
     int i;
@@ -11,4 +9,3 @@ void print_array(int v[], int length){
         printf("%d\n", v[i]);
     }
 }
-

@@ -29,5 +29,4 @@ int mgetline(char s[], int lim) {
         s[i++] = c;
     s[i] = '\0';
     return i;
-    
 }
