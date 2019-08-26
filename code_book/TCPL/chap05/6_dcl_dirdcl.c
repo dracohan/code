@@ -23,7 +23,7 @@ int getch(void){
     return (bufp > 0) ? buf[--bufp] : getchar();
 }
 
-int ungetch(int c) {
+void ungetch(int c) {
     if (bufp >= BUFSIZE) 
         printf("ungetch: too many characters\n");
     else 
