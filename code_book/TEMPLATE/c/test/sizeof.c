@@ -5,6 +5,7 @@ typedef int INT;
 typedef struct point{
     int i;
     int j;
+    char c;
 }pt;
 
 union upt
@@ -13,6 +14,7 @@ union upt
     int i;
     int j;
     double f;
+    char c;
 } u;
 
 
