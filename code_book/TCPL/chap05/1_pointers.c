@@ -17,4 +17,4 @@ int main() {
     printf("*p: %#x\n", *p);
     printf("p: %#x\n", p++);
     printf("*p: %#x\n", *p);
-}
+} 
