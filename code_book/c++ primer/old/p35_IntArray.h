@@ -7,7 +7,7 @@ class IntArray {
         IntArray( int *array, int array_size);
         IntArray( const IntArray &rhs );
         
-        virtual ~IntArray() { delete [] ia; }
+        virtual ~IntArray() { delete [] _ia; }
         
         bool operator==( const IntArray &rhs) const;
         bool operator!=( const IntArray &rhs) const;
@@ -20,7 +20,7 @@ class IntArray {
         virtual int min() const;
         virtual int find( int value ) const;
 
-    private:
+    protected:
         static const int default_size = 12;
         void init( int sz, int *array );
         int _size;

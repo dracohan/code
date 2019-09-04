@@ -34,7 +34,7 @@ int main() {
     printf("sizeof double: %d\n", sizeof(double));
     printf("sizeof union: %d\n", sizeof(u));
     printf("sizeof I: %d\n", sizeof(I));
-    printf("sizeof pt: %d\n", sizeof(pt));
+    printf("sizeof struct: %d\n", sizeof(pt));
     printf("sizeof ept: %d\n", sizeof(ept));
     printf("sizeof int array: %d\n", sizeof(n));
     printf("sizeof double array: %d\n", sizeof(d));
