@@ -1,5 +1,4 @@
 //: C02:Fillvector.cpp
-// Копирование всего содержимого файла в вектор строк
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -8,11 +7,11 @@ using namespace std;
 
 int main() {
 	vector<string> v;
-	ifstream in("Fillvector.cpp");
+	ifstream in("/home/suiyuan/github/code/code_book/Thinking C++/master1/Chapter 2/FillString.cpp");
 	string line;
 	while ( getline(in, line) )
-		v.push_back(line);	// Занесение строки в конец вектора
-	// Нумерация строк:
+		v.push_back(line);	
 	for (int i = 0; i < v.size(); i++)
 		cout << i << ": " << v[i] << endl;
+	// cout << v << endl; // can't output vector directly
 } ///:~

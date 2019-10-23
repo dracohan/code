@@ -1,6 +1,5 @@
 //: C02:CallHello.cpp
-// Вызов другой программы
-#include <cstdlib> // Объявление "system()"
+#include <cstdlib> 
 using namespace std;
 
 int main() {

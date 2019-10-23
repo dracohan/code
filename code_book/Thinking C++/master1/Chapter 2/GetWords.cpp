@@ -1,5 +1,4 @@
 //: C02:GetWords.cpp
-// Разбиение файла по словам, разделенным пропусками
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -8,7 +7,7 @@ using namespace std;
 
 int main() {
 	vector<string> words;
-	ifstream in("GetWords.cpp");
+	ifstream in("/home/suiyuan/github/code/code_book/Thinking C++/master1/Chapter 2/input");
 	string word;
 	while (in >> word)
 		words.push_back(word);
