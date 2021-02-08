@@ -53,6 +53,9 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "apue.h": "c"
-    }
+        "apue.h": "c",
+        "bubble_sort.C": "cpp",
+        "chrono": "cpp"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "Google"
 }
