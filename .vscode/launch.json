@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "/tmp/a.out",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "/tmp/",
             "environment": [],
             "externalConsole": false,
