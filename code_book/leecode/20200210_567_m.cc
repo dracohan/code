@@ -1,59 +1,33 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class Solution {
- public:
-  static bool checkInclusion(string s1, string s2) {
-    const char* pattern = s1.c_str();
-    const char* text = s2.c_str();
-
-    int pLen = s1.size();
-    int tLen = s2.size();
-
-    int pFreq[26];
-    int winFreq[26];
-
-    for (int i = 0; i < pLen; i++) {
-      pFreq[pattern[i] - 'a']++;
-    }
-
-    int pCount = 0;
-    for (int i = 0; i < 26; i++) {
-      if (pFreq[i] > 0) {
-        pCount++;
-      }
-    }
-
-    int left = 0;
-    int right = 0;
-    // 当滑动窗口中的某个字符个数与 s1 中对应相等的时候才计数
-    int winCount = 0;
-    while (right < tLen) {
-      if (pFreq[text[right] - 'a'] > 0) {
-        winFreq[text[right] - 'a']++;
-        if (winFreq[text[right] - 'a'] == pFreq[text[right] - 'a']) {
-          winCount++;
+public:
+    static bool checkInclusion(string s1, string s2) {
+        int n = s1.length(), m = s2.length();
+        if (n > m) {
+            return false;
         }
-      }
-      right++;
-
-      while (pCount == winCount) {
-        if (right - left == pLen) {
-          return true;
+        vector<int> cnt1(26), cnt2(26);
+        for (int i = 0; i < n; ++i) {
+            ++cnt1[s1[i] - 'a'];
+            ++cnt2[s2[i] - 'a'];
         }
-        if (pFreq[text[left] - 'a'] > 0) {
-          winFreq[text[left] - 'a']--;
-          if (winFreq[text[left] - 'a'] < pFreq[text[left] - 'a']) {
-            winCount--;
-          }
+        if (cnt1 == cnt2) {
+            return true;
         }
-        left++;
-      }
+        for (int i = n; i < m; ++i) {
+            ++cnt2[s2[i] - 'a'];
+            --cnt2[s2[i - n] - 'a'];
+            if (cnt1 == cnt2) {
+                return true;
+            }
+        }
+        return false;
     }
-    return false;
-  }
 };
 
 
