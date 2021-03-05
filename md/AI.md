@@ -7,5 +7,4 @@ p292 为什么要有激活函数?  - 如果多层感知机之间没有非线性�
 
 ![](./images/activation_functions_plot.png)
 
-p293 
-
+p299 
