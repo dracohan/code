@@ -2,6 +2,4 @@
 
 ## Background Knowledge
 
-## Performance Evaluatation
-
 ## Performance Optimization
