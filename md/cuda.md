@@ -25,6 +25,51 @@
 ![](./images/global_device_host.png)
 
 
-### Kernel func restrictions
+### Device Management
+two ways to query and manage GPU device:
+- CUDA Runtime API
+- nvidia-smi
+   - nvidia-smi -q -i 0
+   - nvidia-smi -q -i 0 -d MEMORY
+   ```text
+       -d,   --display=            Display only selected information: MEMORY,
+                                       UTILIZATION, ECC, TEMPERATURE, POWER, CLOCK,
+                                       COMPUTE, PIDS, PERFORMANCE, SUPPORTED_CLOCKS,
+                                       PAGE_RETIREMENT, ACCOUNTING, ENCODER_STATS,    FBC_STATS
+   ```
+
+### Set Device in Runtime
+CUDA_VISIBLE_DEVICES=2,  3
+
+### GPU Arch
+- XXX threads per SM
+- X SM per GPU
+- wrap is 32 threads
+   - all thread execute same code while has its own counter and regs
+   - one wrap could be on only one SM
+   - synced in warp, not between wrap
+- Kernel's wrap will be assigned to a free SM
+- Multi wrap could be on same SM at the same time
+- Instruction in same thread pipelined
+- SIMT execute same code but on different data. SIMD vs SIMT
+   - own pc
+   - own reg
+   - own execution path
+
+### Fermi
+-每个SM 中包含：
+   - 2个 Warp Scheduler/Dispatch Unit
+   - 32个CUDA Core(分在两条 lane 上，每条分别是16 个)
+   - 每个CUDA Core 里面是1个单精浮点单元(FPU)和1个整数单元(ALU)，可以直接做FMA的乘累加
+   - 每个cycle可以跑16个双精的FMA
+   - 16个LD/ST Unit
+   - 4个SFU
+
+
+
+
+
+
+
 
 
