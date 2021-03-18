@@ -65,7 +65,13 @@ CUDA_VISIBLE_DEVICES=2,  3
    - 16个LD/ST Unit
    - 4个SFU
 
-### 
+### Synchronize
+cudaDeviceSynchronize用来阻塞主机应用程序，直到所有的CUDA操作完成
+
+### Metrics
+achieved_occupancy 每个周期内活跃的线程数与SM最大支持的比率
+
+ON 3.5
 
 
 
