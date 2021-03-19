@@ -2,6 +2,14 @@
 
 ## Fishbook
 ## Handon-ML
+
+----
+**chap02**
+### Fine Tune your models
+- GridSearchCV RandomizedSearchCV
+
+---
+**chap10**
 ### 感知机
 p292 为什么要有激活函数?  - 如果多层感知机之间没有非线性函数，那么再深的网络层级也可以用单一层级表示
 
@@ -34,3 +42,38 @@ tensorboard_cb = keras.callbacks.TensorBoard(run_logdir)
 %load_ext tensorboard
 %tensorboard --logdir=./my_logs --port=6006
 ```
+
+### Fine Tune Neural Network Hyperparameters
+- 先用RandomizedSearchCV扫描一遍，然后用别的search方法在最优解附近搜索
+- 业界也有很多比RandomizedSearchCV更好的搜索算法，例如Keras Tuner/skopt
+- Google Cloud API also provide超参优化服务
+- 超参优化仍然是正在研究的区域
+#### 隐藏层数量
+- 如果神经元足够多，一层隐藏网络也可以处理复杂问题，但是参数会很多，多层网络可以指数级降低对神经元数量的需求。因为多层网络可以服用之前的结果，与画一个森林类似
+#### 隐藏层神经元的数量
+- 输入输出层的数量由形状决定，中间隐藏层通常是金字塔型，低level多，高level神经元少
+- 可以跟隐藏层数量一样慢慢增加隐藏层神经元数量直到overfit，但是更通常的做法是直接给一个大的数量，慢慢缩减。
+- 反过来说，如果隐藏层神经元数量不够，则不能表示更多的特性，再深的网络也无济于事，例如两个神经元的隐藏层只能表示2D数据。
+- 相比增加隐藏层神经元，更倾向于增加隐藏层数量
+
+#### Learning Rate, Batch Size, Other HP
+- Learning Rate, 通常最优解是最大解的一半。一般从一个比较小的lr开始，逐渐增加到一个比较大的值。调优过程中，会看到loss首先下降，然后上升，最优lr就是上升前的值
+- optimizer
+- Batch Size,大batch size通常导致训练初期不稳定
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
