@@ -61,9 +61,18 @@ tensorboard_cb = keras.callbacks.TensorBoard(run_logdir)
 - optimizer
 - Batch Size,大batch size通常导致训练初期不稳定
 
+---
+**chap11**
+### 梯度消失问题
+- 有时候梯度会越来越小,网络不收敛,称为梯度消失.有时候相反. 梯度越来越大,称为梯度爆炸, 在循环神经网络里会碰到.
 
 
 
+### 训练数据缺少标签
+
+### 利用优化器加速训练
+
+### 正则化技术
 
 
 
