@@ -1,0 +1,833 @@
+# 这个 viminfo 文件是由 Vim 7.4 所产生。
+# 如果想要自行修改请特别小心！
+
+# 文件被写的时候 ‘encoding’ 的值
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 上个 Search 图案：
+~MSle0~/Root
+
+# 上个 替换 Search 图案：
+~MSle0&(rw
+
+# 最后替换的字符串
+$
+
+# 命令行 历史记录 (从新到旧)：
+:wq
+:q
+:q!
+:Q!
+:wq!
+:%s/(rw/(ro/gc
+:%s/(ro/(rw/gc
+:%s\(ro/(rw/gc
+:%s/\(ro/\(rw/gc
+:%s/(r/(ro/gc
+:%
+:%s/(r/(ro
+:%s/\(r/\(ro/gc
+:%s/\(r/\(ro
+
+# 查找字符串 历史记录 (从新到旧)：
+?/Root
+?/google
+?/max
+?/\[data
+?/store-en
+?/series
+? @$
+? \<DB_NAME\>
+? \<sirius_1229\>
+? \<test\>
+? (rw
+? (ro
+? \(ro
+? (r
+? \(r
+?/error
+
+# 表达式 历史记录 (从新到旧)：
+
+# 输入行 历史记录 (从新到旧)：
+
+# 输入行 历史记录 (从新到旧)：
+
+# 寄存器:
+"0	LINE	0
+	#PermitRootLogin prohibit-password
+"1	LINE	0
+	#!/bin/bash
+	
+	usage() {
+	  echo -e "Usage: zebuprof <input> <output>\n"
+	  echo -e "<intput>: input directory contains logs and data"
+	  echo -e "<output>: output directory\n"
+	  exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -lt 1 ]; then
+	  usage
+	fi
+	
+	if [ ! -d $1 ] || [ $1 == "." ]; then
+	  echo -e "specified wrong input directory\n"
+	  exit 2
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=$(realpath $2)
+	fi
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=$(realpath $1)
+	filename="*libprofile.data"
+	
+	cnt=0
+	for file in $(ls "$dirpath"); do
+	  if [ "$file" == "dma_vc_report.log" ]; then
+	    ((cnt++))
+	  elif [ "$file" == "sip_inst_report.log" ]; then
+	    ((cnt++))
+	  elif [[ "$file" == *"libprofile.data" ]]; then
+	    ((cnt++))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+	workdir=$(pwd)
+	cd /tmp
+	zebu_data_path=$(mktemp -d zebudata.XXXX)
+	zebu_data_path=/tmp/$zebu_data_path
+"2	LINE	0
+	#!/bin/bash
+	
+	usage() {
+		echo -e "Usage: zebuprof <input> <output>\n"
+		echo -e "<intput>: input directory contains logs and data"
+		echo -e "<output>: output directory\n"
+		exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -lt 1 ]; then
+	  usage
+	fi
+	
+	if [ ! -d $1 ] || [ $1 == "." ]; then
+	  echo -e "specified wrong input directory\n"
+	  exit 2
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=`realpath $2`
+	fi
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=`realpath $1`
+	filename="*libprofile.data1"
+	
+	cnt=0
+	
+	for file in `ls "$dirpath"`
+	do
+	  if [ "$file" == "dma_vc_report.log" ];then
+	    (( cnt++ ))
+	  elif [ "$file" == "sip_inst_report.log" ];then
+	    (( cnt++ ))
+	  elif [[ "$file" == *"libprofile.data" ]];then
+	    (( cnt++ ))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+	workdir=`pwd`
+	cd /tmp
+"3	LINE	0
+	#!/bin/bash
+	
+	usage() {
+		echo -e "Usage: zebuprof <input> <output>\n"
+		echo -e "<intput>: input directory contains logs and data"
+		echo -e "<output>: output directory\n"
+		exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -lt 1 ]; then
+	  usage
+	fi
+	
+	if [ ! -d $1 ] || [ $1 == "." ]; then
+	  echo -e "specified wrong input directory\n"
+	  exit 2
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=`realpath $2`
+	fi
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=`realpath $1`
+	filename="*libprofile.data"
+	
+	cnt=0
+	
+	for file in `ls "$dirpath"`
+	do
+	  if [ "$file" == "dma_vc_report.log" ];then
+	    (( cnt++ ))
+	  elif [ "$file" == "sip_inst_report.log" ];then
+	    (( cnt++ ))
+	  elif [[ "$file" == *"libprofile.data" ]];then
+	    (( cnt++ ))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+	workdir=`pwd`
+	cd /tmp
+"4	LINE	0
+	#!/bin/bash -x
+	
+	usage() {
+		echo -e "Usage: zebuprof <input> <output>\n"
+		echo -e "<intput>: input directory contains logs and data"
+		echo -e "<output>: output directory\n"
+		exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -lt 1 ]; then
+	  usage
+	fi
+	
+	if [ ! -d $1 ] || [ $1 == "." ]; then
+	  echo -e "specified wrong input directory\n"
+	  exit 2
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=`realpath $2`
+	fi
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=`realpath $1`
+	
+	cnt=0
+	
+	for file in `ls "$dirpath"`
+	do
+	  if [ "$file" == "dma_vc_report.log" ];then
+	    (( cnt++ ))
+	  elif [ "$file" == "sip_inst_report.log" ];then
+	    (( cnt++ ))
+	  elif [[ "$file" == *"libprofile.data" ]];then
+	    (( cnt++ ))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+	workdir=`pwd`
+	cd /tmp
+	zebu_data_path=$(mktemp -d zebudata.XXXX)
+"5	LINE	0
+	#!/bin/bash
+	
+	usage() {
+		echo -e "Usage: zebuprof <input> <output>\n"
+		echo -e "<intput>: input directory contains logs and data"
+		echo -e "<output>: output directory\n"
+		exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -lt 1 ]; then
+	  usage
+	fi
+	
+	if [ ! -d $1 ] || [ $1 == "." ]; then
+	  echo -e "specified wrong input directory\n"
+	  exit 2
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=`realpath $2`
+	fi
+	
+	echo -e "outpath: $outpath"
+	exit 1
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=`realpath $1`
+	
+	cnt=0
+	
+	for file in `ls "$dirpath"`
+	do
+	  if [ "$file" == "dma_vc_report.log" ];then
+	    (( cnt++ ))
+	  elif [ "$file" == "sip_inst_report.log" ];then
+	    (( cnt++ ))
+	  elif [[ "$file" == *"libprofile.data" ]];then
+	    (( cnt++ ))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+"6	LINE	0
+	#!/bin/bash
+	
+	usage() {
+		echo -e "Usage: zebuprof <input> <output>\n"
+		echo -e "<intput>: input directory contains logs and data"
+		echo -e "<output>: output directory\n"
+		exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -lt 1 ]; then
+	  usage
+	fi
+	
+	if [ ! -d $1 ] || [ $1 == "." ]; then
+	  echo -e "specified wrong input directory\n"
+	  exit 2
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=`realpath $2`
+	fi
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=`realpath $1`
+	
+	cnt=0
+	
+	for file in `ls "$dirpath"`
+	do
+	  if [ "$file" == "dma_vc_report.log" ];then
+	    (( cnt++ ))
+	  elif [ "$file" == "sip_inst_report.log" ];then
+	    (( cnt++ ))
+	  elif [[ "$file" == *"libprofile.data" ]];then
+	    (( cnt++ ))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+	workdir=`pwd`
+	cd /tmp
+	zebu_data_path=$(mktemp -d zebudata.XXXX)
+"7	LINE	0
+	#!/bin/bash
+	
+	usage() {
+		echo -e "Usage: zebuprof <input> <output>\n"
+		echo -e "<intput>: input directory contains logs and data"
+		echo -e "<output>: output directory\n"
+		exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -le 1 ]; then
+	  usage
+	fi
+	
+	if [ ! -d $1 ] || [ $1 == "." ]; then
+	  echo -e "specified wrong directory does not exists\n"
+	  exit 2
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=`realpath $2`
+	fi
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=`realpath $1`
+	
+	cnt=0
+	
+	for file in `ls "$dirpath"`
+	do
+	  if [ "$file" == "dma_vc_report.log" ];then
+	    (( cnt++ ))
+	  elif [ "$file" == "sip_inst_report.log" ];then
+	    (( cnt++ ))
+	  elif [[ "$file" == *"libprofile.data" ]];then
+	    (( cnt++ ))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+	workdir=`pwd`
+	cd /tmp
+	zebu_data_path=$(mktemp -d zebudata.XXXX)
+"8	LINE	0
+	#!/bin/bash
+	
+	usage() {
+		echo -e "Usage: zebuprof <input> <output>\n"
+		echo -e "<intput>: input directory contains logs and data"
+		echo -e "<output>: output directory\n"
+		exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -le 1 ]; then
+	  usage
+	fi
+	
+	if [ ! -d $1 ] || [ $1 == "." ]; then
+	  echo "specified directory does not exists\n"
+	  exit 2
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=`realpath $2`
+	fi
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=`realpath $1`
+	
+	cnt=0
+	
+	for file in `ls "$dirpath"`
+	do
+	  if [ "$file" == "dma_vc_report.log" ];then
+	    (( cnt++ ))
+	  elif [ "$file" == "sip_inst_report.log" ];then
+	    (( cnt++ ))
+	  elif [[ "$file" == *"libprofile.data" ]];then
+	    (( cnt++ ))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+	workdir=`pwd`
+	cd /tmp
+	zebu_data_path=$(mktemp -d zebudata.XXXX)
+"9	LINE	0
+	#!/bin/bash
+	
+	usage() {
+		echo -e "Usage: zebuprof <input> <output>\n"
+		echo -e "<intput>: input directory contains logs and data"
+		echo -e "<output>: output directory\n"
+		exit 1
+	}
+	
+	if [ $# -gt 2 ] || [ $# -le 1 ] || [ ! -d $1 ] || [ $1 == "." ]; then
+	  usage
+	fi
+	
+	if [ $# -eq 2 ]; then
+	  outpath=`realpath $2`
+	fi
+	
+	echo -e "outpath: $outpath\n"
+	
+	LD_PRELOAD="/usr/lib/enflame/dtupp/libstdc++.so.6"
+	
+	dirpath=`realpath $1`
+	
+	cnt=0
+	
+	for file in `ls "$dirpath"`
+	do
+	  if [ "$file" == "dma_vc_report.log" ];then
+	    (( cnt++ ))
+	  elif [ "$file" == "sip_inst_report.log" ];then
+	    (( cnt++ ))
+	  elif [[ "$file" == *"libprofile.data" ]];then
+	    (( cnt++ ))
+	  fi
+	done
+	
+	if [ $cnt -ne 3 ]; then
+	  echo "specify wrong directory which can only contain dma_vc_report.log, sip_inst_report.log and one *libprofile.data"
+	  exit 2
+	fi
+	
+	rm -rf ~/.libprofile.conf
+	
+	export DTU_PROFILER_FLAGS="--do_emu_profile=1"
+	workdir=`pwd`
+	cd /tmp
+	zebu_data_path=$(mktemp -d zebudata.XXXX)
+	zebu_data_path=/tmp/$zebu_data_path
+	cd $zebu_data_path
+	/usr/bin/log2perfdb -dma "$dirpath"/dma_vc_report.log -sip "$dirpath"/sip_inst_report.log
+""-	CHAR	0
+	d
+
+# 文件标记:
+'0  29  18  /etc/ssh/sshd_config
+'1  1  12  /usr/bin/zebuprof
+'2  44  0  /usr/bin/zebuprof
+'3  1  0  ~/.docker/config.json
+'4  1  0  /etc/apt/sources.list
+'5  2  51  /etc/docker/daemon.json
+'6  79  0  /usr/bin/zebuprof
+'7  1  0  /etc/network/interfaces
+'8  68  0  /usr/bin/zebuprof
+'9  1  0  /usr/bin/zebuprof
+
+# 跳转列表 (从新到旧):
+-'  29  18  /etc/ssh/sshd_config
+-'  83  24  /etc/ssh/sshd_config
+-'  28  7  /etc/ssh/sshd_config
+-'  1  0  /etc/ssh/sshd_config
+-'  1  12  /usr/bin/zebuprof
+-'  44  0  /usr/bin/zebuprof
+-'  1  0  ~/.docker/config.json
+-'  1  0  /etc/apt/sources.list
+-'  2  51  /etc/docker/daemon.json
+-'  1  0  /etc/docker/daemon.json
+-'  79  0  /usr/bin/zebuprof
+-'  1  0  /etc/network/interfaces
+-'  68  0  /usr/bin/zebuprof
+-'  81  0  /usr/bin/zebuprof
+-'  2835  8  ~/.cache/bazel/_bazel_suiyuan/8e419b06bf4d1419796595ca27c14be4/execroot/dtupp/bazel-out/k8-dbg/bin/lib/dtupp.bin-2.params
+-'  24  12  ~/.cache/bazel/_bazel_suiyuan/8e419b06bf4d1419796595ca27c14be4/execroot/dtupp/bazel-out/k8-dbg/bin/lib/dtupp.bin-2.params
+-'  1  0  ~/.cache/bazel/_bazel_suiyuan/8e419b06bf4d1419796595ca27c14be4/execroot/dtupp/bazel-out/k8-dbg/bin/lib/dtupp.bin-2.params
+-'  25  0  ~/.cache/bazel/_bazel_suiyuan/8e419b06bf4d1419796595ca27c14be4/execroot/dtupp/bazel-out/k8-dbg/bin/lib/dtupp.bin-2.params
+-'  21  15  /etc/systemd/resolved.conf
+-'  4  0  /etc/systemd/resolved.conf
+-'  1  0  /etc/systemd/resolved.conf
+-'  9  21  /etc/network/interfaces
+-'  2  26  ~/.pp.conf
+-'  1  0  ~/.pp.conf
+-'  1  0  /etc/dtu/pp.conf
+-'  3  0  /etc/dtu/pp.conf.bak
+-'  1  0  /etc/dtu/pp.conf.bak
+-'  1  0  /etc/dtu/pp.conf.ba
+-'  2  10  /etc/dtu/pp.conf
+-'  128  23  /etc/influxdb/influxdb.conf
+-'  123  4  /etc/influxdb/influxdb.conf
+-'  120  8  /etc/influxdb/influxdb.conf
+-'  230  22  /etc/influxdb/influxdb.conf
+-'  9  66  /etc/influxdb/influxdb.conf
+-'  1  0  /etc/influxdb/influxdb.conf
+-'  1  0  ~/.xsession
+-'  8  0  /etc/systemd/network
+-'  1  0  /etc/systemd/network
+-'  1  0  /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+-'  11  0  /etc/fstab
+-'  1  0  /etc/fstab
+-'  2  44  /var/lib/kubelet/kubeadm-flags.env
+-'  1  0  /var/lib/kubelet/kubeadm-flags.env
+-'  3  16  /etc/dtu/pp.conf
+-'  17  34  /etc/exports
+-'  1  0  /etc/exports
+-'  36  6  /etc/profile
+-'  1  0  /etc/profile
+-'  16  0  /etc/exports
+-'  5  0  /etc/exports
+-'  11  27  /etc/exports
+-'  18  0  /etc/exports
+-'  15  0  /etc/exports
+-'  10  0  /etc/exports
+-'  8  28  /etc/exports
+-'  9  8  /usr/bin/pip3
+-'  1  0  /usr/bin/pip3
+-'  9  17  /usr/bin/pip
+-'  1  0  /usr/bin/pip
+-'  164  0  ~/build/tensorflow/20190807_01.log
+-'  79  68  ~/build/tensorflow/20190807_01.log
+-'  12  396  ~/build/tensorflow/20190807_01.log
+-'  11  396  ~/build/tensorflow/20190807_01.log
+-'  10  396  ~/build/tensorflow/20190807_01.log
+-'  1  0  ~/build/tensorflow/20190807_01.log
+-'  164  0  ~/build/tensorflow/20190807_01.log
+-'  79  68  ~/build/tensorflow/20190807_01.log
+-'  12  396  ~/build/tensorflow/20190807_01.log
+-'  11  396  ~/build/tensorflow/20190807_01.log
+-'  10  396  ~/build/tensorflow/20190807_01.log
+-'  1  0  ~/build/tensorflow/20190807_01.log
+-'  9  17  /usr/bin/pip
+-'  1  0  /usr/bin/pip
+-'  164  0  ~/build/tensorflow/20190807_01.log
+-'  79  68  ~/build/tensorflow/20190807_01.log
+-'  12  396  ~/build/tensorflow/20190807_01.log
+-'  11  396  ~/build/tensorflow/20190807_01.log
+-'  10  396  ~/build/tensorflow/20190807_01.log
+-'  1  0  ~/build/tensorflow/20190807_01.log
+-'  164  0  ~/build/tensorflow/20190807_01.log
+-'  79  68  ~/build/tensorflow/20190807_01.log
+-'  12  396  ~/build/tensorflow/20190807_01.log
+-'  11  396  ~/build/tensorflow/20190807_01.log
+-'  10  396  ~/build/tensorflow/20190807_01.log
+-'  1  0  ~/build/tensorflow/20190807_01.log
+-'  9  17  /usr/bin/pip
+-'  1  0  /usr/bin/pip
+-'  164  0  ~/build/tensorflow/20190807_01.log
+-'  79  68  ~/build/tensorflow/20190807_01.log
+-'  12  396  ~/build/tensorflow/20190807_01.log
+-'  11  396  ~/build/tensorflow/20190807_01.log
+-'  10  396  ~/build/tensorflow/20190807_01.log
+-'  1  0  ~/build/tensorflow/20190807_01.log
+-'  164  0  ~/build/tensorflow/20190807_01.log
+-'  79  68  ~/build/tensorflow/20190807_01.log
+-'  12  396  ~/build/tensorflow/20190807_01.log
+-'  11  396  ~/build/tensorflow/20190807_01.log
+
+# 文件内的标记历史记录 (从新到旧):
+
+> /etc/ssh/sshd_config
+	"	29	18
+	^	29	19
+	.	29	19
+	+	28	0
+	+	29	19
+
+> /usr/bin/zebuprof
+	"	1	12
+	^	1	13
+	.	1	12
+	+	1	237
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	0
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	0
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	0
+	+	1	11
+	+	1	11
+	+	1	11
+	+	1	11
+	+	80	6
+	+	1	12
+
+> ~/.docker/config.json
+	"	1	0
+
+> /etc/apt/sources.list
+	"	1	0
+
+> /etc/docker/daemon.json
+	"	2	51
+	^	2	52
+	.	2	48
+	+	3	0
+	+	2	48
+
+> /etc/network/interfaces
+	"	1	0
+	^	9	22
+	.	9	21
+	+	9	0
+	+	7	21
+	+	9	21
+
+> ~/.cache/bazel/_bazel_suiyuan/8e419b06bf4d1419796595ca27c14be4/execroot/dtupp/bazel-out/k8-dbg/bin/lib/dtupp.bin-2.params
+	"	2835	8
+	^	2835	9
+	.	2835	8
+	+	23	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	2835	8
+
+> /etc/systemd/resolved.conf
+	"	21	15
+	^	21	16
+	.	21	0
+	+	21	0
+
+> ~/.pp.conf
+	"	2	26
+	^	2	29
+	.	2	26
+	+	2	26
+
+> /etc/dtu/pp.conf
+	"	1	0
+	^	1	22
+	.	1	21
+	+	3	0
+	+	1	5
+	+	2	9
+	+	3	12
+	+	1	30
+	+	2	18
+	+	3	18
+	+	1	2
+	+	2	6
+	+	3	9
+	+	1	28
+	+	2	16
+	+	3	16
+	+	1	30
+	+	2	18
+	+	3	18
+	+	1	28
+	+	2	16
+	+	3	16
+	+	2	10
+	+	1	13
+	+	2	0
+	+	1	21
+
+> /etc/dtu/pp.conf.bak
+	"	3	0
+
+> /etc/dtu/pp.conf.ba
+	"	1	0
+
+> /etc/influxdb/influxdb.conf
+	"	128	23
+	^	230	23
+	.	128	23
+	+	230	22
+	+	123	28
+	+	128	23
+
+> ~/.xsession
+	"	1	0
+
+> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+	"	1	0
+
+> /etc/fstab
+	"	11	0
+	^	11	1
+	.	11	0
+	+	11	0
+
+> /var/lib/kubelet/kubeadm-flags.env
+	"	2	44
+	^	1	1
+	.	2	44
+	+	2	0
+	+	1	0
+	+	2	44
+
+> /etc/exports
+	"	17	34
+	^	17	73
+	.	17	34
+	+	11	28
+	+	12	24
+	+	13	26
+	+	14	26
+	+	15	26
+	+	5	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	18	0
+	+	16	20
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	5	0
+	+	8	0
+	+	9	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	17	34
+
+> /etc/profile
+	"	36	6
+	.	44	0
+	+	44	0
+
+> /usr/bin/pip3
+	"	9	8
+	^	9	18
+	.	9	8
+	+	9	8
+
+> /usr/bin/pip
+	"	9	17
+	^	9	18
+	.	9	17
+	+	9	17
+
+> ~/build/tensorflow/20190807_01.log
+	"	164	0
