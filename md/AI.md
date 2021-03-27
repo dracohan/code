@@ -5,6 +5,11 @@
 
 ----
 **chap02**
+### Prepare data
+- Feature scaling
+当数据集变化范围较大时，DL算法表现不好，可以做scaling
+
+- regularization
 ### Fine Tune your models
 - GridSearchCV RandomizedSearchCV
 
@@ -71,6 +76,7 @@ tensorboard_cb = keras.callbacks.TensorBoard(run_logdir)
     - 如果在神经网络的第一层之前使用了BN，则不需要standardize训练数据集，因为BN已经做过了
     - BN可以rescale并offset数据集，但是针对一个batch可能不准，可以等到整个数据集结束再计算，但是Keras决定使用动态的策略，动态计算。
     - Ioffe和Szegedy证明BN可以显著提高所有的DNN，使用BN的同时可以使用饱和的激活函数，例如tanh，而且对weight的初始化不敏感，并且可以使用较大的learning rate。
+    - BN降低了对regularization的需求
 
 ### 训练数据缺少标签
 
