@@ -63,9 +63,21 @@ if tgt == "cuda":
     fadd1.import_module(fadd1_dev)
 ```
 
-- Getting Started with TVM command line driver - TVMC
+### Getting Started with TVM command line driver - TVMC
+TVMC is a tool that exposes TVM features such as auto-tuning, compiling, profiling and execution of models, via a command line interface.
 
+- RUN
+```
+tvmc run \
+  --inputs imagenet_cat.npz \
+  --output predictions.npz \
+  compiled_module.tar
+  ```
 
-
-
+- TUNE \
+As part of the tuning process, TVM will try running many different operator implementation variants to see which perform best.  \
+The results of these runs are stored in a tuning records file, which is ultimately the output of the tune subcommand.
+    - the target specification of the device you intend to run this model on;
+    - the path to an output file in which the tuning records will be stored, and finally,
+    - a path to the model to be tuned.
 
