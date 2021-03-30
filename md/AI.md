@@ -96,7 +96,7 @@ tensorboard_cb = keras.callbacks.TensorBoard(run_logdir)
     - BN可以rescale并offset数据集，但是针对一个batch可能不准，可以等到整个数据集结束再计算，但是Keras决定使用动态的策略，动态计算。
     - Ioffe和Szegedy证明BN可以显著提高所有的DNN，使用BN的同时可以使用饱和的激活函数，例如tanh，而且对weight的初始化不敏感，并且可以使用较大的learning rate。
     - BN降低了对regularization的需求
-### Batch Normalization
+#### Batch Normalization
 - BN的参数数量：
 ```text
 Model: "sequential_4"
@@ -128,12 +128,24 @@ Non-trainable params: 2,368
     - axis，进行BN操作的维度，默认最后一个维度
 - BN层有可能被fixed-update weight初始化代替，但是还在研究过程总
 
-### gradient clipping
+#### gradient clipping
 是一项防止梯度爆炸的技术，主要用在RNN中，因为BN在RNN中不太好用,在Keras中使用比较简单：
 > optimizer = keras.optimizers.SGD(clipvalue=1.0)
 上述优化器会把所有的gradient裁剪到-1到1之间
 
 ### 训练数据缺少标签
+通常不会从头开始训练一个网络，而应该复用已经存在的神经网络的lower layer。不仅可以加速，而且需要的数据集也更少。output layer经常被替换。通常做法是：
+- freeze所有的layer
+- unfreeze 一到两个顶层的layer，查看反向传播后的性能
+- 随着训练数据的增多，unfreeze更多层
+具体方法参见keras.md, p347
+所有的模型freeze和unfreeze之后都需要重新compile
+
+#### Unsupervised pretraining
+如果要训练一个复杂的网络，但是没有足够的带标签数据:
+1. 尽量收集带标签数据
+2. 进行无监督学习
+3. 复用lower layer，并使用监督学习训练higher layer
 
 ### 利用优化器加速训练
 

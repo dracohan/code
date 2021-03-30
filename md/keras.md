@@ -19,4 +19,12 @@ p343 查看某一层的参数有多少个可以traning：
 >bn1 = model.layers[1] \
 >[(var.name, var.trainable) for var in bn1.variables]
 
+p347 复用keras layer： \
+互相影响
+> model_A = keras.models.load_model("my_model_A.h5")
+model_B_on_A = keras.models.Sequential(model_A.layers[:-1])
+model_B_on_A.add(keras.layers.Dense(1, activation="sigmoid"))
 
+互不影响：
+>model_A_clone = keras.models.clone_model(model_A)
+model_A_clone.set_weights(model_A.get_weights())
