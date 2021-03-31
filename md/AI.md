@@ -168,8 +168,20 @@ Non-trainable params: 2,368
 - Monte Carlo dropout
 - max-norm regularization
 
+### Notes
+1. 不可以把所有权重初始化为同样的值，即使他们符合He初始化方法。因为这对导致对称性，而且反向传播不能打破这种对称性。
+2. bias却可以初始化为0，不会有太大的影响
+
 ---
 **chap12**
 
 ### Quick Tour
 - TF operations在最底层都是通过高效的c++代码实现，有些算子有多个kernel实现，每个kernel对应一个硬件架构，比如CPU、GPU or TPU
+
+### Use TF like Numpy
+- Tensor是一个多维度的数组，也可以只有一个维度
+- t.constant([1.],[3.])可以创建tensor
+- Keras有自己的lower API，在keras.backend中。使用方式： 
+>K = keras.backend \
+> K.square(K.transpose(t)) + 10
+

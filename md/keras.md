@@ -45,3 +45,11 @@ model = keras.models.Sequential([
 model.compile(loss="sparse_categorical_crossentropy", optimizer=optimizer, metrics=["accuracy"])
 ```
 
+p379 tensor支持常见操作
+```
+t = tf.constant([[1.,2.,3.],[4.,5.,6.]])
+t + 10 与tf.add(t,10)效果相同
+tf.square(t)
+tf.transpose(t)
+```
+
