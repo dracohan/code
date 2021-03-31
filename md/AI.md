@@ -148,7 +148,16 @@ Non-trainable params: 2,368
 3. 复用lower layer，并使用监督学习训练higher layer
 
 ### 利用优化器加速训练
-
+- momentum optimization 
+    gradient is for acceleration, not speed
+- nesterov accelerated gradient
+#### Learning rate
+除了使用第10章讨论的从一个小的lr开始，指数级增加lr，直到学习曲线开始下降以外。也可以从一个较大的lr开始，逐渐缩小lr。所有的这些策略统称为learning schedule，常见的有：
+- power scheduling
+- exponential scheduling
+- piecewise constant scheduling
+- performance scheduling
+- 1cycle scheduling
 ### 正则化技术
 
 

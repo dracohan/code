@@ -28,3 +28,20 @@ model_B_on_A.add(keras.layers.Dense(1, activation="sigmoid"))
 互不影响：
 >model_A_clone = keras.models.clone_model(model_A)
 model_A_clone.set_weights(model_A.get_weights())
+
+p353 use momentum opt
+>optimizer = keras.optimizers.SGD(lr=0.001, momentum=0.9)
+
+
+p362 power scheduling
+> optimizer = keras.optimizers.SGD(lr=0.01, decay=1e-4)
+```
+model = keras.models.Sequential([
+    keras.layers.Flatten(input_shape=[28, 28]),
+    keras.layers.Dense(300, activation="selu", kernel_initializer="lecun_normal"),
+    keras.layers.Dense(100, activation="selu", kernel_initializer="lecun_normal"),
+    keras.layers.Dense(10, activation="softmax")
+])
+model.compile(loss="sparse_categorical_crossentropy", optimizer=optimizer, metrics=["accuracy"])
+```
+
