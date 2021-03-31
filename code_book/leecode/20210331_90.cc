@@ -17,6 +17,11 @@
 // 链接：https://leetcode-cn.com/problems/subsets-ii
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
+#include <vector>
+#include <map>
+
+using namespace std;
+
 class Solution {
  public:
   static vector<vector<int>> subsetsWithDup(vector<int>& nums) {
@@ -33,7 +38,7 @@ class Solution {
       }
     }
     for (int i = 1; i <= 10; i++) {
-      if（
+      
     }
   }
 };
