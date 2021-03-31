@@ -159,16 +159,17 @@ Non-trainable params: 2,368
 - performance scheduling
 - 1cycle scheduling
 ### 正则化技术
+利用正则化可以消除部分过拟合
+- l1 and l2 regularization
+- dropout 
+    - 在每一个training step，每个神经元有一定的概率会被忽略。下一个step有可能重新激活。原理是每一个丢掉部分神经元后的网络都有所不同，所以最终的网络是多个网络的融合。实际过程中，往往丢掉顶层的一到三层的神经元
+    - 因为dropout发生在training过程中，所以比较training loss和validation loss有可能会误导。所以应该evaluate training loss without dropout
+    - 如果看到模型过拟合，可以提高dropout rate
+- Monte Carlo dropout
+- max-norm regularization
 
+---
+**chap12**
 
-
-
-
-
-
-
-
-
-
-
-
+### Quick Tour
+- TF operations在最底层都是通过高效的c++代码实现，有些算子有多个kernel实现，每个kernel对应一个硬件架构，比如CPU、GPU or TPU
