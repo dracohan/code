@@ -17,8 +17,9 @@
 // 链接：https://leetcode-cn.com/problems/subsets-ii
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-#include <vector>
+#include <iostream>
 #include <map>
+#include <vector>
 
 using namespace std;
 
@@ -28,27 +29,23 @@ class Solution {
     vector<vector<int>> res;
     vector<int> rec;
     map<int, int> hash;
-    for (int i = 1; i <= 10; i++) {
-      hash[i]++;
+    for (int i = 0; i < nums.size(); i++) {
+      if (nums[i] != 0) hash[nums[i]]++;
     }
-    for (int i = 1; i <= 10; i++) {
-      if (hash[i] != 0) {
-        rec.push_back(i);
-        res.push_back(rec);
+    for (int i = hash.size() - 1; i > 0; i--) {
+      for (int j = 0; j < hash.at(i).second; j++) {
+        rec.push_back(nums[j]);
       }
-    }
-    for (int i = 1; i <= 10; i++) {
-      
     }
   }
 };
 
 int main() {
   vector<int> nums = {1, 2, 2};
-  vector<vector<int>> res = subsetsWithDup(nums);
+  vector<vector<int>> res = Solution::subsetsWithDup(nums);
   for (auto v : res) {
     for (auto n : v) {
-      std::cout << n << ", "
+      std::cout << n << ", ";
     }
     std::cout << std::endl;
   }
