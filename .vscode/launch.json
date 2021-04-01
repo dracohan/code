@@ -37,7 +37,7 @@
             "request": "launch",
             "program": "D:\\tmp\\binary\\${fileBasenameNoExtension}.exe",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "D:\\tmp\\binary",
             "environment": [],
             "externalConsole": false,

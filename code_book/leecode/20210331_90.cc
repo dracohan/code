@@ -26,22 +26,47 @@ using namespace std;
 class Solution {
  public:
   static vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-    vector<vector<int>> res;
-    vector<int> rec;
     map<int, int> hash;
     for (int i = 0; i < nums.size(); i++) {
-      if (nums[i] != 0) hash[nums[i]]++;
+      hash[nums[i]]++;
     }
-    for (int i = hash.size() - 1; i > 0; i--) {
-      for (int j = 0; j < hash.at(i).second; j++) {
-        rec.push_back(nums[j]);
+    vector<int> idle;
+    vector<vector<int>> presubs;
+    presubs.clear();
+    for (auto i = hash.begin(); i != hash.end(); i++) {
+      vector<int> sub;
+      vector<vector<int>> subs;
+      for (int n = 0; n < i->second; n++) {
+        sub.push_back(i->first);
+        subs.push_back(sub);
       }
+      subs.push_back(idle);
+      vector<vector<int>> npresubs;
+      for (auto j = subs.begin(); j != subs.end(); j++) {
+        if (presubs.empty()) {
+          npresubs = subs;
+          break;
+        }
+        for (auto k = presubs.begin(); k != presubs.end(); k++) {
+          vector<int> elem = JoinTwoVec(*j, *k);
+          npresubs.push_back(elem);
+        }
+      }
+      presubs = npresubs;
     }
+    return presubs;
+  }
+
+  static vector<int> JoinTwoVec(vector<int> a, vector<int> b) {
+    for (auto x : b) {
+      a.push_back(x);
+    }
+    return a;
   }
 };
 
 int main() {
-  vector<int> nums = {1, 2, 2};
+  vector<int> nums = {0};
   vector<vector<int>> res = Solution::subsetsWithDup(nums);
   for (auto v : res) {
     for (auto n : v) {
