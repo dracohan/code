@@ -179,9 +179,75 @@ Non-trainable params: 2,368
 - TF operations在最底层都是通过高效的c++代码实现，有些算子有多个kernel实现，每个kernel对应一个硬件架构，比如CPU、GPU or TPU
 
 ### Use TF like Numpy
+#### Tensor and Operations
 - Tensor是一个多维度的数组，也可以只有一个维度
 - t.constant([1.],[3.])可以创建tensor
 - Keras有自己的lower API，在keras.backend中。使用方式： 
 >K = keras.backend \
 > K.square(K.transpose(t)) + 10
+```
+t = tf.constant([1,2,3],[4,5,6])
+t + 10
+t.dtype
+t.shape
+tf.square(t)
+tf.transpose(t)
+tf.exp(t)
+tf.sqrt(t)
+tf.reshape(t)
+```
+
+#### Constant
+- tf和numpy的类型可以通用，例如：
+> a = np.array([2.,3.,4.])
+> b = tf.constant(a)\
+需要注意的是numpy默认是64bit，tf是32bit
+- tf.Tensor是常量，不可更改。所以不能用Tensor表示weight
+#### variable
+类似tf.constant,tf.Varialble与numpy的操作也可以通用,但是Varialbe还可以进行assign，assign_add等操作改变值：
+> v = tf.Variable([[1.,2.,3.,], [4.,5.,6.,]])
+> v.assign(2*v)
+
+#### Other data structures
+- tf.SparseTensor\
+    tensor contains almost zero
+- tf.TensorArray\
+    a list of tensor
+- tf.RaggedTensor\
+    static list of tensors with same shape and type
+- string tensors\
+    tf.string
+- sets\
+    tf.constant([1,2],[3,4]) represent 2 set: {1,2}， {3,4}
+- queues\
+    tf.queue()
+
+### customizing models and train algorithms
+#### custom loss functions
+```
+def huber_fn(y_true, y_pred):
+    error = y_true - y_pred
+
+models.compile(loss=hubber_fn, optimizer="nadam)
+```
+#### save and loading models with custom component
+- 自定义的组件可以被保存，然后调用，因为keras保存了字典，可以通过名字查找实际的函数
+
+model = keras.models.load_model("xxxx.h5", custom_objects={"hubber_fn": huber_fn})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
