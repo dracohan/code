@@ -233,7 +233,45 @@ models.compile(loss=hubber_fn, optimizer="nadam)
 #### save and loading models with custom component
 - 自定义的组件可以被保存，然后调用，因为keras保存了字典，可以通过名字查找实际的函数
 
-model = keras.models.load_model("xxxx.h5", custom_objects={"hubber_fn": huber_fn})
+保存：\
+model.save("my_model_with_a_custom_loss_threshold_2.h5")
+
+加载：\
+model = keras.models.load_model("xxxx.h5", custom_objects={"huber_fn": huber_fn})
+- 以下列方式编译的model，保存的时候不会把参数进行保存：
+model.compile(loss=create_huber(2.0), optimizer="nadam", metrics=["mae"])
+- 如果需要保存需要创建keras.losses.Loss的子类，并重写构造函数、call()、get_config().其中get_config用来保存外部的参数名和内部成员变量的对应关系，return一个map
+- 可以自定义losses, regularizers, constraint, initilizer, metrics, activation functions，layers, event models。但是这些自定义的内容的超参都不会在保存模型的时候被保存，如果需要保存需要继承keras.regularizers.Regularizer, keras.constraints.Constraint, keras.initializers.Initializer, keras.layers.Layer. 同样需要重写__init, __call__, get_config
+
+#### Metrics
+loss和metric不同，loss必须是差异化的，而且不能为0，不用对人可读。metric则相反，只是一个评价，可以为0，必须人类可读。定义一个metric跟定义一个loss function一样
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
