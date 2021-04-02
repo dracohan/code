@@ -17,41 +17,38 @@
 // 链接：https://leetcode-cn.com/problems/subsets-ii
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
 class Solution {
-public:
-    vector<int> t;
-    vector<vector<int>> ans;
+ private:
+  vector<vector<int>> res;
+  vector<int> items;
 
-    void dfs(bool choosePre, int cur, vector<int> &nums) {
-        if (cur == nums.size()) {
-            ans.push_back(t);
-            return;
-        }
-        dfs(false, cur + 1, nums);
-        if (!choosePre && cur > 0 && nums[cur - 1] == nums[cur]) {
-            return;
-        }
-        t.push_back(nums[cur]);
-        dfs(true, cur + 1, nums);
-        t.pop_back();
+ public:
+  void subsets(vector<int>& nums, int start) {
+    res.push_back(items);
+    if (start >= nums.size()) return;
+    for (int i = start; i < nums.size(); ++i) {
+      //  if (i > start && nums[i] == nums[i - 1]) continue;
+      items.push_back(nums[i]);
+      subsets(nums, i + 1);
+      items.pop_back();
     }
-
-    vector<vector<int>> subsetsWithDup(vector<int> &nums) {
-        sort(nums.begin(), nums.end());
-        dfs(false, 0, nums);
-        return ans;
-    }
+  }
+  vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+    sort(nums.begin(), nums.end());
+    subsets(nums, 0);
+    return res;
+  }
 };
 
 int main() {
   Solution s;
-  vector<int> nums = {1,2,2};
+  vector<int> nums = {1, 2, 3};
   vector<vector<int>> res = s.subsetsWithDup(nums);
   for (auto v : res) {
     for (auto n : v) {
