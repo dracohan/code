@@ -60,7 +60,7 @@ public:
 
 int main() {
   Solution s;
-  int t = s.reverse(901000);
+  int t = s.reverse(-901000);
   std::cout << t << std::endl;
 
 }

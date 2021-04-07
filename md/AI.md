@@ -246,7 +246,8 @@ model.compile(loss=create_huber(2.0), optimizer="nadam", metrics=["mae"])
 #### Metrics
 loss和metric不同，loss必须是差异化的，而且不能为0，不用对人可读。metric则相反，只是一个评价，可以为0，必须人类可读。定义一个metric跟定义一个loss function一样
 
-
+Precision通过两个变量计算准确率，为多个epoch累加的正确个数的累加，而不是准确率的平均
+该对象也可以自定义，需要自定义的函数有：update_state, result, get_config, reset_states
 
 
 
