@@ -249,6 +249,12 @@ loss和metric不同，loss必须是差异化的，而且不能为0，不用对�
 Precision通过两个变量计算准确率，为多个epoch累加的正确个数的累加，而不是准确率的平均
 该对象也可以自定义，需要自定义的函数有：update_state, result, get_config, reset_states
 
+#### custom layers
+如果是无weight的layer，可以实现lambda：
+> exponential_layer = keras.layers.Lambda(lambda x: tf.exp(x))
+
+如果是带权重的layer，需要继承自keras.layers.Layer，并重写
+
 
 
 
