@@ -1,26 +1,26 @@
 # AI Background knownledges
 
-## Fishbook
-## Handon-ML
+# Fishbook
+# Handon-ML
 
 ----
 **chap02**
-### Prepare data
+## Prepare data
 - Feature scaling
 当数据集变化范围较大时，DL算法表现不好，可以做scaling
 
 - regularization
-### Fine Tune your models
+## Fine Tune your models
 - GridSearchCV RandomizedSearchCV
 
 ---
 **chap10**
-### 感知机
+## 感知机
 p292 为什么要有激活函数?  - 如果多层感知机之间没有非线性函数，那么再深的网络层级也可以用单一层级表示
 
 ![](./images/activation_functions_plot.png)
 
-### 如何计算MLP的参数数量
+## 如何计算MLP的参数数量
 p300 每一层的参数为上一层输入的神经元个数×当前层神经元个数的权重+当前层bias数量，例如：
 ```text
 Model: "sequential"
@@ -39,7 +39,7 @@ Total params: 266,610
 Trainable params: 266,610
 Non-trainable params: 0
 ```
-### Callbacks
+## Callbacks
 fit函数接收callbacks参数，用来制定需要保存的checkpoints，默认是每个epoch结束。如果有validation_set，可以选择保存最优的epoch,如下：
 
 ```(.cpp .numberLines)
@@ -52,7 +52,7 @@ model = keras.models.load_model("my_keras_model.h5") # rollback to best model
 
 也可以同时指定callback和early stop，early stop是说没有进展了就停止，此时可以指定很大的epoch，early stop会自动停止并回滚到best epoch，所以不需要回滚操作
 
-### Tensorboard
+## Tensorboard
 tensorboard --logdir=./my_logs --port=6006
 
 ```
@@ -67,27 +67,27 @@ tensorboard_cb = keras.callbacks.TensorBoard(run_logdir)
 %tensorboard --logdir=./my_logs --port=6006
 ```
 
-### Fine Tune Neural Network Hyperparameters
+## Fine Tune Neural Network Hyperparameters
 - 先用RandomizedSearchCV扫描一遍，然后用别的search方法在最优解附近搜索
 - 业界也有很多比RandomizedSearchCV更好的搜索算法，例如Keras Tuner/skopt
 - Google Cloud API also provide超参优化服务
 - 超参优化仍然是正在研究的区域
-#### 隐藏层数量
+### 隐藏层数量
 - 如果神经元足够多，一层隐藏网络也可以处理复杂问题，但是参数会很多，多层网络可以指数级降低对神经元数量的需求。因为多层网络可以服用之前的结果，与画一个森林类似
-#### 隐藏层神经元的数量
+### 隐藏层神经元的数量
 - 输入输出层的数量由形状决定，中间隐藏层通常是金字塔型，低level多，高level神经元少
 - 可以跟隐藏层数量一样慢慢增加隐藏层神经元数量直到overfit，但是更通常的做法是直接给一个大的数量，慢慢缩减。
 - 反过来说，如果隐藏层神经元数量不够，则不能表示更多的特性，再深的网络也无济于事，例如两个神经元的隐藏层只能表示2D数据。
 - 相比增加隐藏层神经元，更倾向于增加隐藏层数量
 
-#### Learning Rate, Batch Size, Other HP
+### Learning Rate, Batch Size, Other HP
 - Learning Rate, 通常最优解是最大解的一半。一般从一个比较小的lr开始，逐渐增加到一个比较大的值。调优过程中，会看到loss首先下降，然后上升，最优lr就是上升前的值
 - optimizer
 - Batch Size,大batch size通常导致训练初期不稳定
 
 ---
 **chap11**
-### 梯度消失问题
+## 梯度消失问题
 有时候梯度会越来越小,网络不收敛,称为梯度消失.有时候相反. 梯度越来越大,称为梯度爆炸, 在循环神经网络里会碰到.
 - 使用不饱和激活函数.研究表明激活函数使用不当容易造成梯度消失. ReLU表现要好很多,因为正数的时候不会越来越小,而且容易计算.但是Relu也有问题，经常会碰到dying Relu，经常lr比较大的饿时候计算了负值，导致梯度为0. 为了避免这个问题，可以使用leaky Relu：
 ![](./images/leaky_relu_plot.png)
@@ -96,7 +96,7 @@ tensorboard_cb = keras.callbacks.TensorBoard(run_logdir)
     - BN可以rescale并offset数据集，但是针对一个batch可能不准，可以等到整个数据集结束再计算，但是Keras决定使用动态的策略，动态计算。
     - Ioffe和Szegedy证明BN可以显著提高所有的DNN，使用BN的同时可以使用饱和的激活函数，例如tanh，而且对weight的初始化不敏感，并且可以使用较大的learning rate。
     - BN降低了对regularization的需求
-#### Batch Normalization
+### Batch Normalization
 - BN的参数数量：
 ```text
 Model: "sequential_4"
@@ -128,12 +128,12 @@ Non-trainable params: 2,368
     - axis，进行BN操作的维度，默认最后一个维度
 - BN层有可能被fixed-update weight初始化代替，但是还在研究过程总
 
-#### gradient clipping
+### gradient clipping
 是一项防止梯度爆炸的技术，主要用在RNN中，因为BN在RNN中不太好用,在Keras中使用比较简单：
 > optimizer = keras.optimizers.SGD(clipvalue=1.0)
 上述优化器会把所有的gradient裁剪到-1到1之间
 
-### 训练数据缺少标签
+## 训练数据缺少标签
 通常不会从头开始训练一个网络，而应该复用已经存在的神经网络的lower layer。不仅可以加速，而且需要的数据集也更少。output layer经常被替换。通常做法是：
 - freeze所有的layer
 - unfreeze 一到两个顶层的layer，查看反向传播后的性能
@@ -141,24 +141,24 @@ Non-trainable params: 2,368
 具体方法参见keras.md, p347
 所有的模型freeze和unfreeze之后都需要重新compile
 
-#### Unsupervised pretraining
+### Unsupervised pretraining
 如果要训练一个复杂的网络，但是没有足够的带标签数据:
 1. 尽量收集带标签数据
 2. 进行无监督学习
 3. 复用lower layer，并使用监督学习训练higher layer
 
-### 利用优化器加速训练
+## 利用优化器加速训练
 - momentum optimization 
     gradient is for acceleration, not speed
 - nesterov accelerated gradient
-#### Learning rate
+### Learning rate
 除了使用第10章讨论的从一个小的lr开始，指数级增加lr，直到学习曲线开始下降以外。也可以从一个较大的lr开始，逐渐缩小lr。所有的这些策略统称为learning schedule，常见的有：
 - power scheduling
 - exponential scheduling
 - piecewise constant scheduling
 - performance scheduling
 - 1cycle scheduling
-### 正则化技术
+## 正则化技术
 利用正则化可以消除部分过拟合
 - l1 and l2 regularization
 - dropout 
@@ -168,18 +168,18 @@ Non-trainable params: 2,368
 - Monte Carlo dropout
 - max-norm regularization
 
-### Notes
+## Notes
 1. 不可以把所有权重初始化为同样的值，即使他们符合He初始化方法。因为这对导致对称性，而且反向传播不能打破这种对称性。
 2. bias却可以初始化为0，不会有太大的影响
 
 ---
 **chap12**
 
-### Quick Tour
+## Quick Tour
 - TF operations在最底层都是通过高效的c++代码实现，有些算子有多个kernel实现，每个kernel对应一个硬件架构，比如CPU、GPU or TPU
 
-### Use TF like Numpy
-#### Tensor and Operations
+## Use TF like Numpy
+### Tensor and Operations
 - Tensor是一个多维度的数组，也可以只有一个维度
 - t.constant([1.],[3.])可以创建tensor
 - Keras有自己的lower API，在keras.backend中。使用方式： 
@@ -197,18 +197,18 @@ tf.sqrt(t)
 tf.reshape(t)
 ```
 
-#### Constant
+### Constant
 - tf和numpy的类型可以通用，例如：
 > a = np.array([2.,3.,4.])
 > b = tf.constant(a)\
 需要注意的是numpy默认是64bit，tf是32bit
 - tf.Tensor是常量，不可更改。所以不能用Tensor表示weight
-#### variable
+### variable
 类似tf.constant,tf.Varialble与numpy的操作也可以通用,但是Varialbe还可以进行assign，assign_add等操作改变值：
 > v = tf.Variable([[1.,2.,3.,], [4.,5.,6.,]])
 > v.assign(2*v)
 
-#### Other data structures
+### Other data structures
 - tf.SparseTensor\
     tensor contains almost zero
 - tf.TensorArray\
@@ -222,15 +222,15 @@ tf.reshape(t)
 - queues\
     tf.queue()
 
-### customizing models and train algorithms
-#### custom loss functions
+## customizing models and train algorithms
+### custom loss functions
 ```
 def huber_fn(y_true, y_pred):
     error = y_true - y_pred
 
 models.compile(loss=hubber_fn, optimizer="nadam)
 ```
-#### save and loading models with custom component
+### save and loading models with custom component
 - 自定义的组件可以被保存，然后调用，因为keras保存了字典，可以通过名字查找实际的函数
 
 保存：\
@@ -243,17 +243,35 @@ model.compile(loss=create_huber(2.0), optimizer="nadam", metrics=["mae"])
 - 如果需要保存需要创建keras.losses.Loss的子类，并重写构造函数、call()、get_config().其中get_config用来保存外部的参数名和内部成员变量的对应关系，return一个map
 - 可以自定义losses, regularizers, constraint, initilizer, metrics, activation functions，layers, event models。但是这些自定义的内容的超参都不会在保存模型的时候被保存，如果需要保存需要继承keras.regularizers.Regularizer, keras.constraints.Constraint, keras.initializers.Initializer, keras.layers.Layer. 同样需要重写__init, __call__, get_config
 
-#### Metrics
+### Metrics
 loss和metric不同，loss必须是差异化的，而且不能为0，不用对人可读。metric则相反，只是一个评价，可以为0，必须人类可读。定义一个metric跟定义一个loss function一样
 
 Precision通过两个变量计算准确率，为多个epoch累加的正确个数的累加，而不是准确率的平均
 该对象也可以自定义，需要自定义的函数有：update_state, result, get_config, reset_states
 
-#### custom layers
+### custom layers
 如果是无weight的layer，可以实现lambda：
 > exponential_layer = keras.layers.Lambda(lambda x: tf.exp(x))
 
-如果是带权重的layer，需要继承自keras.layers.Layer，并重写
+如果是带权重的layer，需要继承自keras.layers.Layer，并重写以下函数：
+* __init__
+* build()
+    首次使用layer的时候被调用，调用add_weight创建layer的变量
+* call()
+    期望的处理，比如dense为input和kernel相乘，并添加偏置
+* compute_output_shape()
+    返回output的shape，通常该函数可以别忽略，因为tf.keras会自动推导出输出形状
+
+如果在training和testing的时候行为不同的自定义layer，需要为call函数增加training参数，使用该参数进行区分
+
+### custom models
+Model类是Layer类的一个子类，可以跟Layer一样定义和使用，但是有一些更多的派生函数，例如compile, fit, evaluate, predict, get_layer，save
+如果希望保存，日后调用keras.models.load_model()，则需要使用以下两种方式的一种：
+1. 在自定义model和自定义layer中实现get_config()。
+2. 实现save_weights, load_weights
+
+
+
 
 
 
