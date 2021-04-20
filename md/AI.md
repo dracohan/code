@@ -270,6 +270,22 @@ Model类是Layer类的一个子类，可以跟Layer一样定义和使用，但�
 1. 在自定义model和自定义layer中实现get_config()。
 2. 实现save_weights, load_weights
 
+### Losses and Metrics based on internals
+Loss和Metric不止可以用预测值计算，也可以用中间层的一些结果计算
+
+### TF计算梯度
+使用tf.GradientTape可以自动记录每一个用到变量的操作，最后可以导出：
+```
+w1, w2 = tf.Variable(5.), tf.Variable(3.)
+with tf.GradientTape() as tape:
+    z = f(w1, w2)
+
+gradients = tape.gradient(z, [w1, w2])
+```
+这种方式很准确，而且只需要计算一次。 
+
+
+
 
 
 
