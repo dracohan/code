@@ -284,45 +284,48 @@ gradients = tape.gradient(z, [w1, w2])
 ```
 这种方式很准确，而且只需要计算一次。 
 
+### Tensorflow functions and Graphs
+convert python function to tf function
+```
+def cube(x):
+    return x ** 3
+tf_cube = tf.function(cube)
+```
 
+as a decorator:
+```
+@tf.function
+def tf_cube(x):
+    return x ** 3
 
+tf_cube(2)
+```
 
+可以使用python_function访问tf function的原生python function，例如
+> tf_cube.python_function
 
+通常tensorflow的函数比python的原生函数执行的更快，特别是当计算比较复杂的时候。
 
+默认在Keras里自定义loss，metric，layer的时候自动转换为tf.function，如果不需要转换，需要设置dynamic=True, 或者在compile的时候设置run_eagerly=True
 
+Graph可以重用，例如tf_cube(tf.constant(3))会生成一个int32类型的shape[]的graph，后面的调用都会复用这个类型。如果调用tf_cube(tf.constant(2,3))会生成新的graph。自动生成还有个前提是使用tf.constant作为参数，如果使用python原生的int作为参数，每一个不同的值都会生成一个新的graph，例如tf_cube(10), tf_cube(20)会生成两个。
 
+如果使用python value多次调用tf function会生成多组tf graph占用内存，python value需要仅用于少数比较固定的值，例如超参。这样tensorflow可以优化每一个参数。
 
+### AutoGraph and Tracing
+TF生成图的逻辑是：
+- AutoGraph: 分析control flow，例如for, while, if, return, break等。原因是python提供了__add__()/__mul__()等capture接口，但是没有__while__()/__if__()等接口
+- 当分析结束后，将所有的control flow替换为tensorflow自己的operation，例如tf.while_loop(), tf.cond()
+- Tensorflow会调用这些生成后的function。但是调用的时候不会传值，只会有name/data type/shape。成为graph mode，与eager mode相反
+- 可以查看tensorflow生成的funciton:
+> tf.autograph.to_code(tf_cube.python_function)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### TF function rules
+- 如果调用了第三方库，例如numpy或者标准库，这些调用只会在tracing的时候运行，不出现在graph中。TensorFlow graph只由tf的结构组成，所以应该使用tf.reduct_sum()而不是np.sum()，tf.sort()而不是内置sorted()
+- 如果tf函数调用了python函数或者tf function，那么这些函数会出现在图中，而且这些函数不需要使用@tf.function修饰
+- 如果函数创建了tf varialble，只在第一次调用的时候创建，否则会用exception。通常不在tf function中创建。如果需要赋值，使用assign而不是=
+- python函数的源码需要可见，如果不可见例如定义在shell中，则graph声场会失败
+- 尽量使用vector而不是for loop
 
 
 
