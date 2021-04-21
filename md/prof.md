@@ -3,6 +3,9 @@
 ## Background Knowledge
 
 ## Tasks
+General Perf
+- [ ] perf用法及实现原理
+
 EF
 ----
 - [ ] libprofile采集原理
@@ -20,6 +23,25 @@ TF
 - [ ] 分布式数据采集
 - [ ] CUDA生态profiling
 
+STCv
+------
+- [ ]  uftrace用法
+
 ## Profiling Bibles
 
 ## Profiling Skills Buildup
+
+### DTrace
+[DTrace](http://dtrace.org/blogs/about/)
+
+DTrace is a combination of a number of things:
+
+- kernel driver
+- user space "dtrace" command
+- probe function mechanisms (eg syscall, fbt)
+- scripting language
+
+### 火焰图
+
+
+
