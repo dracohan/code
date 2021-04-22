@@ -10,6 +10,7 @@
 当数据集变化范围较大时，DL算法表现不好，可以做scaling
 
 - regularization
+    将数据限定在某一个范围内的预处理。
 ## Fine Tune your models
 - GridSearchCV RandomizedSearchCV
 
@@ -327,9 +328,13 @@ TF生成图的逻辑是：
 - python函数的源码需要可见，如果不可见例如定义在shell中，则graph声场会失败
 - 尽量使用vector而不是for loop
 
+### Excercise
+3. Tensorflow默认32bit，numpy默认64
 
+---
+**chap13**
+目前为止都是利用内存中的数据训练网络，但是神经网络的数据集通常非常大，不适合放在RAM中。TF提供了Data API简化操作。Data API可以跟tf.keras无缝衔接。
 
-
-
-
+Data API可以从csv，binary，TFRecord(Protobuf)， SQL database 读取数据。数据预处理可以写自己的预处理Layer，也可以用Keras提供的标准layer. TF系统中的预处理模块：
+1. tf.Transform. 2. TFDS
 
