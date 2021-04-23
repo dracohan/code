@@ -338,3 +338,72 @@ TF生成图的逻辑是：
 Data API可以从csv，binary，TFRecord(Protobuf)， SQL database 读取数据。数据预处理可以写自己的预处理Layer，也可以用Keras提供的标准layer. TF系统中的预处理模块：
 1. tf.Transform. 2. TFDS
 
+## Dataset(tf.data)
+```
+// method 1
+X = tf.range(10)
+dataset = tf.data.Dataset.from_tensor_slices(x)
+
+// method 2
+dataset = tf.data.Dataset.range(10)
+```
+### chain transform
+> dataset = dataset.repeat(3).batch(9)
+
+切分前dataset的类型是RangeDataset，每个元素类型是：
+>tf.Tensor(0, shape=(), dtype=int64)\
+>tf.Tensor(1, shape=(), dtype=int64)
+
+切分后是BatchDataset，每个元素类型是：
+> tf.Tensor([0 1 2 3 4 5 6 7], shape=(8,), dtype=int64)
+
+注意：dataset的method调用并不改变dataset本身，需要赋值
+
+也可以用map函数针对每个元素调用自定义transform函数：
+> dataset = dataset.map(lambda x: x * 2)
+
+调用apply函数针对整个dataset进行操作(从batch转为range)：
+> dataset = dataset.unbatch()
+
+只取某几个元素：
+> dataset.take(3)
+
+### Shuffle
+### Preprocess
+decode_csv返回a list of scalar tensors(元素只有大小，没有方向), 可以通过tf.stack转换为1D tensor array
+
+### Prefetching
+调用dataset的prefetch方法，可以创建一个尽量做到prefetch一到两个batch（通过参数决定）的dataset。如果不确定prefetch数量，可以设置tf.data.experimental.AUTOTUNE让TF决定
+
+## TFRecord Format
+每个record包含 长度/length CRC/data/data CRC\
+Write：
+```
+with tf.io.TFRecordWriter("my_data.tfrecord") as f:
+    f.write(b"This is the first record")
+    f.write(b"And this is the second record")
+```
+Read：
+```
+filepaths = ["my_data.tfrecord"]
+dataset = tf.data.TFRecordDataset(filepaths)
+for item in dataset:
+    print(item)
+```
+Compress Write:
+```
+options = tf.io.TFRecordOptions(compression_type="GZIP")
+with tf.io.TFRecordWriter("my_compressed.tfrecord", options) as f:
+    f.write(b"This is the first record")
+    f.write(b"And this is the second record")
+```
+
+Compress Read:
+```
+dataset = tf.data.TFRecordDataset(["my_compressed.tfrecord"],
+                                  compression_type="GZIP")
+for item in dataset:
+    print(item)
+```
+
+
