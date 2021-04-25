@@ -43,4 +43,9 @@ DTrace is a combination of a number of things:
 
 ### 火焰图
 
+### perf
+sudo perf record -e cpu-clock -g ./run
+sudo perf report
+
+
 

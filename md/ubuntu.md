@@ -12,3 +12,6 @@ git config --global credential.helper cache
 ### 查看内核启动参数
 >cat /proc/cmdline
 
+### perf没权限
+>sudo sh -c 'echo -1 >/proc/sys/kernel/perf_event_paranoid'
+
