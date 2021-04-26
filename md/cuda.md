@@ -1,5 +1,9 @@
 # CUDA(Compute Unified Device Architecture)
 
+## profiling
+nvprof默认是summary mode
+也可以使用Trace Mode: --print-api-trace/--print-gpu-trace
+
 ## Professional CUDA C
 ### Flynn's Taxonomy
 - SISD(Single Instruction Single Data)

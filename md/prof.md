@@ -59,5 +59,16 @@ DTrace is a combination of a number of things:
 报告：
 >sudo perf report
 
+查看所有的PMU event:
+perf list
+
+### Gprof
+gprof用于监控程序中每个方法的执行时间和被调用次数，方便找出程序中最耗时的函数。在程序正常退出后，会生成gmon.out文件，解析这个文件，可以生成一个可视化的报告
+* 使用gprof，需要在编译时，加入-pg选项
+* gprof -b run gmon.out >>report.txt
+
+
+
+
 
 
