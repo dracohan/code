@@ -42,6 +42,9 @@ DTrace is a combination of a number of things:
 - scripting language
 
 ### 火焰图
+1. 使用perf script工具对perf.data进行解析perf script -i perf.data &> perf.unfold
+2. 将perf.unfold中的符号进行折叠：/data/stackcollapse-perf.pl perf.unfold &> perf.folded
+3. 最后生成svg图：/data/flamegraph.pl perf.folded > perf.svg
 
 ### perf
 安装:
