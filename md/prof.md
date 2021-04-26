@@ -44,8 +44,17 @@ DTrace is a combination of a number of things:
 ### 火焰图
 
 ### perf
-sudo perf record -e cpu-clock -g ./run
-sudo perf report
+安装:
+> sudo apt-get install linux-tools-common linuxx-tools-generic linux-tools-`uname -r`
+
+打开pmc:
+> sudo sh -c 'echo -1 >/proc/sys/kernel/perf_event_paranoid'
+
+记录：
+> sudo perf record -e cpu-clock -g ./run
+
+报告：
+>sudo perf report
 
 
 
