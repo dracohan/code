@@ -2,7 +2,7 @@
 
 ## Command
 编译成.o
-> drwxrwxr-x 3 Baowei.Han Baowei.Han  4096 4月  25 17:34 ../
+
 
 查看程序的headers:
 > readelf --headers /lib/libc.so.6
