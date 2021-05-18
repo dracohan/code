@@ -19,6 +19,27 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "type": "shell",
+            "label": "linuxbuild",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-O0",
+                "${file}",
+                "/home/jm/github/code/code_book/datac/DSAAC2eCode/list.c",
+                "-o",
+                "/tmp/a.out"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
