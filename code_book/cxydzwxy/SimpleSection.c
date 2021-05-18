@@ -13,6 +13,11 @@ int printf(const char* format, ...);
 int global_int_var = 84;
 int global_unint_var;
  
+ /**
+  * @brief 
+  * 
+  * @param i 
+  */
 void func1(int i)
 {
     printf("%d\n",i);
