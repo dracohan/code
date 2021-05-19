@@ -51,6 +51,27 @@
                 }
             ],
             "preLaunchTask": "winbuild"
+        },
+        {
+            "name": "windows launch gcc",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "c:\\tmp\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "c:\\tmp",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\devtool\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "winbuildcc"
         }
     ]
 }

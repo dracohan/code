@@ -8,6 +8,27 @@
             "args": [
                 "-g",
                 "${file}",
+                "C:\\github\\code\\code_book\\datac\\DSAAC2eCode\\list.c",
+                "-o",
+                "c:\\tmp\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "winbuildcc",
+            "command": "C:\\devtool\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\gcc.exe",
+            "args": [
+                "-g",
+                "${file}",
+                // "C:\\github\\code\\code_book\\datac\\DSAAC2eCode\\list.c",
                 "-o",
                 "c:\\tmp\\${fileBasenameNoExtension}.exe"
             ],
