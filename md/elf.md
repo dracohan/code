@@ -5,11 +5,11 @@
 
 
 查看程序的headers:
+查看反汇编
+> objdump --disassemble libtest.so
 > readelf --headers /lib/libc.so.6
 read relocate table
 > readelf -r ./xxx.o
-查看反汇编
-> objdump --disassemble libtest.so
 check the sections of a so
 > readelf --sections libtest.so
 查看需要重定位的符号

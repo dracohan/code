@@ -3,21 +3,19 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "linux build current file",
-            "command": "g++",
+            "label": "winbuild",
+            "command": "C:\\devtool\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe",
             "args": [
                 "-g",
                 "${file}",
-                "-lpthread",
+                "C:\\github\\code\\code_book\\datac\\DSAAC2eCode\\list.c",
                 "-o",
-                "/tmp/a.out"
+                "c:\\tmp\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -25,16 +23,43 @@
         },
         {
             "type": "shell",
-            "label": "g++.exe build active file",
-            "command": "D:\\pkg\\mingw64\\bin\\g++.exe",
+            "label": "winbuildcc",
+            "command": "C:\\devtool\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\gcc.exe",
             "args": [
                 "-g",
                 "${file}",
+                // "C:\\github\\code\\code_book\\datac\\DSAAC2eCode\\list.c",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "c:\\tmp\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "D:\\pkg\\mingw64\\bin"
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "linuxbuild",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-O0",
+                "${file}",
+                "/home/jm/github/code/code_book/datac/DSAAC2eCode/list.c",
+                "-o",
+                "/tmp/a.out"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
         }
     ]

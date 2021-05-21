@@ -17,7 +17,7 @@
             "request": "launch",
             "program": "/tmp/a.out",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "/tmp/",
             "environment": [],
             "externalConsole": false,
@@ -29,20 +29,20 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "linux build current file"
+            "preLaunchTask": "linuxbuild"
         },
         {
             "name": "windows launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "D:\\tmp\\binary\\${fileBasenameNoExtension}.exe",
+            "program": "c:\\tmp\\${fileBasenameNoExtension}.exe",
             "args": [],
-            "stopAtEntry": true,
-            "cwd": "D:\\tmp\\binary",
+            "stopAtEntry": false,
+            "cwd": "c:\\tmp",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "D:\\pkg\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "C:\\devtool\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -50,7 +50,28 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build"
+            "preLaunchTask": "winbuild"
+        },
+        {
+            "name": "windows launch gcc",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "c:\\tmp\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "c:\\tmp",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\devtool\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "winbuildcc"
         }
     ]
 }

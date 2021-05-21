@@ -10,7 +10,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "D:/pkg/mingw64/bin/g++.exe",
+            "compilerPath": "C:\\devtool\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++11",
             "intelliSenseMode": "clang-x64",
@@ -20,10 +20,7 @@
                 ],
                 "limitSymbolsToIncludedHeaders": false,
                 "databaseFilename": ""
-            },
-            "forcedInclude": [
-                "D:/pkg/mingw64/lib/gcc/x86_64-w64-mingw32/6.4.0/include/c++/iostream"
-            ]
+            }
         }
     ],
     "version": 4
