@@ -58,7 +58,7 @@
             "request": "launch",
             "program": "c:\\tmp\\${fileBasenameNoExtension}.exe",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "c:\\tmp",
             "environment": [],
             "externalConsole": false,

@@ -1,8 +1,7 @@
-#include "list.h"
-
 #include <stdlib.h>
 
 #include "fatal.h"
+#include "3-1-list.h"
 
 /* Place in the interface file */
 struct Node {
@@ -37,11 +36,10 @@ int IsLast(Position P, List L) { return P->Next == NULL; }
 Position Find(ElementType X, List L) {
   Position P;
 
-  /* 1*/ P = L->Next;
-  /* 2*/ while (P != NULL && P->Element != X)
-    /* 3*/ P = P->Next;
+  P = L->Next;
+  while (P != NULL && P->Element != X) P = P->Next;
 
-  /* 4*/ return P;
+  return P;
 }
 /* END */
 
@@ -72,11 +70,10 @@ void Delete(ElementType X, List L) {
 Position FindPrevious(ElementType X, List L) {
   Position P;
 
-  /* 1*/ P = L;
-  /* 2*/ while (P->Next != NULL && P->Next->Element != X)
-    /* 3*/ P = P->Next;
+  P = L;
+  while (P->Next != NULL && P->Next->Element != X) P = P->Next;
 
-  /* 4*/ return P;
+  return P;
 }
 /* END */
 
@@ -88,13 +85,12 @@ Position FindPrevious(ElementType X, List L) {
 void Insert(ElementType X, List L, Position P) {
   Position TmpCell;
 
-  /* 1*/ TmpCell = malloc(sizeof(struct Node));
-  /* 2*/ if (TmpCell == NULL)
-    /* 3*/ FatalError("Out of space!!!");
+  TmpCell = malloc(sizeof(struct Node));
+  if (TmpCell == NULL) FatalError("Out of space!!!");
 
-  /* 4*/ TmpCell->Element = X;
-  /* 5*/ TmpCell->Next = P->Next;
-  /* 6*/ P->Next = TmpCell;
+  TmpCell->Element = X;
+  TmpCell->Next = P->Next;
+  P->Next = TmpCell;
 }
 /* END */
 
@@ -124,12 +120,12 @@ void Insert(ElementType X, List L, Position P) {
 void DeleteList(List L) {
   Position P, Tmp;
 
-  /* 1*/ P = L->Next; /* Header assumed */
-  /* 2*/ L->Next = NULL;
-  /* 3*/ while (P != NULL) {
-    /* 4*/ Tmp = P->Next;
-    /* 5*/ free(P);
-    /* 6*/ P = Tmp;
+  P = L->Next; /* Header assumed */
+  L->Next = NULL;
+  while (P != NULL) {
+    Tmp = P->Next;
+    free(P);
+    P = Tmp;
   }
 }
 /* END */
