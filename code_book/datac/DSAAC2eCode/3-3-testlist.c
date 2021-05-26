@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "list.h"
+#include "3-1-list.h"
 
 void PrintList(const List L) {
   Position P = Header(L);
@@ -16,7 +16,7 @@ void PrintList(const List L) {
   }
 }
 
-main() {
+int main() {
   List L;
   Position P;
   int i;
