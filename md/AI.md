@@ -406,4 +406,46 @@ for item in dataset:
     print(item)
 ```
 
+---
+**chap14**
+
+## Convolution Layer
+一层由相同filter组成的layer输出的东西层成为feature map，highlight了最能激活filter的部分
+
+filter多个导出多个feature map，同一个feature map share一个filter
+input多个成为多个input channel
+### TF implementation
+```
+A mini-batch: b, h, w, channel
+china = load_sample_image("china.jpg") / 255
+flower = load_sample_image("flower.jpg") / 255
+images = np.array([china, flower])
+batch_size, height, width, channels = images.shape
+```
+
+china.shape = 427, 640, 2其中427和640是h，w， 2是channel
+
+创建filter：
+```
+filters = np.zeros(shape=(7, 7, channels, 2), dtype=np.float32)
+filters[:, 3, :, 0] = 1  # vertical line
+filters[3, :, :, 1] = 1  # horizontal line
+```
+通过如下对nn的调用
+>  outputs = tf.nn.conv2d(images, filters, strides=1, padding="SAME")
+如果stride是1，output的shape是(2, 427, 640, 2)
+如果stride是2，output的shape是(2, 214, 320, 2)
+
+
+可以得到：
+plt.imshow(outputs[0, :, :, 0], cmap="gray") # plot 1st image's 2nd feature map
+
+![](./images/cnn_filter_1.png)
+
+通常filter不需要自己创建，CNN自己学习一个出来，filter是一个trainable的参数。 
+
+卷基层的参数不多，主要有filter的数量，h, w, stride, padding type
+
+
+
 
