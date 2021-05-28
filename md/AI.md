@@ -23,6 +23,7 @@ p292 为什么要有激活函数?  - 如果多层感知机之间没有非线性�
 
 ## 如何计算MLP的参数数量
 p300 每一层的参数为上一层输入的神经元个数×当前层神经元个数的权重+当前层bias数量，例如：
+model.summary()显示
 ```text
 Model: "sequential"
 _________________________________________________________________
@@ -445,6 +446,84 @@ plt.imshow(outputs[0, :, :, 0], cmap="gray") # plot 1st image's 2nd feature map
 通常filter不需要自己创建，CNN自己学习一个出来，filter是一个trainable的参数。 
 
 卷基层的参数不多，主要有filter的数量，h, w, stride, padding type
+
+## Pooling layer
+polling跟卷积类似，但是没有权重，只是把所有的input聚集起来，取最大值或者平均值。
+
+polling layer可以引入不变性，当输入有稍许位移的时候，输出并没有变化。在CNN中，可以屏蔽部分不重要的细节。
+
+创建一个pooling layer：
+> max_pool = keras.layers.MaxPool2D(pool_size=2)
+
+depthwise max pooling
+
+> depth_pool = keras.layers.Lambda(lambda X: tf.nn.max_pool(
+    X, ksize=(1, 1, 1, 3), strides=(1, 1, 1, 3), padding="VALID"))
+
+global average pooling layer:
+每一个feature map输出一个值，主要用在输出层
+
+## CNN Architectures
+CNN网络由多个卷基层+ pooling层+Relu组成，最后可能会接一个全连接网络。 一个常见的错误是使用太大的kernel，使用较小的kernel可以减小计算量，结果也会更好
+
+卷基层的参数数量： kernel h * w + 1(bias) * filter number(feature map): 
+for model:
+```
+model = keras.models.Sequential([
+    DefaultConv2D(filters=64, kernel_size=7, input_shape=[28, 28, 1]),
+    keras.layers.MaxPooling2D(pool_size=2),
+    DefaultConv2D(filters=128),
+    DefaultConv2D(filters=128),
+    keras.layers.MaxPooling2D(pool_size=2),
+    DefaultConv2D(filters=256),
+    DefaultConv2D(filters=256),
+    keras.layers.MaxPooling2D(pool_size=2),
+    keras.layers.Flatten(),
+    keras.layers.Dense(units=128, activation='relu'),
+    keras.layers.Dropout(0.5),
+    keras.layers.Dense(units=64, activation='relu'),
+    keras.layers.Dropout(0.5),
+    keras.layers.Dense(units=10, activation='softmax'),
+])
+```
+```
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_8 (Conv2D)            (None, 28, 28, 64)        3200      
+_________________________________________________________________
+max_pooling2d_4 (MaxPooling2 (None, 14, 14, 64)        0         
+_________________________________________________________________
+conv2d_9 (Conv2D)            (None, 14, 14, 128)       73856     
+_________________________________________________________________
+conv2d_10 (Conv2D)           (None, 14, 14, 128)       147584    
+_________________________________________________________________
+max_pooling2d_5 (MaxPooling2 (None, 7, 7, 128)         0         
+_________________________________________________________________
+conv2d_11 (Conv2D)           (None, 7, 7, 256)         295168    
+_________________________________________________________________
+conv2d_12 (Conv2D)           (None, 7, 7, 256)         590080    
+_________________________________________________________________
+max_pooling2d_6 (MaxPooling2 (None, 3, 3, 256)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 2304)              0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 128)               295040    
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_4 (Dense)              (None, 64)                8256      
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 64)                0         
+_________________________________________________________________
+dense_5 (Dense)              (None, 10)                650       
+=================================================================
+Total params: 1,413,834
+Trainable params: 1,413,834
+Non-trainable params: 0
+```
+
+
 
 
 
