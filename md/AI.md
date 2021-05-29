@@ -523,6 +523,11 @@ Trainable params: 1,413,834
 Non-trainable params: 0
 ```
 
+### Data augmentation(数据扩充)
+数据扩充人为的增加了训练集的大小，给每个训练数据增加了变量，可以用来减少过拟合
+
+
+
 
 
 
