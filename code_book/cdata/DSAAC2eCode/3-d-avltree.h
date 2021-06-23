@@ -15,6 +15,8 @@ Position FindMax(AvlTree T);
 AvlTree Insert(ElementType X, AvlTree T);
 AvlTree Delete(ElementType X, AvlTree T);
 ElementType Retrieve(Position P);
+Position PrintTree(AvlTree T);
+
 
 #endif /* _AvlTree_H */
 /* END */

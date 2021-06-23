@@ -20,6 +20,13 @@ AvlTree MakeEmpty(AvlTree T) {
   return NULL;
 }
 
+Position PrintTree(AvlTree T) {
+  if (T == NULL) return NULL;
+  PrintTree(T->Left);
+  printf("%d ", T->Element);
+  PrintTree(T->Right);
+}
+
 Position Find(ElementType X, AvlTree T) {
   if (T == NULL) return NULL;
   if (X < T->Element)
@@ -138,15 +145,19 @@ AvlTree Insert(ElementType X, AvlTree T) {
     if (Height(T->Left) - Height(T->Right) == 2)
       if (X < T->Left->Element)
         T = SingleRotateWithLeft(T);
-      else
+      else{
+        PrintTree(T);
         T = DoubleRotateWithLeft(T);
+      }
   } else if (X > T->Element) {
     T->Right = Insert(X, T->Right);
     if (Height(T->Right) - Height(T->Left) == 2)
       if (X > T->Right->Element)
         T = SingleRotateWithRight(T);
-      else
+      else{
+        PrintTree(T);
         T = DoubleRotateWithRight(T);
+      }
   }
   /* Else X is in the tree already; we'll do nothing */
 
