@@ -1,1 +1,6 @@
 .vscode/
+*.out
+prog
+*.o
+.gitignore
+*.json
