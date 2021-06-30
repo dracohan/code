@@ -59,7 +59,7 @@ int dp(vector<int> &coins, int amount) {
 //   return count[rem - 1];
 // }
 
-int coinChange_with_vec(vector<int> &coins, int amount) {
+int coinChange_memo(vector<int> &coins, int amount) {
   if (amount < 1) return 0;
   count.assign(amount + 1, -2);
   return dp(coins, amount);
@@ -67,6 +67,6 @@ int coinChange_with_vec(vector<int> &coins, int amount) {
 
 int main() {
   vector<int> coins = {1, 2, 5};
-  int ret = coinChange_with_vec(coins, 11);
+  int ret = coinChange_memo(coins, 11);
   cout << "ret: " << ret << endl;
 }
