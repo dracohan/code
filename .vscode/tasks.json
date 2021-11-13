@@ -43,13 +43,36 @@
         },
         {
             "type": "shell",
-            "label": "linuxbuild",
+            "label": "linuxbuildcc",
             "command": "gcc",
             "args": [
                 "-g",
                 "-O0",
                 "${file}",
-                "/home/jm/github/code/code_book/datac/DSAAC2eCode/list.c",
+                "-lpthread",
+                "/home/withon/github/code/code_book/csapp/ch08-ecf/csapp.c",
+                "-o",
+                "/tmp/a.out"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "linuxbuild",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-O0",
+                "${file}",
+                "-lpthread",
+                "/home/withon/github/code/code_book/csapp/ch08-ecf/csapp.c",
                 "-o",
                 "/tmp/a.out"
             ],

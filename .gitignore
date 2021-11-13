@@ -3,6 +3,7 @@
 *.log
 *.a
 *.out
+*.json
 script/*
 transfer/*
 company/*
@@ -38,3 +39,4 @@ _testmain.go
 *.exe
 *.test
 *.prof
+.vscode
