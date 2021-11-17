@@ -49,8 +49,8 @@
                 "-g",
                 "-O0",
                 "${file}",
-                "-lpthread",
                 "/home/withon/github/code/code_book/csapp/ch08-ecf/csapp.c",
+                "-lpthread",
                 "-o",
                 "/tmp/a.out"
             ],
