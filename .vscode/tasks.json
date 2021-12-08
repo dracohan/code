@@ -8,7 +8,7 @@
             "args": [
                 "-g",
                 "${file}",
-                "C:\\github\\code\\code_book\\datac\\DSAAC2eCode\\list.c",
+                // "C:\\github\\code\\code_book\\datac\\DSAAC2eCode\\list.c",
                 "-o",
                 "c:\\tmp\\${fileBasenameNoExtension}.exe"
             ],
@@ -28,7 +28,8 @@
             "args": [
                 "-g",
                 "${file}",
-                // "C:\\github\\code\\code_book\\datac\\DSAAC2eCode\\list.c",
+                "C:\\github\\code\\code_book\\cdata\\DSAAC2eCode\\3-2-list.c",
+                "-O0",
                 "-o",
                 "c:\\tmp\\${fileBasenameNoExtension}.exe"
             ],

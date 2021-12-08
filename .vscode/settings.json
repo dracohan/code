@@ -71,5 +71,5 @@
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.tabSize": 2,
-    "workbench.quickOpen.closeOnFocusLost": false
+    "workbench.quickOpen.closeOnFocusLost": false,
 }

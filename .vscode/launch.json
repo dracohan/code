@@ -5,13 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
             "name": "linux launch",
             "type": "cppdbg",
             "request": "launch",
@@ -37,7 +30,7 @@
             "request": "launch",
             "program": "c:\\tmp\\${fileBasenameNoExtension}.exe",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "c:\\tmp",
             "environment": [],
             "externalConsole": false,
