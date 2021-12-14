@@ -1,7 +1,7 @@
 #define SepChain    /* Define the appropriate hash algorithm */
 
 #ifdef SepChain
-    #include "hashsep.h"
+    #include "5-1-hashsep.h"
 #endif
 
 #ifdef QuadProb
@@ -36,8 +36,7 @@ main( )
         Insert( j, H );
     }
 
-    for( i = 0, j = 0; i < NumItems; i++, j += 71 )
-    #ifdef SepChain
+    for( i = 0, j = 0; i w
         if( ( P = Find( j, H ) ) == NULL || Retrieve( P ) != j )
     #endif
     #ifdef QuadProb

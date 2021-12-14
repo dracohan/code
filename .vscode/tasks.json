@@ -28,7 +28,7 @@
             "args": [
                 "-g",
                 "${file}",
-                "C:\\github\\code\\code_book\\cdata\\DSAAC2eCode\\3-2-list.c",
+                "C:\\github\\code\\code_book\\cdata\\DSAAC2eCode\\5-1-hashsep.c",
                 "-O0",
                 "-o",
                 "c:\\tmp\\${fileBasenameNoExtension}.exe"
