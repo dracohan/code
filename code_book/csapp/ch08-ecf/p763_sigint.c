@@ -4,6 +4,7 @@
 void sigint_handler(int sig) /* SIGINT handler */   //line:ecf:sigint:beginhandler
 {
     printf("Caught SIGINT!\n");    //line:ecf:sigint:printhandler
+    return;
     // exit(0);                      //line:ecf:sigint:exithandler
 }                                              //line:ecf:sigint:endhandler
 

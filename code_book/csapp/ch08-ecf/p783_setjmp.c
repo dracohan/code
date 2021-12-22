@@ -37,6 +37,7 @@ void foo(void)
 void bar(void) 
 {
     if (error2)
-	longjmp(buf, 2); 
+    //Detected an error1 condition in foo ????
+	longjmp(buf, 0); 
 }
 /* $end setjmp */
