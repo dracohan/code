@@ -1,4 +1,4 @@
-#include "binheap.h"
+#include "6-1-binheap.h"
 #include <stdio.h>
 
 #define MaxSize (1000)
