@@ -50,7 +50,7 @@
                 "-g",
                 "-O0",
                 "${file}",
-                "/home/withon/github/code/code_book/csapp/ch08-ecf/csapp.c",
+                "/home/stc/baowei.han/github/code/code_book/csapp/ch09-vm/csapp.c",
                 "-lpthread",
                 "-o",
                 "/tmp/a.out"
