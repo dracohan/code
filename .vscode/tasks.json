@@ -50,10 +50,11 @@
                 "-g",
                 "-O0",
                 "${file}",
-                "/home/stc/baowei.han/github/code/code_book/csapp/ch09-vm/csapp.c",
+                "/home/withon/github/code/code_book/csapp/ch12-cocurrent/csapp.c",
+                "/home/withon/github/code/code_book/csapp/ch12-cocurrent/echo.c",
                 "-lpthread",
                 "-o",
-                "/tmp/a.out"
+                "/tmp/client"
             ],
             "options": {
                 "cwd": "${fileDirname}"
