@@ -24,7 +24,7 @@ void *thread(void *vargp)
 {
     int myid = (int)vargp;
     static int cnt = 0; //line:conc:sharing:cntdec
-    printf("[%d]: %s (cnt=%d)\n", myid, ptr[myid], ++cnt); //line:conc:sharing:stack
+    printf("[%d]: %s (cnt=%d) i=%d\n", myid, ptr[myid], ++cnt, i); //line:conc:sharing:stack
     return NULL;
 }
 /* $end sharing */
