@@ -9,7 +9,9 @@ int main()                                    //line:conc:hello:main
 {
     pthread_t tid;                            //line:conc:hello:tid
     Pthread_create(&tid, NULL, thread, NULL); //line:conc:hello:create
-    Pthread_join(tid, NULL);                  //line:conc:hello:join
+    printf("tid: 0x%lx\n", tid);
+    // Pthread_join(tid, NULL);                  //line:conc:hello:join
+    pthread_cancel(tid);
     exit(0);                                  //line:conc:hello:exit
 }
 
@@ -19,3 +21,4 @@ void *thread(void *vargp) /* thread routine */  //line:conc:hello:beginthread
     return NULL;                               //line:conc:hello:return
 }                                              //line:conc:hello:endthread
 /* $end hello */
+
