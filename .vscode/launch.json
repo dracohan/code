@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "linuxbuildcc"
+            "preLaunchTask": "linuxbuild"
         },
         {
             "name": "windows launch",

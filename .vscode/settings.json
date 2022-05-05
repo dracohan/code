@@ -69,10 +69,15 @@
         "thread": "cpp",
         "cfenv": "cpp",
         "typeindex": "cpp",
-        "StringClient.C": "cpp"
+        "StringClient.C": "cpp",
+        "__bit_reference": "cpp",
+        "__string": "cpp",
+        "ios": "cpp"
     },
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.tabSize": 2,
     "workbench.quickOpen.closeOnFocusLost": false,
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
 }

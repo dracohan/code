@@ -50,11 +50,11 @@
                 "-g",
                 "-O0",
                 "${file}",
-                "/home/withon/github/code/code_book/csapp/ch12-cocurrent/csapp.c",
-                "/home/withon/github/code/code_book/csapp/ch12-cocurrent/echo.c",
+                // "/home/withon/github/code/code_book/csapp/ch12-cocurrent/csapp.c",
+                // "/home/withon/github/code/code_book/csapp/ch12-cocurrent/echo.c",
                 "-lpthread",
                 "-o",
-                "/tmp/client"
+                "/tmp/a.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -73,8 +73,6 @@
                 "-g",
                 "-O0",
                 "${file}",
-                "-lpthread",
-                "/home/withon/github/code/code_book/csapp/ch08-ecf/csapp.c",
                 "-o",
                 "/tmp/a.out"
             ],
