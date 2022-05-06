@@ -72,7 +72,8 @@
         "StringClient.C": "cpp",
         "__bit_reference": "cpp",
         "__string": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "__node_handle": "cpp"
     },
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "editor.multiCursorModifier": "ctrlCmd",

@@ -1,6 +1,3 @@
-/**
- * Definition for a binary tree node.
- */
 #include <algorithm>
 #include <iostream>
 
