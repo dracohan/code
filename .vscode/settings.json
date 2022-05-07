@@ -73,7 +73,10 @@
         "__bit_reference": "cpp",
         "__string": "cpp",
         "ios": "cpp",
-        "__node_handle": "cpp"
+        "__node_handle": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "__tree": "cpp"
     },
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "editor.multiCursorModifier": "ctrlCmd",
