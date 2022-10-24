@@ -1,5 +1,6 @@
 #include <memory>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -9,8 +10,18 @@ public:
   int _x;
 };
 
-int main() {
+// std::unique_ptr<Result> alloc() {
+// Result&& alloc() {
+vector<int>&& alloc() {
   // auto &&r  = std::make_unique<Result>();
-  Result r;
-  std::cout << "r: " << r._x << std::endl;
+  // Result r; 
+  vector<int> v = {1,2,3};
+  return std::move(v);
+  // return v;
+}
+
+int main() {
+  auto &&c = alloc();
+  // Result r;
+  std::cout << "r: " << c.size() << std::endl;
 }
