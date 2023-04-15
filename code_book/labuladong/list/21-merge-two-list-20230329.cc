@@ -13,21 +13,21 @@
 class Solution {
 public:
   ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
-    if (list1 == nullptr)
-      return list2;
+    // if (list1 == nullptr)
+    //   return list2;
 
-    if (list2 == nullptr)
-      return list1;
+    // if (list2 == nullptr)
+    //   return list1;
 
-    ListNode *head = nullptr;
-    if (list1->val > list2->val) {
-      head = list2;
-      list2 = list2->next;
-    } else {
-      head = list1;
-      list1 = list1->next;
-    }
-    
+    // ListNode *head = nullptr;
+    // if (list1->val > list2->val) {
+    //   head = list2;
+    //   list2 = list2->next;
+    // } else {
+    //   head = list1;
+    //   list1 = list1->next;
+    // }
+    ListNode * head = new ListNode(-1);
     ListNode *dummy = head;
     while (list1 != nullptr && list2 != nullptr) {
       if (list1->val > list2->val) {
@@ -43,7 +43,7 @@ public:
       head->next = list1;
     if (list2 != nullptr)
       head->next = list2;
-    return dummy;
+    return dummy->next;
   }
 };
 
