@@ -13,6 +13,7 @@ void printList(ListNode *l) {
     std::cout << l->val << " ";
     l = l->next;
   }
+  std::cout << std::endl;
 }
 
 

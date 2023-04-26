@@ -12,9 +12,13 @@
 class Solution {
  public:
   ListNode* partition(ListNode* head, int x) {
+    // smaller splitted list 1
     ListNode* dummy1 = new ListNode(-1);
+    // larger splitted list 2
     ListNode* dummy2 = new ListNode(-1);
+    // moving header
     ListNode *p1 = dummy1, *p2 = dummy2;
+    // original header
     ListNode* p = head;
     while (p != nullptr) {
       if (p->val >= x) {
@@ -24,12 +28,14 @@ class Solution {
         p1->next = p;
         p1 = p1->next;
       }
-      // p= p->next, but p1/p2->next should be nullptr
+      // p= p->next(tmp), but p1/p2->next should be nullptr
       ListNode* tmp = p->next;
       p->next = nullptr;
       p = tmp;
     }
+    // concat two list
     p1->next = dummy2->next;
+    // dummy1 is virtual
     return dummy1->next;
   }
 };
