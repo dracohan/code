@@ -15,11 +15,12 @@ def backtrack(路径, 选择列表):
       将该选择再加入选择列表
 */
 #include <algorithm>
+#include <functional>
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
+// typedef std::function<void()> func_t;
 void backtrace(vector<int>& c, vector<int>& t, vector<vector<int>>& res) {
   if (t.size() == c.size()) {
     res.push_back(t);
@@ -35,20 +36,35 @@ void backtrace(vector<int>& c, vector<int>& t, vector<vector<int>>& res) {
   }
 }
 
-vector<vector<int>> permute(vector<int>& nums) {
+vector<vector<int>> permute(vector<int> &nums) {
   vector<vector<int>> res;
-  vector<int> t;
-  backtrace(nums, t, res);
+  vector<int> track;
+  backtrace(nums, track, res);
+
+  // func_t backtrace = [&]() {
+  //   if (track.size() == nums.size()) {
+  //     res.push_back(track);
+  //     return;
+  //   }
+  //   for (auto it = nums.begin(); it != nums.end(); it++) {
+  //     if (std::find(track.begin(), track.end(), *it) != track.end())
+  //       continue;
+  //     track.push_back(*it);
+  //     backtrace();
+  //     track.pop_back();
+  //   }
+  // };
+  // backtrace();
   return res;
 }
 
 int main() {
   vector<int> c = {1, 2, 5};
   vector<vector<int>> res = permute(c);
-  // for (auto it = res.begin(); it != res.end(); it++){
-  //   for (auto tt = it->begin(); tt != it->end(); tt++){
-  //     std::cout << *tt << " ";
-  //   }
-  //   std::cout << std::endl;
-  // }
+  for (auto it = res.begin(); it != res.end(); it++) {
+    for (auto tt = it->begin(); tt != it->end(); tt++) {
+      std::cout << *tt << " ";
+    }
+    std::cout << std::endl;
+  }
 }
