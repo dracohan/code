@@ -59,7 +59,7 @@ vector<vector<int>> permute(vector<int> &nums) {
 }
 
 int main() {
-  vector<int> c = {1, 2, 5};
+  vector<int> c = {1, 2, 2};
   vector<vector<int>> res = permute(c);
   for (auto it = res.begin(); it != res.end(); it++) {
     for (auto tt = it->begin(); tt != it->end(); tt++) {
