@@ -1,0 +1,3 @@
+[submodule "code_book/cocurrent_cpp_in_action/master"]
+	path = code_book/cocurrent_cpp_in_action/master
+	url = https://github.com/anthonywilliams/ccia_code_samples.git
