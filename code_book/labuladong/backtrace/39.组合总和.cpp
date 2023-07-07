@@ -82,7 +82,7 @@ class Solution {
       if (i > start && nums[i] == nums[i - 1]) continue;
       track.push_back(nums[i]);
       trackSum += nums[i];
-      backtrace(nums, i, target);
+      backtrace(nums, i, target); //可重复，所以选择不递增
       track.pop_back();
       trackSum -= nums[i];
     }
