@@ -81,54 +81,97 @@ using namespace std;
 // @lc code=start
 class Solution {
  public:
+  // int openLock(vector<string>& deadends, string target) {
+  //   if (target == "0000") {
+  //     return 0;
+  //   }
+
+  //   unordered_set<string> deads(deadends.begin(), deadends.end());
+  //   if (deads.count("0000")) {
+  //     return -1;
+  //   }
+  //   auto num_prev = [](char x) -> char { return (x == '0' ? '9' : x - 1); };
+  //   auto num_succ = [](char x) -> char { return (x == '9' ? '0' : x + 1); };
+
+  //   auto get = [&](string& status) -> vector<string> {
+  //     vector<string> ret;
+  //     for (int i = 0; i < 4; ++i) {
+  //       char num = status[i];
+  //       status[i] = num_prev(num);
+  //       ret.push_back(status);
+  //       status[i] = num_succ(num);
+  //       ret.push_back(status);
+  //       status[i] = num;
+  //     }
+  //     return ret;
+  //   };
+
+  //   unordered_set<string> visited;
+  //   queue<pair<string, int>> q;
+
+  //   int step = 0;
+  //   q.emplace("0000", 0);
+  //   visited.insert("0000");
+
+  //   while (!q.empty()) {
+  //     auto [cur, step] = q.front();
+  //     q.pop();
+  //     for (auto&& next : get(cur)) {
+  //       if (!visited.count(next) && !deads.count(next)) {
+  //         if (next == target) {
+  //           return step + 1;
+  //         }
+
+  //         q.emplace(next, step + 1);
+  //         visited.insert(std::move(next));
+  //       }
+  //     }
+  //   }
+  //   return -1;
+  // }
+
   int openLock(vector<string>& deadends, string target) {
-    if (target == "0000") {
-      return 0;
-    }
-
     unordered_set<string> deads(deadends.begin(), deadends.end());
-    if (deads.count("0000")) {
-      return -1;
-    }
-    auto num_prev = [](char x) -> char { return (x == '0' ? '9' : x - 1); };
-    auto num_succ = [](char x) -> char { return (x == '9' ? '0' : x + 1); };
-
-    auto get = [&](string& status) -> vector<string> {
-      vector<string> ret;
-      for (int i = 0; i < 4; ++i) {
-        char num = status[i];
-        status[i] = num_prev(num);
-        ret.push_back(status);
-        status[i] = num_succ(num);
-        ret.push_back(status);
-        status[i] = num;
-      }
-      return ret;
-    };
-
-    unordered_set<string> visited;
-    queue<pair<string, int>> q;
+    unordered_set<string> q1, q2, visited;
 
     int step = 0;
-    q.emplace("0000", 0);
-    visited.insert("0000");
+    q1.insert("0000");
+    q2.insert(target);
 
-    while (!q.empty()) {
-      auto [cur, step] = q.front();
-      q.pop();
-      for (auto&& next : get(cur)) {
-        if (!visited.count(next) && !deads.count(next)) {
-          if (next == target) {
-            return step + 1;
-          }
+    while(!q1.empty() && !q2.empty()){
+        // 哈希集合在遍历的过程中不能修改，用 temp 存储扩散结果
+        unordered_set<string> temp;
 
-          q.emplace(next, step + 1);
-          visited.insert(std::move(next));
+        /* 将 q1 中的所有节点向周围扩散 */
+        for(auto cur : q1){
+            /* 判断是否到达终点 */
+            if(deads.count(cur)) 
+                continue;
+            if(q2.count(cur))
+                return step;
+
+            visited.insert(cur);
+
+            /* 将一个节点的未遍历相邻节点加入集合 */
+            for(int j=0; j<4; j++){
+                string up = plusOne(cur, j);
+                if(!visited.count(up))
+                    temp.insert(up);
+                string down = minusOne(cur, j);
+                if(!visited.count(down))
+                    temp.insert(down);
+            }
         }
-      }
+        /* 在这里增加步数 */
+        step++;
+        // temp 相当于 q1
+        // 这里交换 q1 q2，下一轮 while 就是扩散 q2
+        q1 = q2;
+        q2 = temp;
     }
     return -1;
-  }
+}
+
 };
 
 int main() {
