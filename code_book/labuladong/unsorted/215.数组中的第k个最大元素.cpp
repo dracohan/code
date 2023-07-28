@@ -50,6 +50,11 @@
 using namespace std;
 
 // @lc code=start
+#include <queue>
+#include <iostream>
+
+using namespace std;
+
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
@@ -64,5 +69,14 @@ public:
         return pq.top();
     }
 };
+
+int main() {
+  vector<int> nums = {3,2,1,5,6,4};
+  Solution solution;
+  int res = solution.findKthLargest(nums, 2);
+  std::cout << "kth largest:" << res << std::endl;
+}
+
+
 // @lc code=end
 
