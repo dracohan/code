@@ -54,8 +54,8 @@
  */
 
 // @lc code=start
-#include <unordered_set>
-#include <vector>
+#include <string>
+#include <unordered_map>
 
 #include "../utils/utils.h"
 
@@ -63,8 +63,28 @@ using namespace std;
 
 class Solution {
  public:
+  int lengthOfLongestSubstring_own(string s) {
+    int right = 1, left = 0;
+    int longest = 0;
+
+    if (s.size() <= 1) return s.size();
+
+    while (right < s.size()) {
+      char c = s[right];
+
+      while (left < right) {
+        string sub = s.substr(left, right - left);
+        if (sub.find(c) == std::string::npos) break;
+        left++;
+      }
+      if (right - left + 1 > longest) longest = right - left + 1;
+      right++;
+    }
+    return longest;
+  }
+
   int lengthOfLongestSubstring(string s) {
-    unordered_set<char> window;
+    unordered_map<char, int> window;
 
     int right = 0, left = 0;
     int longest = 0;
@@ -73,15 +93,14 @@ class Solution {
       char c = s[right];
       right++;
 
-      auto _, success = window.insert(c);
-      if (!success) {
-        while (left < right) {
-          if (s[left] != s[right]) left++;
-        }
+      window[c]++;
+
+      while (window[c] > 1) {
+        char d = s[left];
         left++;
-      } else if ((right - left) > longest) {
-        longest = right - left;
+        window[d]--;
       }
+      longest = max(longest, right - left);
     }
     return longest;
   }
