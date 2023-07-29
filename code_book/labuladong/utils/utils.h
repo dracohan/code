@@ -16,6 +16,13 @@ void printCollection(const Container &c, const char* optcstr="")
 }
 
 
+void printIndent(int n) {
+    for (int i = 0; i < n; i++) {
+        printf(" |");
+    }
+}
+
+
 /*
 int main() 
 {
