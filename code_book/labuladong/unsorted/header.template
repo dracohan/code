@@ -2,7 +2,23 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <climits>
 
 #include "../utils/utils.h"
 
 using namespace std;
+
+
+printIndent(indent++);
+printf("amount: %d\n", amount);
+if (amount == 0) {
+  printIndent(indent--);
+  printf("return 0\n");
+
+
+int main() {
+  vector<int> coins = {1, 2, 5};
+  Solution s;
+  int ret = s.coinChange(coins, 11);
+  cout << "ret: " << ret << endl;
+}
