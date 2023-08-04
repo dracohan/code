@@ -38,7 +38,7 @@ void backtrace(vector<int>& c, vector<int>& t, vector<vector<int>>& res) {
 
 vector<vector<int>> permute(vector<int> &nums) {
   vector<vector<int>> res;
-  vector<int> track;
+  vector<int>   ;
   backtrace(nums, track, res);
 
   // func_t backtrace = [&]() {
