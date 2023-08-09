@@ -58,6 +58,16 @@
  */
 
 // @lc code=start
+#include <algorithm>
+#include <climits>
+#include <iostream>
+#include <map>
+#include <vector>
+
+#include "../utils/utils.h"
+
+using namespace std;
+
 class Solution {
 public:
   int maxSubArray(vector<int> &nums) {
@@ -79,6 +89,26 @@ public:
       res = max(res, dp[i]);
     }
     return res;
+  }
+  int maxSubArray_2(vector<int> &nums) {
+    int left = 0, right = 0;
+    int windowSum = 0, maxSum = INT_MIN;
+    while (right < nums.size()) {
+      // 扩大窗口并更新窗口内的元素和
+      windowSum += nums[right];
+      right++;
+
+      // 更新答案
+      maxSum = windowSum > maxSum ? windowSum : maxSum;
+
+      // 判断窗口是否要收缩
+      while (windowSum < 0) {
+        // 缩小窗口并更新窗口内的元素和
+        windowSum -= nums[left];
+        left++;
+      }
+    }
+    return maxSum;
   }
 };
 // @lc code=end
