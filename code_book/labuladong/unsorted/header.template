@@ -5,6 +5,7 @@
 #include <climits>
 
 #include "../utils/utils.h"
+#include "../utils/tree.h"
 
 using namespace std;
 

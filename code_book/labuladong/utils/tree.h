@@ -25,6 +25,66 @@ struct TreeNode {
       : val(x), left(left), right(right) {}
 };
 
+void printTreePreOrder(TreeNode* current) {
+  if (nullptr == current) return;
+
+  std::cout << current->val << " ";
+  printTreePreOrder(current->left);
+  printTreePreOrder(current->right);
+}
+
+void printTreeInOrder(TreeNode* current) {
+  if (nullptr == current) return;
+
+  printTreeInOrder(current->left);
+  std::cout << current->val << " ";
+  printTreeInOrder(current->right);
+}
+
+void printTreePostOrder(TreeNode* current) {
+  if (nullptr == current) return;
+
+  printTreePostOrder(current->left);
+  printTreePostOrder(current->right);
+  std::cout << current->val << " ";
+}
+
+void treeToVec(TreeNode* p, vector<int> &v) {
+  if (nullptr == p) 
+    return;
+  v.push_back(p->val);
+  treeToVec(p->left, v);
+  treeToVec(p->right, v);
+}
+
+TreeNode* build(vector<int>& v, int i, int n) {
+  if (i >= n || v[i] == 8888)
+    return nullptr;
+  TreeNode* root = new TreeNode(v[i]);
+  root->left = build(v, 2*i + 1, n);
+  root->right = build(v, 2*i + 2, n);
+  return root;
+}
+
+TreeNode* vecToTree(vector<int> &v) {
+  int n = v.size();
+  TreeNode* root = build(v, 0, n);
+  // printTree(root);
+  return root;
+}
+
+
+
+// 打印双向链表
+void printList(TreeNode* head) {
+  TreeNode* p = head;
+  while (p) {
+    std::cout << p->val << " ";
+    p = p->right;
+  }
+  std::cout << endl;
+}
+
 struct Tree {
   TreeNode* root;
   Tree() : root(nullptr) {}
@@ -66,23 +126,5 @@ struct Tree {
     treeToList(root->right, head, last);
   }
 
-  void printTree() { printTree(root); }
-
-  void printTree(TreeNode* current) {
-    if (nullptr == current) return;
-
-    printTree(current->left);
-    std::cout << current->val << " ";
-    printTree(current->right);
-  }
+  //  void printTree() { printTree(root); }
 };
-
-// 打印双向链表
-void printList(TreeNode* head) {
-  TreeNode* p = head;
-  while (p) {
-    std::cout << p->val << " ";
-    p = p->right;
-  }
-  std::cout << endl;
-}
