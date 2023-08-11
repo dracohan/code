@@ -62,11 +62,11 @@
 
 // @lc code=start
 #include <algorithm>
+#include <climits>
 #include <iostream>
 #include <map>
-#include <vector>
-#include <climits>
 #include <queue>
+#include <vector>
 
 #include "../utils/utils.h"
 
@@ -76,39 +76,39 @@ class Solution {
 public:
   vector<vector<int>> kSmallestPairs(vector<int> &nums1, vector<int> &nums2,
                                      int k) {
-    auto cmp = [&nums1, &nums2](const pair<int, int> &a,
-                                const pair<int, int> &b) {
-      return nums1[a.first] + nums2[a.second] >
-             nums1[b.first] + nums2[b.second];
+    auto cmp = [&](std::pair<int, int> p1, std::pair<int, int> p2) {
+      return nums1[p1.first] + nums2[p1.second] >
+             nums1[p2.first] + nums2[p2.second];
     };
 
     int m = nums1.size();
     int n = nums2.size();
-    vector<vector<int>> ans;
-    priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> pq(
-        cmp);
-    for (int i = 0; i < min(k, m); i++) {
-      pq.emplace(i, 0);
+    priority_queue<std::pair<int, int>, vector<std::pair<int, int>>,
+                   decltype(cmp)>
+        pq(cmp);
+
+    for (int i = 0; i < std::min(m, k); i++) {
+      pq.push(std::make_pair(i, 0));
     }
+    vector<vector<int>> res;
     while (k-- > 0 && !pq.empty()) {
-      auto [x, y] = pq.top();
+      auto p = pq.top();
       pq.pop();
-      ans.emplace_back(initializer_list<int>{nums1[x], nums2[y]});
-      if (y + 1 < n) {
-        pq.emplace(x, y + 1);
+      res.push_back({nums1[p.first], nums2[p.second]});
+      if (p.second < n - 1) {
+        pq.push(std::make_pair(p.first, p.second + 1));
       }
     }
-
-    return ans;
+    return res;
   }
 };
 
 int main() {
-  vector<int> nums1 = {1,7,11};
-  vector<int> nums2 = {2,4,6};
+  vector<int> nums1 = {1, 7, 11};
+  vector<int> nums2 = {2, 4, 6};
   Solution s;
   vector<vector<int>> ret = s.kSmallestPairs(nums1, nums2, 3);
-  for (auto& r : ret)
+  for (auto &r : ret)
     printCollection(r);
 }
 // @lc code=end
