@@ -8,7 +8,7 @@
 #include "../utils/utils.h"
 #include "../utils/tree.h"
 
-
+using namespace std;
 
 printIndent(indent++);
 printf("amount: %d\n", amount);
@@ -18,8 +18,17 @@ if (amount == 0) {
 
 
 int main() {
-  vector<int> coins = {1, 2, 5};
+  vector<int> coins = {10,9,2,5,3,7,101,18};
   Solution s;
-  int ret = s.coinChange(coins, 11);
-  cout << "ret: " << ret << endl;
+  vector<int> ret = s.lengthOfLIS(coins);
+  printCollection(ret);
+}
+
+int main() {
+  vector<int> vec = {3,5,1,6,2,0,8,8888,8888,7,4};
+  TreeNode* t = vecToTree(vec);
+//   printTreePreOrder(t);
+  Solution s; 
+  auto res = s.lowestCommonAncestor(t, 5, 4);
+  std::cout << "val:" << res->val << std::endl;
 }

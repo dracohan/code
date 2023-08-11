@@ -67,6 +67,7 @@
 #include <map>
 #include <queue>
 #include <vector>
+#include <unordered_set>
 
 #include "../utils/utils.h"
 
@@ -81,22 +82,29 @@ public:
              nums1[p2.first] + nums2[p2.second];
     };
 
-    int m = nums1.size();
-    int n = nums2.size();
     priority_queue<std::pair<int, int>, vector<std::pair<int, int>>,
                    decltype(cmp)>
         pq(cmp);
 
-    for (int i = 0; i < std::min(m, k); i++) {
-      pq.push(std::make_pair(i, 0));
-    }
+    int m = nums1.size();
+    int n = nums2.size();
+    // for (int i = 0; i < std::min(m, k); i++) {
+    //     pq.push(std::make_pair(i, 0));
+    // }
+    pq.push(std::make_pair(0, 0));
     vector<vector<int>> res;
+    unordered_set<long> s;
     while (k-- > 0 && !pq.empty()) {
       auto p = pq.top();
       pq.pop();
       res.push_back({nums1[p.first], nums2[p.second]});
-      if (p.second < n - 1) {
-        pq.push(std::make_pair(p.first, p.second + 1));
+      if (p.second < n - 1 && !s.count((long)p.first << 32 | (p.second + 1))) {
+        pq.push({p.first, p.second + 1});
+        s.insert((long)p.first << 32 | (p.second + 1));
+      }
+      if (p.first < m - 1 && !s.count((long)(p.first + 1) << 32 | p.second)) {
+        pq.push({p.first + 1, p.second});
+        s.insert((long)(p.first + 1) << 32 | p.second);
       }
     }
     return res;
@@ -104,10 +112,10 @@ public:
 };
 
 int main() {
-  vector<int> nums1 = {1, 7, 11};
-  vector<int> nums2 = {2, 4, 6};
+  vector<int> nums1 = {1, 2, 3};
+  vector<int> nums2 = {1, 2, 3};
   Solution s;
-  vector<vector<int>> ret = s.kSmallestPairs(nums1, nums2, 3);
+  vector<vector<int>> ret = s.kSmallestPairs(nums1, nums2, 10);
   for (auto &r : ret)
     printCollection(r);
 }

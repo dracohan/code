@@ -76,17 +76,20 @@ using namespace std;
 
 class Solution {
 public:
-  int maxPathSum(TreeNode *root) {
-    if (root == nullptr)
-      return 0;
-    int left = std::max(0, maxPathSum(root->left));
-    int right = std::max(0, maxPathSum(root->right));
+    int res = INT_MIN;
+    int maxPathSum(TreeNode* root) {
+        traverse(root);
+        return res;
+    }
 
-    int all = left + right + root->val;
-    int oneSidesum = std::max(left, right) + root->val;
+    int traverse(TreeNode* root) {
+        if (root == nullptr) return 0;
+        int left = std::max(0, traverse(root->left));
+        int right = std::max(0, traverse(root->right));
+        res = std::max(res, left + right + root->val);
+        return std::max(left, right) + root->val;
+    }
 
-    return std::max(all, oneSidesum);
-  }
 };
 
 int main() {

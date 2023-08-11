@@ -17,67 +17,68 @@ using namespace std;
 
 struct TreeNode {
   int val;
-  TreeNode* left;
-  TreeNode* right;
+  TreeNode *left;
+  TreeNode *right;
   TreeNode() : val(0), left(nullptr), right(nullptr) {}
   TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode* left, TreeNode* right)
+  TreeNode(int x, TreeNode *left, TreeNode *right)
       : val(x), left(left), right(right) {}
 };
 
-void printTreePreOrder(TreeNode* current) {
-  if (nullptr == current) return;
+void printTreePreOrder(TreeNode *current) {
+  if (nullptr == current)
+    return;
 
   std::cout << current->val << " ";
   printTreePreOrder(current->left);
   printTreePreOrder(current->right);
 }
 
-void printTreeInOrder(TreeNode* current) {
-  if (nullptr == current) return;
+void printTreeInOrder(TreeNode *current) {
+  if (nullptr == current)
+    return;
 
   printTreeInOrder(current->left);
   std::cout << current->val << " ";
   printTreeInOrder(current->right);
 }
 
-void printTreePostOrder(TreeNode* current) {
-  if (nullptr == current) return;
+void printTreePostOrder(TreeNode *current) {
+  if (nullptr == current)
+    return;
 
   printTreePostOrder(current->left);
   printTreePostOrder(current->right);
   std::cout << current->val << " ";
 }
 
-void treeToVec(TreeNode* p, vector<int> &v) {
-  if (nullptr == p) 
+void treeToVec(TreeNode *p, vector<int> &v) {
+  if (nullptr == p)
     return;
   v.push_back(p->val);
   treeToVec(p->left, v);
   treeToVec(p->right, v);
 }
 
-TreeNode* build(vector<int>& v, int i, int n) {
+TreeNode *buildFromVector(vector<int> &v, int i, int n) {
   if (i >= n || v[i] == 8888)
     return nullptr;
-  TreeNode* root = new TreeNode(v[i]);
-  root->left = build(v, 2*i + 1, n);
-  root->right = build(v, 2*i + 2, n);
+  TreeNode *root = new TreeNode(v[i]);
+  root->left = buildFromVector(v, 2 * i + 1, n);
+  root->right = buildFromVector(v, 2 * i + 2, n);
   return root;
 }
 
-TreeNode* vecToTree(vector<int> &v) {
+TreeNode *buildFrom(vector<int> &v) {
   int n = v.size();
-  TreeNode* root = build(v, 0, n);
+  TreeNode *root = buildFromVector(v, 0, n);
   // printTree(root);
   return root;
 }
 
-
-
 // 打印双向链表
-void printList(TreeNode* head) {
-  TreeNode* p = head;
+void printList(TreeNode *head) {
+  TreeNode *p = head;
   while (p) {
     std::cout << p->val << " ";
     p = p->right;
@@ -86,14 +87,14 @@ void printList(TreeNode* head) {
 }
 
 struct Tree {
-  TreeNode* root;
+  TreeNode *root;
   Tree() : root(nullptr) {}
 
   void insert(int val) { insert(root, val); }
 
-  void insert(TreeNode*& current, int val) {
+  void insert(TreeNode *&current, int val) {
     if (nullptr == current) {
-      TreeNode* node = new TreeNode();
+      TreeNode *node = new TreeNode();
       node->left = nullptr;
       node->right = nullptr;
       node->val = val;
@@ -108,12 +109,13 @@ struct Tree {
     }
   }
 
-  void treeToList(TreeNode*& head, TreeNode*& last) {
+  void treeToList(TreeNode *&head, TreeNode *&last) {
     treeToList(root, head, last);
   }
 
-  void treeToList(TreeNode* root, TreeNode*& head, TreeNode*& last) {
-    if (nullptr == root) return;
+  void treeToList(TreeNode *root, TreeNode *&head, TreeNode *&last) {
+    if (nullptr == root)
+      return;
 
     //不为空，转换左侧，最后的节点保存为last
     treeToList(root->left, head, last);
