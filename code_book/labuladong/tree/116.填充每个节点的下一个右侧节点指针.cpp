@@ -99,20 +99,33 @@ public:
 
 class Solution {
 public:
-    Node* connect(Node* root) {
+    TreeNode* connect(TreeNode* root) {
         if(root == nullptr) return nullptr;
         traverse(root->left, root->right);
         return root;
     }
-    void traverse(Node* l, Node* r) {
+
+    void traverse(TreeNode* l, TreeNode* r) {
         if(l == nullptr || r == nullptr )
             return;
 
         l->next = r;
         traverse(l->left, l->right);
-        traverse(l->left, r->right);
         traverse(l->right, r->left);
+        traverse(l->left, r->right);
     }
 };
+
+
+int main() {
+  vector<int> vec = {1,2,3,4,5,6,7};
+  TreeNode* t = vecToTree(vec);
+//   printTreePreOrder(t);
+  Solution s; 
+  auto res = s.connect(t);
+//   for (auto x : res) {
+//       printTreePostOrder(x);
+//   }
+}
 // @lc code=end
 
