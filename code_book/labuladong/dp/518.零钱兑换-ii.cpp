@@ -94,15 +94,15 @@ public:
       for (int j = 1; j <= amount; j++) {
         if (j - coins[i - 1] >= 0) {
           dp[i][j] = dp[i - 1][j] + dp[i][j - coins[i - 1]];
-          printf("setting dp[%d][%d]=dp[%d][%d] + dp[%d][%d]=%d\n", i, j, i - 1,
-                 j, i, j - coins[i - 1], dp[i][j]);
+          // printf("setting dp[%d][%d]=dp[%d][%d] + dp[%d][%d]=%d\n", i, j, i - 1,
+                //  j, i, j - coins[i - 1], dp[i][j]);
         } else {
           dp[i][j] = dp[i - 1][j];
-          printf("setting dp[%d][%d]=dp[%d][%d]=%d\n", i, j, i - 1, j,
-                 dp[i][j]);
+          // printf("setting dp[%d][%d]=dp[%d][%d]=%d\n", i, j, i - 1, j,
+                //  dp[i][j]);
         }
       }
-      printf("\n");
+      // printf("\n");
     }
     return dp[n][amount];
   }
