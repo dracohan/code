@@ -93,5 +93,13 @@ public:
     return res;
     }
 };
+
+
+int main() {
+  vector<int> nums = {10,9,2,1,2,1,2,1,2};
+  Solution s;
+  int ret = s.lengthOfLIS(nums);
+  std::cout << "ret: " << ret << std::endl;
+}
 // @lc code=end
 
