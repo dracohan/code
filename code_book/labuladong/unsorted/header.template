@@ -32,3 +32,10 @@ int main() {
   auto res = s.lowestCommonAncestor(t, 5, 4);
   std::cout << "val:" << res->val << std::endl;
 }
+
+int main() {
+  vector<string> pizza = {"A..","AAA","..."};
+  Solution s;
+  int ret = s.ways(pizza, 3);
+  std::cout << "ret:" << ret << std::endl;
+}

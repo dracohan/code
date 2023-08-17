@@ -80,16 +80,16 @@ using namespace std;
 class Solution {
 public:
   string reverseWords(string s) {
-    int sz = s.size();
     int i = 0;
-    int j = sz - 1;
+    int j = s.size() - 1;
+
     while (s[i] == ' ')
       i++;
     while (s[j] == ' ')
       j--;
 
     s = s.substr(i, j - i + 1);
-    sz = j - i + 1;
+    int sz = j - i + 1;
 
     for (int i = 0, j = sz - 1; i < j; i++, j--) {
       std::swap(s[i], s[j]);
@@ -101,9 +101,7 @@ public:
     for (int i = 0; i < sz; i++) {
       if (s[i] != ' ') {
         st.push(s[i]);
-      } else {
-        if (st.empty())
-          continue;
+      } else if (!st.empty()) {
         while (!st.empty()) {
           res[k++] = st.top();
           st.pop();
@@ -111,11 +109,13 @@ public:
         res[k++] = ' ';
       }
     }
+
     while (!st.empty()) {
       res[k++] = st.top();
       st.pop();
     }
     res[k++] = '\0';
+    
     return (string)res;
   }
 };
