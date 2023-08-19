@@ -57,57 +57,62 @@
 
 // @lc code=start
 #include <algorithm>
+#include <climits>
 #include <iostream>
 #include <map>
-#include <vector>
-#include <climits>
-#include <unordered_set>
 #include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
-#include "../utils/utils.h"
 #include "../utils/tree.h"
+#include "../utils/utils.h"
 
 using namespace std;
 
 class Solution {
   unordered_set<string> wds;
   bool res = false;
+  unordered_map<int, bool> memo;
 
- public:
-  bool wordBreak(string s, vector<string>& wordDict) {
-    for (auto& s : wordDict) wds.insert(s);
+public:
+  bool wordBreak(string s, vector<string> &wordDict) {
+    for (auto &s : wordDict)
+      wds.insert(s);
     dp(s, 0);
     return res;
   }
 
   void dp(string s, int start) {
-    if (res == true) return;
+    if (res == true)
+      return;
+
+    if (memo.contains(start) && memo[start] == false)
+      return;
 
     if (start == s.size()) {
       res = true;
       return;
     }
-    for (int i = start; i < s.size(); i++) {
-      for (auto& wd : wds) {
-        int len = wd.size();
-        if (start + len > s.size()){
-          res = false;
+    for (auto &wd : wds) {
+      int len = wd.size();
+      if (start + len > s.size()) {
+        continue;
+      }
+      if (wd == s.substr(start, len)) {
+        dp(s, start + len);
+        if (res == true)
           return;
-        } 
-        if (wd == s.substr(i, len)) {
-          dp(s, i + len);
-          if (res == true) return;
-        }
       }
     }
+
     res = false;
+    memo[start] == false;
   }
 };
 
-
 int main() {
-  string str = "catsandog";
-  vector<string> wordDict = {"cats","dog","sand","and","cat"};
+  string str = "bb";
+  vector<string> wordDict = {"a", "b", "bbb", "bbbb"};
   Solution s;
   int ret = s.wordBreak(str, wordDict);
   cout << "ret: " << ret << endl;
