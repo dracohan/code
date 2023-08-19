@@ -4,6 +4,8 @@
 #include <map>
 #include <vector>
 #include <climits>
+#include <unordered_set>
+#include <unordered_map>
 
 #include "../utils/utils.h"
 #include "../utils/tree.h"
@@ -39,3 +41,12 @@ int main() {
   int ret = s.minPathSum(grid);
   cout << "ret: " << ret << endl;
 }
+
+int main() {
+  string str = "leecode";
+  vector<string> wordDict = {"lee", "code"};
+  Solution s;
+  int ret = s.wordBreak(str, wordDict);
+  cout << "ret: " << ret << endl;
+}
+
