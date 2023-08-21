@@ -77,41 +77,40 @@ using namespace std;
 
 class Solution {
 public:
+public:
+  int count = 0;
+  vector<string> track;
+  vector<vector<string>> pathes;
+  
   int findTargetSumWays(vector<int> &nums, int target) {
-    if (nums.size() == 0)
-      return 0;
-    return dp(nums, 0, target);
+    backtrack(nums, target, 0, 0);
+    return count;
   }
 
-private:
-  // 备忘录
-  unordered_map<string, int> memo;
-  int dp(vector<int> &nums, int i, int remain) {
-    // base case
-    if (i == nums.size()) {
-      if (remain == 0)
-        return 1;
-      return 0;
+  void backtrack(vector<int> &nums, int target, int index, int sum) {
+    if (index == nums.size()) {
+      if (sum == target) {
+        pathes.push_back(track);
+        count++;
+      }
+    } else {
+      track.push_back("+" + std::to_string(nums[index]));
+      backtrack(nums, target, index + 1, sum + nums[index]);
+      track.pop_back();
+
+      track.push_back("-" + std::to_string(nums[index]));
+      backtrack(nums, target, index + 1, sum - nums[index]);
+      track.pop_back();
     }
-    // 把它俩转成字符串才能作为哈希表的键
-    string key = to_string(i) + "," + to_string(remain);
-    // 避免重复计算
-    if (memo.count(key)) {
-      return memo[key];
-    }
-    // 还是穷举
-    int result =
-        dp(nums, i + 1, remain - nums[i]) + dp(nums, i + 1, remain + nums[i]);
-    // 记入备忘录
-    memo[key] = result;
-    return result;
   }
 };
 
 int main() {
-  vector<int> coins = {1,1,1,1,1};
+  vector<int> coins = {1, 1, 1, 1, 1};
   Solution s;
   int ret = s.findTargetSumWays(coins, 3);
-  std::cout << "val:" << ret << std::endl;
+  for (const auto & path : s.pathes) {
+    printCollection(path);
+  }
 }
 // @lc code=end
