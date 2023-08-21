@@ -77,6 +77,8 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+#include <tuple>
+// #include <algorithm>
 
 #include "../utils/tree.h"
 #include "../utils/utils.h"
@@ -84,49 +86,35 @@
 using namespace std;
 
 class Solution {
-  unordered_map<int, vector<std::pair<int, int>>> hash;
-  int src, dst;
-  vector<vector<int>> memo;
-
+  unordered_map<int, vector<std::tuple<int, int, int>>> hash;
 public:
   int findCheapestPrice(int n, vector<vector<int>> &flights, int src, int dst,
                         int k) {
-    this->src = src;
-    this->dst = dst;
-    memo.resize(n, vector<int>(k + 1, -888));
-    for (auto &row : memo) {
-      fill(row.begin(), row.end(), -888);
-    }
-
     for (auto &f : flights) {
-      hash[f[1]].push_back(std::make_pair(f[0], f[2]));
-    }
-    return dp(dst, k);
-  }
-
-  // 定义：从 src 出发，k 步之内到达 s 的最短路径权重
-  int dp(int s, int k) {
-    if (s == src)
-      return 0;
-    if (k < 0)
-      return -1;
-    if (memo[s][k] != -888) {
-      return memo[s][k];
+      hash[f[0]].push_back(std::make_tuple(f[1], f[2], 0));
     }
 
-    int res = INT_MAX;
-    if (hash.count(s)) {
-      for (auto v : hash[s]) {
-        int from = v.first;
-        int price = v.second;
-        int subProblem = dp(from, k - 1);
-        if (subProblem != -1) {
-          res = std::min(res, subProblem + price);
+    int price = 0;
+    int minum = 0;
+    queue<int> q;
+    q.push(src);
+
+    while (k-- > 0 && !q.empty()) {
+      int cur = q.front();
+      q.pop();
+      int curSum = std::get<3>(cur);
+      vector<std::tuple<int, int, int>> nexts = hash[cur];
+      int loc, price, sum;
+      for (const auto &next : nexts) {
+        std::tie(loc, price, sum) = next;
+        q.push(loc);
+        sum = curSum + price;
+        if (loc == dst) {
+          minum = std::min(minum, sum);
         }
       }
     }
-    memo[s][k] = res == INT_MAX ? -1 : res;
-    return res == INT_MAX ? -1 : res;
+    return minum;
   }
 };
 
