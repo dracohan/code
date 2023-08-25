@@ -7,10 +7,17 @@
  *
  * algorithms
  * Medium (53.46%)
+<<<<<<< HEAD
  * Likes:    2818
  * Dislikes: 0
  * Total Accepted:    514K
  * Total Submissions: 961.4K
+=======
+ * Likes:    2820
+ * Dislikes: 0
+ * Total Accepted:    514.1K
+ * Total Submissions: 961.6K
+>>>>>>> 164301381a488614b622d13776686f99e8d51c89
  * Testcase Example:
  '["LRUCache","put","put","get","put","get","put","get","get","get"]\n' +
   '[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]'
@@ -73,123 +80,96 @@
  */
 
 // @lc code=start
+
+#include <algorithm>
+#include <climits>
+#include <iostream>
+#include <map>
+#include <queue>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+
+#include "../utils/tree.h"
+#include "../utils/utils.h"
+
+using namespace std;
+
+struct DLinkedNode {
+  int key, value;
+  DLinkedNode *prev;
+  DLinkedNode *next;
+  DLinkedNode() : key(0), value(0), prev(nullptr), next(nullptr) {}
+  DLinkedNode(int _key, int _value)
+      : key(_key), value(_value), prev(nullptr), next(nullptr) {}
+};
+
 class LRUCache {
-  struct Node {
-    int k;
-    int v;
-    Node *next;
-    Node *prev;
-    Node(int key, int value) {
-      this.k = key;
-      this.v = value;
-      this.prev = nullptr;
-      this.next = nullptr;
-    }
-  };
-
-  struct DoubleList {
-    Node *head;
-    Node *tail;
-    int size;
-
-    DoubleList() {
-      head = new Node(-1, -1);
-      tail = new Node(-1, -1);
-      head->next = tail;
-      head->prev = nullptr;
-      tail->prev = head;
-      tail->next = nullptr;
-      size = 0;
-    }
-
-    void addLast(Node *x) {
-      tail->prev->next = x;
-      x->prev = tail->prev;
-      x->next = tail;
-      tail->prev = x;
-      size++;
-    }
-
-    void remove(Node *x) {
-      x->prev->next = x->next;
-      x->next->prev = x->prev;
-      size--;
-    }
-
-    Node *removeFirst() {
-      if (head->next == nullptr)
-        return nullptr;
-      Node *first = head->next;
-      remove(first);
-      return first;
-    }
-
-    int getSize() { return size; }
-  };
-
-  unordered_map<int, Node *> map;
-  DoubleList cache;
-
-  int cap;
+private:
+  unordered_map<int, DLinkedNode *> cache;
+  DLinkedNode *head;
+  DLinkedNode *tail;
+  int size;
+  int capacity;
 
 public:
-  LRUCache(int capacity) : cap(capacity) {}
-
-  void makeRecent(int key) {
-    Node x = map.get(key);
-    cache.remove(x);
-    cache.addLast(x);
-  }
-
-  void deleteHead() {
-    Node *node = head->next;
-    removeNode(node);
-    map.erase(node->key);
-    delete node;
-  }
-
-  void addNode(Node *node) {
-    tail->next = node;
-    node->next = nullptr;
-    node->prev = tail;
-    map[node->key] = node;
-    tail = node;
-  }
-
-  void removeNode(Node *node) {
-    Node *prev = head;
-    while (prev->next != node) {
-      prev = prev->next;
-    }
-    prev->next = node->next;
-    delete node;
-  }
-
-  void moveToEnd(Node *node) {
-    cache.remove(node);
-    cache.addLast(node);
+  LRUCache(int _capacity) : capacity(_capacity), size(0) {
+    head = new DLinkedNode();
+    tail = new DLinkedNode();
+    head->next = tail;
+    tail->prev = head;
   }
 
   int get(int key) {
-    if (!map.count(key))
+    if (!cache.count(key)) {
       return -1;
-
-    Node *node = map[key];
-    moveToEnd(node);
-    return node->val;
+    }
+    DLinkedNode *node = cache[key];
+    moveToHead(node);
+    return node->value;
   }
 
   void put(int key, int value) {
-    if (map.count(key)) {
-      Node *node = map[key];
-      node->val = value;
-      moveToEnd(node);
-      return;
+    if (!cache.count(key)) {
+      DLinkedNode *node = new DLinkedNode(key, value);
+      cache[key] = node;
+      addToHead(node);
+
+      if (size > capacity) {
+        DLinkedNode *removed = removeTail();
+        cache.erase(removed->key);
+        delete removed;
+      }
+    } else {
+      DLinkedNode *node = cache[key];
+      node->value = value;
+      moveToHead(node);
     }
-    if (map.size() == capacity) {
-      deleteHead();
-    }
-    addNode(new Node(key, value));
+  }
+
+  void addToHead(DLinkedNode *node) {
+    node->prev = head;
+    node->next = head->next;
+    head->next->prev = node;
+    head->next = node;
+    ++size;
+  }
+
+  void removeNode(DLinkedNode *node) {
+    node->prev->next = node->next;
+    node->next->prev = node->prev;
+    --size;
+  }
+
+  void moveToHead(DLinkedNode *node) {
+    removeNode(node);
+    addToHead(node);
+  }
+
+  DLinkedNode *removeTail() {
+    DLinkedNode *node = tail->prev;
+    removeNode(node);
+    return node;
   }
 };
 
