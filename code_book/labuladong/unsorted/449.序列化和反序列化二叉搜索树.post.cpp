@@ -78,7 +78,6 @@ public:
   const string SEP = ",";
   const string NUL = "#";
   string res;
-  // Encodes a tree to a single string.
   string serialize(TreeNode *root) {
     traverse(root);
     return res;
@@ -89,9 +88,9 @@ public:
       res += NUL + SEP;
       return;
     }
-    res += to_string(root->val) + SEP;
     traverse(root->left);
     traverse(root->right);
+    res += to_string(root->val) + SEP;
     return;
   }
 
@@ -105,7 +104,7 @@ public:
     while (std::getline(iss, token, ',')) {
       tokens.push_back(token);
     }
-    std::reverse(tokens.begin(), tokens.end());
+    // std::reverse(tokens.begin(), tokens.end());
     return build(tokens);
   }
 
