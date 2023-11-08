@@ -51,3 +51,10 @@ int main() {
   cout << "ret: " << ret << endl;
 }
 
+int main() {
+  Solution s;
+  int ret = s.findTheLongestBalancedSubstring("01000111");
+  cout << "ret: " << ret << endl;
+}
+
+
