@@ -32,3 +32,6 @@
 	email = Xuan.Wang@streamcomputing.com
 	name = wangxuan
 	name = “Baowei
+
+[url “git@github.com:”]
+	insteadOf = https://github.com/
